@@ -1,6 +1,6 @@
 # Inception
 
-_Group 1 - "Walk It Off"
+_Group 1 - "Walk It Off"\
 Group Members: Aiden Halili, Sean Krienke, Nickolas Maxwell, Jake Borneman, Justin Stouffer, Michael Fletez_
 
 ## 1. Introduction
