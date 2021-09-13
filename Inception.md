@@ -44,4 +44,27 @@ Alarm is most important. Other features are a bonus. Would like to choose alarm 
 
 **Assessment:** Nice to have
 
+### Interview 2:
+
+**Summary:** This app conflicts with personal preferences, although it does seem to be a good idea for those it interests, incentivising wakeup is a good motivator
+
+**Interviewer:** Nick Maxwell
+**Interviewee:** Courtney Maxwell
+**When:** 9/11/2021
+**Consumer Segments:** Parents, and college students
+
+**Key Insights:**
+- need to be able to control distance
+- need to be able to control alarm sound
+
+**Representative Quotes:**
+- "Coffee will motivate me, make it bring me coffee"
+- "My 4 year old is my alarm clock"
+
+**Hypotheses that were validated:**
+- level-up concept has interest
+- the app would be effective, desirability seems to be a case by case basis
+
+**Assessment:** Some people don't want to get up in the morning, this app is not for them.
+
 ## 4. Final value proposition and consumer segments
