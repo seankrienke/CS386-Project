@@ -15,6 +15,8 @@ cheating.
 
 **Initial Value Proposition:**
 
+- Walkitoff is a location based alarm app that helps users wake up by walking a set distance.
+
 **Initial Consumer Segments:**
 
 - Busy people
