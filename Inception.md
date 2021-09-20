@@ -65,7 +65,33 @@ Alarm is most important. Other features are a bonus. Would like to choose alarm 
 - level-up concept has interest
 - the app would be effective, desirability seems to be a case by case basis
 
-**Assessment:** Some people don't want to get up in the morning, this app is not for them.
+**Assessment:** Nice to have.
+
+### Interview 3:
+
+**Summary:** Different generations face different morning difficulties some good
+
+**Interviewer:** Nick Maxwell
+**Interviewee:** David Maxwell
+**When:** 9/13/2021
+**Consumer Segments:** Senior Citizens(55+)
+
+**Key Insights:**
+- Age plays a role on mobility in the mornings
+- Older individuals tend towards a stronger circadian rythm.
+- Possible value of maintaining mobility (used as an alarm to "get a walk in")
+- Possible value in helping adolescents with mornings.
+- Peaceful wakeup has value ( slow gradual process )
+
+**Representative Quotes:**
+- "Nothing, i wake up at 6am everyday whether i want to or not" ("What do you use to wake up?")
+- "Waking up is painful at my age"
+
+**Hypotheses that were validated:**
+- Mute function, or similar courtesy. "Snooze"
+- Some users may prefer a different task, other than physical activity
+
+**Assessment:** Nice to have.
 
 ## Interview 3:
 
