@@ -242,5 +242,12 @@ Alarm is most important. Other features are a bonus. Would like to choose alarm 
 
 ## 4. Final value proposition and consumer segments
 
-WalkItOff is both an alarm clock and fitness app that motivates people who struggle to get out of bed to actually do so in order to break bad habits and live a more productive and healthier life.
+**Final Value Proposition:** WalkItOff is both an alarm clock and fitness app that motivates people who struggle to get out of bed to actually do so in order to break bad habits and live a more productive and healthier life.
+
+**Consumer Segments:**
+
+- Those who feel tired after getting up
+- Fitness-oriented people
+- College students
+- People with inconsistent sleep schedules
 
