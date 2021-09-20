@@ -20,7 +20,7 @@ Group Members: Aiden Halili, Sean Krienke, Nickolas Maxwell, Jake Borneman, Just
 
 ### Interview 1:
 
-**Summary:** Is unsatisfied with his sleep schedule. Usually gets up when he plans to, but likes to rest for a few more minutes.
+**Summary:** He is unsatisfied with his sleep schedule. Usually gets up when he plans to, but likes to rest for a few more minutes.
 Alarm is most important. Other features are a bonus. Would like to choose alarm sound.
 
 **Interviewer:** Aiden Halili\
@@ -66,5 +66,30 @@ Alarm is most important. Other features are a bonus. Would like to choose alarm 
 - the app would be effective, desirability seems to be a case by case basis
 
 **Assessment:** Some people don't want to get up in the morning, this app is not for them.
+
+## Interview 3:
+
+**Summary:** This app isn't something that anyone would completely depend on to wake up, although it does help with creating structure and starting the day actually feeling awake
+
+**Interviewer:** Aiden Halili
+**Interviewee:** Trevor Rapp
+**When:** 9/10/21
+**Consumer Segments:** Non-morning person
+
+**Key Insights:**
+- Alarm sound doesn't matter as long as it can awaken someone
+- Level-up system would help stay motivated
+- Other features can be nice, but the alarm is most important
+
+**Representative Quotes:**
+-"Typically the first hour Im awake, Im pretty relaxed i guess. Not very active."
+-"I've been mostly happy without an alarm because my work schedule is consistent."
+
+**Hypotheses that were validated:**
+- Those with consistent daily schedules see less of a need for this app
+- Even people who can get themselves up at the same time everyday still feel somewhat tired in the morning
+- The alarm should take precedence over anything else
+
+**Assessment:** Nice to have
 
 ## 4. Final value proposition and consumer segments
