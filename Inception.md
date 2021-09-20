@@ -187,4 +187,51 @@ Alarm is most important. Other features are a bonus. Would like to choose alarm 
 
 **Assessment:** Nice to have, but not necessary 
 
+### Interview 8:
+
+**Summary:** Has a good morning routine, but likes the idea of walking around to stay awake. Doesn’t want the walking distance to be too long.
+
+**Interviewer:** Michael Fletez
+**Interviewee:** Rosny Fletez
+**When:** 9/13/2021
+**Consumer Segments:** Busy person
+
+**Key Insights:**
+- Wakes up early for work
+- Tries to move around to stay awake 
+- Uses an alarm in the morning
+
+**Representative Quotes:**
+- “I hate feeling groggy and lethargic in the morning. When that happens, my eyes feel droopy and it’s difficult to stay focused on work.“
+- “When I wake up in the morning, I try to stay focused on what to complete for the day and try to move around to stay awake.”
+
+**Hypothesis that were validated:**
+- A leaderboard of your distance could be beneficial
+- Different kinds of alarm sounds
+
+**Assessment:** Nice to have
+
+### Interview 9:
+
+**Summary:** Sound doesn’t wake them up fully but moving around does. 
+
+**Interviewer:** Michael Fletez
+**Interviewee:** Emily Pinkoski
+**When:** 9/16/2021
+**Consumer Segments:** Struggles to wake up sometimes.
+
+**Key Insights:**
+- Doesn’t use an alarm in the morning
+- Add a variety choice of different sounds
+
+**Representative Quotes:**
+- “Waking up is important because it determines your feeling for the rest of the day.”
+- “I dislike feeling tired even after waking up and getting up.”
+
+**Hypothesis that were validated:**
+- Sound is important
+- This app would be effective
+
+**Assessment:** Nice to have.
+
 ## 4. Final value proposition and consumer segments
