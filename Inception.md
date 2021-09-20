@@ -241,3 +241,8 @@ Alarm is most important. Other features are a bonus. Would like to choose alarm 
 **Assessment:** Nice to have.
 
 ## 4. Final value proposition and consumer segments
+What the product is: Alarm application with geotagging capabilities. Users must walk set distances to disable alarms.
+Target customer: Individuals who desire change, have issues with waking up.
+Value provided: Responsibility, Longevity, Productivity, Accomplishment, Healthy Living
+Why our product is unique: Our app brings the user to change bad habits, to better themselves and iimprove their lives. It's not just an alarm.
+
