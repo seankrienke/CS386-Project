@@ -118,4 +118,22 @@ Alarm is most important. Other features are a bonus. Would like to choose alarm 
 
 **Assessment:** Nice to have
 
+**Summary:** The app would be cool to have as a type of game to boost productivity, but it's not necessary for people who regularly get up themselves. 
+
+### Interview 5:
+**Interviewer:** Sean Krienke 
+**Interviewee:** Gabe Brand 
+**When:** 9/16/21
+**Consumer Segments:** Morning person 
+
+**Key Insights:**
+- Some people don't have time to do tasks 
+- Other features can be nice, but the alarm is most important
+
+**Hypotheses that were validated:**
+- People who are more of a morning person don't need this app 
+- People would feel accomplished to check off their tasks from the app 
+
+**Assessment:** Nice to have, but not necessary 
+
 ## 4. Final value proposition and consumer segments
