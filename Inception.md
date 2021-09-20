@@ -240,6 +240,29 @@ Alarm is most important. Other features are a bonus. Would like to choose alarm 
 
 **Assessment:** Nice to have.
 
+### Interview 10:
+
+**Summary:** Would not personally use it, but could see it being useful for those who automatically snooze the alarm when it goes off.
+
+**Interviewer:** Justin Stouffer
+**Interviewee:** Megan Murphy
+**When:** 9/12/21
+**Consumer Segments:** People who are morning people
+
+**Key Insights:**
+- Point System/Level up would be nice, but not as incentivizing as say redeeming points for a giftcard or coffee
+- Alarm could get annoying after a while, make sure to include pleasant sounds/music for when walking
+
+**Representative Quotes:**
+-"The process of actually getting up out of bed is the worst part of waking up"
+-"I personally would not find this useful but I imagine many other people would who struggle to get up"
+
+**Hypothesis that were validated:**
+-This app is really only for people who have a hard time getting up on time or always snooze their alarms. Regular alarms work well for most people.
+-Having an incentive to get up and walk is a good idea, but the point system might not work for everyone.
+
+**Assessment:** Don't Care
+
 ## 4. Final value proposition and consumer segments
 
 WalkItOff is both an alarm clock and fitness app that motivates people who struggle to get out of bed to actually do so in order to break bad habits and live a more productive and healthier life.
