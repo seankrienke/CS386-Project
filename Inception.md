@@ -1,9 +1,15 @@
 # Inception
 
 _Group 1 - "Walk It Off"\
+Date: Sept 19, 2021
 Group Members: Aiden Halili, Sean Krienke, Nickolas Maxwell, Jake Borneman, Justin Stouffer, Michael Fletez_
 
 ## 1. Introduction
+
+There are a lot of people who want to have a better and more consistent sleep schedule, but making that change can be difficult. WalkItOff is an Android application that can help
+facilitate that change with an alarm that the user must shut off by walking a set distance. Users can even accumulate points and level up based on the distance they have walked,
+which can help them to stay motivated. The user can even use their points to unlock new alarm sounds. For best accuracy, the app will be using location services to calculate the distance walked as opposed to a step-counter in order to minimize
+cheating. 
 
 ## 2. Initial value proposition and consumer segments
 
