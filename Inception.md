@@ -1,7 +1,7 @@
 # Inception
 
 _Group 1 - "Walk It Off"\
-Date: Sept 19, 2021
+Date: Sept 19, 2021\
 Group Members: Aiden Halili, Sean Krienke, Nickolas Maxwell, Jake Borneman, Justin Stouffer, Michael Fletez_
 
 ## 1. Introduction
