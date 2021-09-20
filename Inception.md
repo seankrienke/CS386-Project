@@ -118,4 +118,54 @@ Alarm is most important. Other features are a bonus. Would like to choose alarm 
 
 **Assessment:** Nice to have
 
+## Interview 5:
+
+**Summary:** This isn't a necessity to have if you have a consistent sleep and wake up schedule. 
+
+**Interviewer:** Jake Borneman
+**Interviewee:** Tanner Borneman
+**When:** 9/16/21
+**Consumer Segments:** Non-morning/Night-owl worker
+
+**Key Insights:**
+- Possible annoyance due to walking a certain distance and the noise following with
+- If someone who is consistent already migth not need it
+- alarm focused but needs to possibly have other options for turning off that involves activity other than walking
+
+**Representative Quotes:**
+-"I already have a consistent sleep schedule. I also try to make sure that I do something productive first thing in the morning"
+-"I think an alarm that remains active unless you move around would be annoying for me and anyone around to hear."
+
+**Hypotheses that were validated:**
+- There is no need for people with good sleep scedules and habits
+- Need some possible noise control
+- Needs possible other solutions to turn an alarm off
+
+**Assessment:** Don't care
+
+## Interview 6:
+
+**Summary:** Someone who isn't active in the morning would like this as a motivator to move around
+
+**Interviewer:** Jake Borneman
+**Interviewee:** Sam
+**When:** 9/18/21
+**Consumer Segments:** Early sleeper/early riser college student
+
+**Key Insights:**
+- Interested due to the unique way of turing the alarm off
+- Level-up system can be a good motivator
+- Doesn't think it is too important to have but sees that it can be used to force a good sleep practice
+
+**Representative Quotes:**
+-"That is a unique way for an alarm. Maybe it can kick my butt awake"
+-"Personally, I don't have much motivation other than having to go to school."
+
+**Hypotheses that were validated:**
+- Motivation would be helpful to get out of bed
+- Force a good sleep schedule if followed correctly
+- Become active/productive in the morning if followed.
+
+**Assessment:** Nice to have
+
 ## 4. Final value proposition and consumer segments
