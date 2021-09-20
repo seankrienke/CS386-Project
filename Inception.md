@@ -1,7 +1,7 @@
 # Inception
 
 _Group 1 - "Walk It Off"\
-Date: Sept 19, 2021
+Date: Sept 19, 2021\
 Group Members: Aiden Halili, Sean Krienke, Nickolas Maxwell, Jake Borneman, Justin Stouffer, Michael Fletez_
 
 ## 1. Introduction
@@ -14,6 +14,8 @@ cheating.
 ## 2. Initial value proposition and consumer segments
 
 **Initial Value Proposition:**
+
+- Walkitoff is a location based alarm app that helps users wake up by walking a set distance.
 
 **Initial Consumer Segments:**
 
@@ -265,5 +267,12 @@ Alarm is most important. Other features are a bonus. Would like to choose alarm 
 
 ## 4. Final value proposition and consumer segments
 
-WalkItOff is both an alarm clock and fitness app that motivates people who struggle to get out of bed to actually do so in order to break bad habits and live a more productive and healthier life.
+**Final Value Proposition:** WalkItOff is both an alarm clock and fitness app that motivates people who struggle to get out of bed to actually do so in order to break bad habits and live a more productive and healthier life.
+
+**Consumer Segments:**
+
+- Those who feel tired after getting up
+- Fitness-oriented people
+- College students
+- People with inconsistent sleep schedules
 
