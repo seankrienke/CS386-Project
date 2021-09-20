@@ -260,10 +260,32 @@ Alarm is most important. Other features are a bonus. Would like to choose alarm 
 -"I personally would not find this useful but I imagine many other people would who struggle to get up"
 
 **Hypothesis that were validated:**
--This app is really only for people who have a hard time getting up on time or always snooze their alarms. Regular alarms work well for most people.
--Having an incentive to get up and walk is a good idea, but the point system might not work for everyone.
+- This app is really only for people who have a hard time getting up on time or always snooze their alarms. Regular alarms work well for most people.
+- Having an incentive to get up and walk is a good idea, but the point system might not work for everyone.
 
 **Assessment:** Don't Care
+
+### Interview 11:
+
+**Summary:** Would be very useful for people that get up at the first alarm, not so useful for people who sleep through their alarms. 
+
+**Interviewer:** Justin Stouffer
+**Interviewee:** Victor Stoj
+**When:** 9/15/21
+**Consumer Segments:** People who struggle waking up in the morning
+
+**Key Insights:**
+- Getting up and walking is the best way to wake up, it forces you to move around
+- The only issue is that the person first has to wake up to their alarm; make sure it is loud enough
+
+**Representative Quotes:**
+-"Getting and walking around wakes me up the fastest, I would like to walk around for a while before the alarm shuts off
+
+**Hypothesis that were validated:**
+- Getting up and walking around is an effective solution to waking up in the morning 
+- People who struggle waking up would find this app useful
+
+**Assessment:** Nice to have
 
 ## 4. Final value proposition and consumer segments
 
