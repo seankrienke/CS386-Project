@@ -17,8 +17,6 @@ public class MainActivity extends AppCompatActivity {
 
         // TODO: get permission for location services
 
-        // TODO: read time picker input
-
         // initialize time picker
         timeSelected = findViewById( R.id.timepicker );
 
