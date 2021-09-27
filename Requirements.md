@@ -19,6 +19,20 @@
 
 -----------------------------------------------------------------------------------------------------------
 
+#2 Stakeholders
+
+* Users- The people that will be using our app are people that struggle to wake up in the morning. These users are ones that constantly snooze their alarms, and are unmotivated to get up and start their day in the morning. 
+
+* Clients- The people that will be investing in our app are ones who believe that it could be of real use to a large demographic of people. These clients are ones who do not think that regular alarm clocks work as well as our app does at waking people up.
+
+* Competitors- Our competitors are other alarm clock apps that have different ideas to get someone out of bed. These competitors have apps like: motion alarm clocks (shake it to stop), alarmy (take photo in a certain place), or barcode alarm clock (take picture of bar code on an item).
+
+* Detractors- The detractors of this app will be people who feel as though regular alarm clocks work perfectly fine to wake up people.
+
+* Developers- The developers of this app will be developers who have knowledge of android software programming, and Java software programming.
+
+-----------------------------------------------------------------------------------------------------------
+
 #3 Functional requirements
 
 **1.)** The app accepts user input for time and sound
@@ -173,3 +187,11 @@ Alternative flows:
 **11.)** As a user, I want a concise navigation bar so that I can easily learn it. (Priority: 1, Estimated time: ~4-5 hours)
 
 **12.)** As a runner, I want the option to track my distance in miles so that I don't have to convert units of measurement. (Priority: 3, Estimated time: ~13-16 hours)
+
+-------------------------------------------------------------------------------------------------------------------
+
+#8 Issue Tracker
+
+* Link- https://trello.com/cs386walkitoff/home
+
+* Screenshot- ![issue tracker](https://user-images.githubusercontent.com/72279824/134845243-d133873c-a85d-443d-a924-6f9ad7a26a1f.PNG)
