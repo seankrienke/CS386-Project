@@ -50,3 +50,9 @@
 **6.)** Recoverability - Regularly updates user score in server to minimize chance of losing progress.
 
 **7.)** Confidentiality - Location services are only acquired via user consent.
+
+-------------------------------------------------------------------------------------------------------------
+
+#5 MVP
+
+ *  For developing the minimal viable product for this project, we will first develop the app and add the features one at a time. Each member of the team can work on one of the features until it is complete and ready to implement. The features we will work on the six functional requirements. We will be validating our features by being able to implement the functional requirements into the app. 
