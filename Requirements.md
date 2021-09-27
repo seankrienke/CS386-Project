@@ -59,6 +59,32 @@
  
 ---------------------------------------------------------------------------------------------------------------
  
+#6 Use Cases
+
+**1.)** ![use case diagram](https://user-images.githubusercontent.com/71902318/134837608-eb92f04f-17e7-43fe-8266-bfe6a7b097da.PNG)
+
+**2.)** 
+Set alarm sound - this use case is for when a user wants 
+to choose between different sounds available to them in the app. User will cycle through options and press the one that 
+they want to use. 
+
+Set alarm clock - The user sets the time for alarm to go off by typing in time into app. 
+
+Set goal - User sets a distance goal in feet, yards, or miles for how far they want to move. Goal is different from
+setting distance because a goal is something that they want to achieve over time.
+
+Set distance - User sets the distance for how far to travel 
+in order to turn the alarm off. 
+
+Choose activity - User chooses between running, walking, biking,
+etc. as an activity to turn the alarm off. 
+
+Delete goal - User can delete the current goal and make a new one, or not have a goal at all.
+
+Delete alarm clock - User can unset the alarm clock so that it no longer goes off at the designated time. 
+
+--------------------------------------------------------------------------------------------------------------------
+
 #7 User Stories
 
 **1.)** As a user, I want to be active so that I have a productive morning. (Priority: 3, Estimated time: ~13-16 hours)
