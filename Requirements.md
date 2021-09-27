@@ -21,16 +21,20 @@
 
 #3 Functional requirements
 
-**1.)** The user can set an alarm at their desired time and alarm sound
+**1.)** The app accepts user input for time and sound
 
-**2.)** The alarm will only shut off if the user walks a certain distance
+**2.)** When the alarm sounds, it will only shut off if a certain distance is traveled.
 
-**3.)** The user must walk a minimum distance of 500 feet, but they can choose a longer distance for the alarm to shut off at
+**3.)** 500 feet is the minimum distance for the alarm to shut off, but the user can input a higher target distance.
 
-**4.)** The user can accumulate points based on the distance they walked so they can level up
+**4.)** Every foot travelled equates to a single point, which will go towards the user's all time score.
 
-**5.)** By leveling up, new features can be unlocked (new alarm sounds, dark mode, etc.)
+**5.)** When a certain amount of points are accumulated, new features will become available to the user(new alarm sounds, dark mode, etc.)
 
-**6.)** Can opt to just track walking distance without using the alarm
+**6.)** The user can also press a button to track their walking distance without having to enable an alarm
 
 -------------------------------------------------------------------------------------------------------------
+
+#4 Non-functional requirements
+
+**1.)** 
