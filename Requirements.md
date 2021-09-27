@@ -21,23 +21,69 @@
 
 #3 Functional requirements
 
-**1.)** The user can set an alarm at their desired time and alarm sound
+**1.)** The app accepts user input for time and sound
 
-**2.)** The alarm will only shut off if the user walks a certain distance
+**2.)** When the alarm sounds, it will only shut off if a certain distance is traveled.
 
-**3.)** The user must walk a minimum distance of 500 feet, but they can choose a longer distance for the alarm to shut off at
+**3.)** 500 feet is the minimum distance for the alarm to shut off, but the user can input a higher target distance.
 
-**4.)** The user can accumulate points based on the distance they walked so they can level up
+**4.)** Every foot travelled equates to a single point, which will go towards the user's all time score.
 
-**5.)** By leveling up, new features can be unlocked (new alarm sounds, dark mode, etc.)
+**5.)** When a certain amount of points are accumulated, new features will become available to the user(new alarm sounds, dark mode, etc.)
 
-**6.)** Can opt to just track walking distance without using the alarm
+**6.)** The user can also press a button to track their walking distance without having to enable an alarm
+
+-------------------------------------------------------------------------------------------------------------
+
+#4 Non-functional requirements
+
+**1.)** Resource utilization - Utilizes user device's location services
+
+**2.)** User interface aesthetics - Contains light colors which are easy on the eyes. The user can change the color scheme to suit their tastes
+
+**3.)** User error protection - A number wheel will be used to minimize accidentally incorrect input.
+
+**4.)** Accessibility - Contains three items in the bottom navigation bar to make it easy to navigate: Alarm, track distance only, score details, and settings.
+
+**5.)** Availability - Will require user location services to use alarm and distance tracking feature.
+
+**6.)** Recoverability - Regularly updates user score in server to minimize chance of losing progress.
+
+**7.)** Confidentiality - Location services are only acquired via user consent.
 
 -------------------------------------------------------------------------------------------------------------
 
+#5 MVP
 
+ *  For developing the minimal viable product for this project, we will first develop the app and add the features one at a time. Each member of the team can work on one of the features until it is complete and ready to implement. The features we will work on the six functional requirements. We will be validating our features by being able to implement the functional requirements into the app. 
+ 
+---------------------------------------------------------------------------------------------------------------
+ 
+#7 User Stories
 
--------------------------------------------------------------------------------------------------------------
+**1.)** As a user, I want to be active so that I have a productive morning. (Priority: 3, Estimated time: ~13-16 hours)
+
+**2.)** As a heavy sleeper, I want to be forced out of bed so that I wake up on time. (Priority: 3, Estimated time: ~13-16 hours)
+
+**3.)** As a user, I want to be motivated so that I don't laze around in bed. (Priority: 4, Estimated time: ~15-20 hours)
+
+**4.)** As a person who's sleep schedule is bad, I want an alarm that can push me to a better sleep schedule. (Priority 2: Estimated time: ~4-5 hours)
+
+**5.)** As a user, I want a unique feature so that the app can be set apart. (Priority: 4, Estimated time: ~15-20 hours)
+
+**6.)** As a user, I want something fun so that I do not become bored of using the alarm. (Priority: 4, Estimated time: ~15-20 hours)
+
+**7.)** As a disciplined sleeper, I want my friends to wake up so that we all can do things at the same time. (Priority: 2, Estimated time: ~15-20 hours)
+
+**8.)** As someone rarely motivated, I want to have something reqarding so that I can feel accomplished. (Priority 4: Estimated time ~15-20 hours)
+
+**9.)** As someone who is busy, I want to keep track of stuff so that I can be prepared. (Priority: 2, Estimated time: ~15-20 hours)
+
+**10.)** As someone who is unhealthy, I want to be moving a lot so that I can lose weight and become healthy. (Priority: 3, Estimated time: ~13-16 hours)
+
+**11.)** As a user, I want an easy to navigate app so that I know what the app consists of. (Priority: 1, Estimated time: ~4-5 hours)
+
+**12.)** As an old person, I want to due hobbies so that I can still have fun. (Priority: 3, Estimated time: ~13-16 hours)
 
 #7 User Stories
 
@@ -64,4 +110,3 @@
 **11.)** As a user, I want an easy to navigate app so that I know what the app consists of. (Priority: 1, Estimated time: ~4-5 hours)
 
 **12.)** As an old person, I want to due hobbies so that I can still have fun. (Priority: 3, Estimated time: ~13-16 hours)
--------------------------------------------------------------------------------------------------------------
