@@ -55,7 +55,7 @@
 
 #5 MVP
 
- *  For developing the minimal viable product for this project, we will first develop the app and add the features one at a time. Each member of the team can work on one of the features until it is complete and ready to implement. The features we will work on the six functional requirements. We will be validating our features by being able to implement the functional requirements into the app. 
+ *  For developing the minimal viable product for this project, we will first focus on the very foundation of this project: the alarm. When launching the app, the user should be able to give the app permission to access location services. The user will then be able to manually set an alarm. The user can select the time via a timepicker wheel. When the selected time arrives, the alarm will sound repeatedly until a minimum distance of 500 feet is travelled. After that, the total distance travelled is sent to add to the users score. The MVP will have one new alarm sound and one new theme to unlock in order to demonstrate the progression system.
  
 ---------------------------------------------------------------------------------------------------------------
  
@@ -84,4 +84,3 @@
 **11.)** As a user, I want an easy to navigate app so that I know what the app consists of. (Priority: 1, Estimated time: ~4-5 hours)
 
 **12.)** As an old person, I want to due hobbies so that I can still have fun. (Priority: 3, Estimated time: ~13-16 hours)
-
