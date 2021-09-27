@@ -82,82 +82,88 @@ of 500 feet is travelled. After that, the total distance travelled is sent to ad
 
 **2.)** 
 
-Use Case: Set Alarm Sound\
-Actor: User\ 
-Description: User sets a sound to use for when the alarm clock goes off\ 
-Precondition: User is on the settings section of the app\ 
-Post-condition: Alarm sound is set to selected audio\ 
-Main flow:
+Use Case: Set Alarm Sound <br />
+Actor: User <br />
+Description: User sets a sound to use for when the alarm clock goes off <br />
+Precondition: User is on the settings section of the app <br />
+Post-condition: Alarm sound is set to selected audio <br />
+Main flow: <br />
 1. User click on settings.
 2. Click on "set alarm sound". 
 3. Click on each sound to sample it.
-4. Click on "choose sound" to select sound.
-Alternative flows:
+4. Click on "choose sound" to select sound. <br />
+
+Alternative flows: <br />
 1. App is closed out.
 2. User goes back to main screen of app. 
 
-Use Case: Set Distance
-Actor: User 
-Description: User sets distance for user to travel in order to turn off the alarm.
-Precondition: User is on the settings section of the app 
-Post-condition: Distance is set 
-Main flow:
+Use Case: Set Distance <br />
+Actor: User <br />
+Description: User sets distance for user to travel in order to turn off the alarm. <br />
+Precondition: User is on the settings section of the app <br /> 
+Post-condition: Distance is set <br /> 
+Main flow: <br />
 1. User click on settings.
 2. Click on "set distance". 
-3. Type in numerical value for distance, and choose "ft", "mi", or "yd" for a unit of measurement. 
-Alternative flows:
+3. Type in numerical value for distance, and choose "ft", "mi", or "yd" for a unit of measurement. <br /> 
+
+Alternative flows: <br />
 1. App is closed out.
 2. User goes back to main screen of app. 
 
-Use Case: Set Alarm Clock
-Actor: User 
-Description: User sets time for alarm clock to sound.
-Precondition: User is on the settings section of the app 
-Post-condition: Alarm is set
-Main flow:
+Use Case: Set Alarm Clock <br />
+Actor: User <br /> 
+Description: User sets time for alarm clock to sound. <br />
+Precondition: User is on the settings section of the app <br /> 
+Post-condition: Alarm is set <br />
+Main flow: <br />
 1. User click on settings.
 2. Click on "set alarm". 
-3. Type in time in numerical value and choose "AM" or "PM".
-Alternative flows:
+3. Type in time in numerical value and choose "AM" or "PM". <br />
+
+Alternative flows: <br />
 1. App is closed out.
 2. User goes back to main screen of app. 
 
-Use Case: Delete Alarm
-Actor: User 
-Description: User deletes the set time for the alarm to go off. 
-Precondition: User is on the settings section of the app 
-Post-condition: Alarm is deleted 
-Main flow:
+Use Case: Delete Alarm <br />
+Actor: User <br /> 
+Description: User deletes the set time for the alarm to go off. <br /> 
+Precondition: User is on the settings section of the app <br /> 
+Post-condition: Alarm is deleted <br /> 
+Main flow: <br />
 1. User click on settings.
-2. Click on "delete alarm". 
-Alternatives flows: 
-4. App is closed out.
-5. User goes back to main screen of app. 
+2. Click on "delete alarm". <br /> 
 
-Use Case: Set Goal
-Actor: User 
-Description: User sets a goal for how far they want to move. An achievement could be unlocked by meeting this distance. 
-Precondition: User is on the settings section of the app 
-Post-condition: Goal is set 
-Main flow:
+Alternatives flows: <br /> 
+1. App is closed out.
+1. User goes back to main screen of app. 
+
+Use Case: Set Goal <br />
+Actor: User <br /> 
+Description: User sets a goal for how far they want to move. An achievement could be unlocked by meeting this distance. <br /> 
+Precondition: User is on the settings section of the app <br /> 
+Post-condition: Goal is set <br /> 
+Main flow: <br />
 1. User click on settings.
 2. Click on "set goal". 
-3. Type in numerical value for distance, and choose "ft", "mi", or "yd" for a unit of measurement. 
-Alternative flows:
+3. Type in numerical value for distance, and choose "ft", "mi", or "yd" for a unit of measurement. <br /> 
+
+Alternative flows: <br />
 1. App is closed out.
 2. User goes back to main screen of app. 
 
-Use Case: Choose Activity
-Actor: User 
-Description: User sets an activity they want to do in order to fulfill the alarm clock's distance requirements. 
-Precondition: User is on the settings section of the app 
-Post-condition: Acitvity is set 
-Main flow:
+Use Case: Choose Activity <br />
+Actor: User <br /> 
+Description: User sets an activity they want to do in order to fulfill the alarm clock's distance requirements. <br /> 
+Precondition: User is on the settings section of the app <br /> 
+Post-condition: Acitvity is set <br /> 
+Main flow: <br />
 1. User click on settings.
 2. Click on "choose activity". 
-3. Choose between walking, running, or biking. 
-Alternative flows:
-1. App is closed out.
+3. Choose between walking, running, or biking. <br /> 
+
+Alternative flows: <br />
+1. App is closed out. 
 2. User goes back to main screen of app.
 
 ---------------------------------------------------------------------------------------------------------------
