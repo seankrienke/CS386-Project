@@ -97,13 +97,13 @@ of 500 feet is travelled. After that, the total distance travelled is sent to ad
 
 **4.)** As a person who's sleep schedule is bad, I want an alarm that can push me to a better sleep schedule. (Priority 2: Estimated time: ~4-5 hours)
 
-**5.)** As a user, I want a unique feature so that the app can be set apart. (Priority: 4, Estimated time: ~15-20 hours)
+**5.)** . (Priority: 4, Estimated time: ~15-20 hours)
 
 **6.)** As a user, I want something fun so that I do not become bored of using the alarm. (Priority: 4, Estimated time: ~15-20 hours)
 
 **7.)** As a disciplined sleeper, I want my friends to wake up so that we all can do things at the same time. (Priority: 2, Estimated time: ~15-20 hours)
 
-**8.)** As someone rarely motivated, I want to have something reqarding so that I can feel accomplished. (Priority 4: Estimated time ~15-20 hours)
+**8.)** As someone rarely motivated, I want to see my progress over time so that I can feel accomplished. (Priority 4: Estimated time ~15-20 hours)
 
 **9.)** As someone who is busy, I want to keep track of stuff so that I can be prepared. (Priority: 2, Estimated time: ~15-20 hours)
 
