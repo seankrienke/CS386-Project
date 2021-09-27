@@ -37,4 +37,16 @@
 
 #4 Non-functional requirements
 
-**1.)** 
+**1.)** Resource utilization - Utilizes user device's location services
+
+**2.)** User interface aesthetics - Contains light colors which are easy on the eyes. The user can change the color scheme to suit their tastes
+
+**3.)** User error protection - A number wheel will be used to minimize accidentally incorrect input.
+
+**4.)** Accessibility - Contains three items in the bottom navigation bar to make it easy to navigate: Alarm, track distance only, score details, and settings.
+
+**5.)** Availability - Will require user location services to use alarm and distance tracking feature.
+
+**6.)** Recoverability - Regularly updates user score in server to minimize chance of losing progress.
+
+**7.)** Confidentiality - Location services are only acquired via user consent.
