@@ -83,10 +83,10 @@ of 500 feet is travelled. After that, the total distance travelled is sent to ad
 **2.)** 
 
 Use Case: Set Alarm Sound\
-Actor: User 
-Description: User sets a sound to use for when the alarm clock goes off 
-Precondition: User is on the settings section of the app 
-Post-condition: Alarm sound is set to selected audio 
+Actor: User\ 
+Description: User sets a sound to use for when the alarm clock goes off\ 
+Precondition: User is on the settings section of the app\ 
+Post-condition: Alarm sound is set to selected audio\ 
 Main flow:
 1. User click on settings.
 2. Click on "set alarm sound". 
