@@ -58,6 +58,93 @@
  *  For developing the minimal viable product for this project, we will first focus on the very foundation of this project: the alarm. When launching the app, the user should be able to give the app permission to access location services. The user will then be able to manually set an alarm. The user can select the time via a timepicker wheel. When the selected time arrives, the alarm will sound repeatedly until a minimum distance of 500 feet is travelled. After that, the total distance travelled is sent to add to the users score. The MVP will have one new alarm sound and one new theme to unlock in order to demonstrate the progression system.
  
 ---------------------------------------------------------------------------------------------------------------
+
+#6 Use Cases
+
+**1.)** ![use case diagram](https://user-images.githubusercontent.com/71902318/134839863-7eaf3f85-66e7-4672-9304-ab1356dd31f1.PNG)
+
+
+**2.)** 
+
+Use Case: Set Alarm Sound
+Actor: User 
+Description: User sets a sound to use for when the alarm clock goes off 
+Precondition: User is on the settings section of the app 
+Post-condition: Alarm sound is set to selected audio 
+Main flow:
+1. User click on settings.
+2. Click on "set alarm sound". 
+3. Click on each sound to sample it.
+4. Click on "choose sound" to select sound.
+Alternative flows:
+1. App is closed out.
+2. User goes back to main screen of app. 
+
+Use Case: Set Distance
+Actor: User 
+Description: User sets distance for user to travel in order to turn off the alarm.
+Precondition: User is on the settings section of the app 
+Post-condition: Distance is set 
+Main flow:
+1. User click on settings.
+2. Click on "set distance". 
+3. Type in numerical value for distance, and choose "ft", "mi", or "yd" for a unit of measurement. 
+Alternative flows:
+1. App is closed out.
+2. User goes back to main screen of app. 
+
+Use Case: Set Alarm Clock
+Actor: User 
+Description: User sets time for alarm clock to sound.
+Precondition: User is on the settings section of the app 
+Post-condition: Alarm is set
+Main flow:
+1. User click on settings.
+2. Click on "set alarm". 
+3. Type in time in numerical value and choose "AM" or "PM".
+Alternative flows:
+1. App is closed out.
+2. User goes back to main screen of app. 
+
+Use Case: Delete Alarm
+Actor: User 
+Description: User deletes the set time for the alarm to go off. 
+Precondition: User is on the settings section of the app 
+Post-condition: Alarm is deleted 
+Main flow:
+1. User click on settings.
+2. Click on "delete alarm". 
+Alternatives flows: 
+4. App is closed out.
+5. User goes back to main screen of app. 
+
+Use Case: Set Goal
+Actor: User 
+Description: User sets a goal for how far they want to move. An achievement could be unlocked by meeting this distance. 
+Precondition: User is on the settings section of the app 
+Post-condition: Goal is set 
+Main flow:
+1. User click on settings.
+2. Click on "set goal". 
+3. Type in numerical value for distance, and choose "ft", "mi", or "yd" for a unit of measurement. 
+Alternative flows:
+1. App is closed out.
+2. User goes back to main screen of app. 
+
+Use Case: Choose Activity
+Actor: User 
+Description: User sets an activity they want to do in order to fulfill the alarm clock's distance requirements. 
+Precondition: User is on the settings section of the app 
+Post-condition: Acitvity is set 
+Main flow:
+1. User click on settings.
+2. Click on "choose activity". 
+3. Choose between walking, running, or biking. 
+Alternative flows:
+1. App is closed out.
+2. User goes back to main screen of app.
+
+
  
 #7 User Stories
 
