@@ -93,9 +93,9 @@ of 500 feet is travelled. After that, the total distance travelled is sent to ad
 
 **2.)** As a heavy sleeper, I want a loud and somewhat high-pitched alarm sound so that I wake up. (Priority: 3, Estimated time: ~13-16 hours)
 
-**3.)** As a user, I want to be given a task in order to shut off my alarm so that I don't laze around in bed. (Priority: 4, Estimated time: ~15-20 hours)
+**3.)** As someone who sleeps in a lot, I want to be given a task in order to shut off my alarm so that I don't laze around in bed. (Priority: 4, Estimated time: ~15-20 hours)
 
-**4.)** As a person who's sleep schedule is bad, I want an alarm that can push me to a better sleep schedule. (Priority 2: Estimated time: ~4-5 hours)
+**4.)** As an ambitious user, I want to set higher distance goals so that I can challenge myself. (Priority 2: Estimated time: ~4-5 hours)
 
 **5.)** As a fitness-oriented user, I want to be able to track my walking distance without having to set up an alarm. (Priority: 4, Estimated time: ~15-20 hours)
 
@@ -105,9 +105,9 @@ of 500 feet is travelled. After that, the total distance travelled is sent to ad
 
 **8.)** As someone rarely motivated, I want to see my progress over time so that I can feel accomplished. (Priority 4: Estimated time ~15-20 hours)
 
-**9.)** As someone who is busy, I want to keep track of stuff so that I can be prepared. (Priority: 2, Estimated time: ~15-20 hours)
+**9.)** As a user, I want to save my alarm settings so that I can save time. (Priority: 2, Estimated time: ~15-20 hours)
 
-**10.)** As a competetive user, I . (Priority: 3, Estimated time: ~13-16 hours)
+**10.)** As a user, I want my walks to be timed so that I can aim to improve my walking speed. (Priority: 3, Estimated time: ~13-16 hours)
 
 **11.)** As a user, I want a concise navigation bar so that I can easily learn it. (Priority: 1, Estimated time: ~4-5 hours)
 
