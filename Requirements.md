@@ -21,16 +21,32 @@
 
 #3 Functional requirements
 
-**1.)** The user can set an alarm at their desired time and alarm sound
+**1.)** The app accepts user input for time and sound
 
-**2.)** The alarm will only shut off if the user walks a certain distance
+**2.)** When the alarm sounds, it will only shut off if a certain distance is traveled.
 
-**3.)** The user must walk a minimum distance of 500 feet, but they can choose a longer distance for the alarm to shut off at
+**3.)** 500 feet is the minimum distance for the alarm to shut off, but the user can input a higher target distance.
 
-**4.)** The user can accumulate points based on the distance they walked so they can level up
+**4.)** Every foot travelled equates to a single point, which will go towards the user's all time score.
 
-**5.)** By leveling up, new features can be unlocked (new alarm sounds, dark mode, etc.)
+**5.)** When a certain amount of points are accumulated, new features will become available to the user(new alarm sounds, dark mode, etc.)
 
-**6.)** Can opt to just track walking distance without using the alarm
+**6.)** The user can also press a button to track their walking distance without having to enable an alarm
 
 -------------------------------------------------------------------------------------------------------------
+
+#4 Non-functional requirements
+
+**1.)** Resource utilization - Utilizes user device's location services
+
+**2.)** User interface aesthetics - Contains light colors which are easy on the eyes. The user can change the color scheme to suit their tastes
+
+**3.)** User error protection - A number wheel will be used to minimize accidentally incorrect input.
+
+**4.)** Accessibility - Contains three items in the bottom navigation bar to make it easy to navigate: Alarm, track distance only, score details, and settings.
+
+**5.)** Availability - Will require user location services to use alarm and distance tracking feature.
+
+**6.)** Recoverability - Regularly updates user score in server to minimize chance of losing progress.
+
+**7.)** Confidentiality - Location services are only acquired via user consent.
