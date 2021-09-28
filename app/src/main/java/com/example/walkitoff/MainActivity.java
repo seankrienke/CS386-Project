@@ -56,11 +56,17 @@ public class MainActivity extends AppCompatActivity {
     public void setAlarm( View view ){
 
         // initialize method/variables
-        String wakeUpTime = parseTime( hour, minute );
+
+          // parse the wake up time
+          String wakeUpTime = parseTime( hour, minute );
+
+          // initialize date object
 
         // set the alarm
 
           // loop until wakeup time
+
+            // reinitialize the date object
 
             // get the current time
 
