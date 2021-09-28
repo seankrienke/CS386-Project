@@ -51,4 +51,24 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Called when user presses button to set alarm
+     * @param view - parameter for button view
+     */
+    public void setAlarm( View view ){
+
+        // initialize method/variables
+        String wakeUpTime = parseTime( hour, minute );
+
+        // set the alarm
+
+          // loop until wakeup time
+
+            // get the current time
+
+          // end loop
+
+          // sound alarm
+    }
+
 }
