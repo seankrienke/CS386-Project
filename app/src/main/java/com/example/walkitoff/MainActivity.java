@@ -8,8 +8,6 @@ import android.widget.TimePicker;
 
 public class MainActivity extends AppCompatActivity {
 
-    TimePicker timeSelected;
-
     int hour, minute;
     
     @Override
@@ -20,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         // TODO: get permission for location services
 
         // initialize time picker
-        timeSelected = findViewById( R.id.timepicker );
+        TimePicker timeSelected = findViewById( R.id.timepicker );
 
         // create anonymous class for time change listener
         timeSelected.setOnTimeChangedListener(new TimePicker.OnTimeChangedListener() {
