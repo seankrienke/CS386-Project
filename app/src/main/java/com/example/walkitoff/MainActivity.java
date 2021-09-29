@@ -73,6 +73,15 @@ public class MainActivity extends AppCompatActivity {
           // end loop
 
           // sound alarm
+            // method: soundAlarm
+    }
+
+    /**
+     * plays alarm sound
+     */
+    private void soundAlarm(){
+
+
     }
 
 }
