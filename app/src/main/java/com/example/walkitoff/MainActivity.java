@@ -6,6 +6,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TimePicker;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class MainActivity extends AppCompatActivity {
 
     int hour, minute;
@@ -51,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Called when user presses button to set alarm
+     *
      * @param view - parameter for button view
      */
     public void setAlarm( View view ){
@@ -60,20 +64,29 @@ public class MainActivity extends AppCompatActivity {
           // parse the wake up time
           String wakeUpTime = parseTime( hour, minute );
 
-          // initialize date object
+          // initialize date objects
+          Date time = new Date();
+          SimpleDateFormat formatTime = new SimpleDateFormat( "HHmm" );
 
         // set the alarm
 
+          // get current time
+          String currentTime = formatTime.format( time );
+
           // loop until wakeup time
+          while( !currentTime.equals( wakeUpTime ) ){
 
-            // reinitialize the date object
+              // reinitialize the date object
+              time = new Date();
 
-            // get the current time
-
+              // get the current time
+              currentTime = formatTime.format( time );
+          }
           // end loop
 
           // sound alarm
             // method: soundAlarm
+          soundAlarm();
     }
 
     /**
