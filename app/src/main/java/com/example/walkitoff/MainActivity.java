@@ -1,8 +1,8 @@
 package com.example.walkitoff;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TimePicker;
@@ -13,7 +13,9 @@ import java.util.Date;
 public class MainActivity extends AppCompatActivity {
 
     int hour, minute;
-    
+
+    MediaPlayer alarm;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -95,7 +97,26 @@ public class MainActivity extends AppCompatActivity {
      */
     private void soundAlarm(){
 
+        // initialize method/variables
+        alarm = MediaPlayer.create( this, R.raw.alarm_sound );
 
+        // play the alarm sound
+        alarm.start();
+
+        // loop the alarm sound
+        alarm.setLooping( true );
+
+    }
+
+    public void stopAlarm( View view ){
+
+        // initialize method/variables
+
+        // stop alarm sound loop
+        alarm.setLooping( false );
+
+        // release the alarm sound
+        alarm.release();
     }
 
 }
