@@ -7,14 +7,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TimePicker;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 public class MainActivity extends AppCompatActivity {
 
     int hour, minute;
 
-    MediaPlayer alarm;
+    MediaPlayer alarmSound;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,89 +36,16 @@ public class MainActivity extends AppCompatActivity {
         // end anonymous class
     }
 
-    /**
-     * concatenates minute to hour
-     * <p>
-     * (ex. hour 23 and minute 12 returns 2312)
-     * @param hour - in 24 hour format
-     * @param minute - minutes 0-59
-     * @return minute concatenated to hour (String)
-     */
-    private String parseTime(int inHour, int inMinute ){
-
-        // return parsed time
-          // method: valueOf
-        return String.valueOf( inHour ) + String.valueOf( inMinute );
-
-    }
-
-    /**
-     * Called when user presses button to set alarm
-     *
-     * @param view - parameter for button view
-     */
     public void setAlarm( View view ){
 
-        // initialize method/variables
+        // initialize alarm sound
+        alarmSound = MediaPlayer.create( this, R.raw.alarm_sound );
 
-          // parse the wake up time
-          String wakeUpTime = parseTime( hour, minute );
-
-          // initialize date objects
-          Date time = new Date();
-          SimpleDateFormat formatTime = new SimpleDateFormat( "HHmm" );
+        // initialize alarm object
+        Alarm alarm = new Alarm( hour, minute, alarmSound );
 
         // set the alarm
-
-          // get current time
-          String currentTime = formatTime.format( time );
-
-          // loop until wakeup time
-          while( !currentTime.equals( wakeUpTime ) ){
-
-              // reinitialize the date object
-              time = new Date();
-
-              // get the current time
-              currentTime = formatTime.format( time );
-          }
-          // end loop
-
-          // sound alarm
-            // method: soundAlarm
-          soundAlarm();
-    }
-
-    /**
-     * plays alarm sound
-     */
-    private void soundAlarm(){
-
-        // initialize method/variables
-        alarm = MediaPlayer.create( this, R.raw.alarm_sound );
-
-        // play the alarm sound
-        alarm.start();
-
-        // loop the alarm sound
-        alarm.setLooping( true );
-
-    }
-
-    /**
-     * stops alarm sound
-     *
-     * @param view - for now, the alarm sound stops on button input for purposes of testing
-     */
-    public void stopAlarm( View view ){
-
-        // initialize method/variables
-
-        // stop alarm sound loop
-        alarm.setLooping( false );
-
-        // release the alarm sound
-        alarm.release();
+        alarm.setAlarm();
     }
 
 }
