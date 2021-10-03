@@ -108,6 +108,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * stops alarm sound
+     *
+     * @param view - for now, the alarm sound stops on button input for purposes of testing
+     */
     public void stopAlarm( View view ){
 
         // initialize method/variables
