@@ -7,33 +7,15 @@ import java.util.Date;
 
 public class Alarm {
 
-    private int hour, minute;
     private String wakeUpTime;
 
     MediaPlayer alarmSound;
 
-    public Alarm( int inHour, int inMinute, MediaPlayer inSound ){
+    public Alarm( Time inTime, MediaPlayer inSound ){
 
         // set member data to parameters
-        hour = inHour;
-        minute = inMinute;
+        wakeUpTime = inTime.parseTime();
         alarmSound = inSound;
-
-        // parse the wake-up time
-        wakeUpTime = parseTime();
-    }
-
-    /**
-     * concatenates minute to hour
-     * <P>
-     * ex. hour 23 and minute 12 returns 2312
-     *
-     * @return formatted time (String)
-     */
-    private String parseTime(){
-
-        // return parsed time
-        return String.valueOf( hour ) + String.valueOf( minute );
     }
 
     /**
