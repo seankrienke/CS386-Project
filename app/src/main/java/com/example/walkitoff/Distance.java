@@ -10,9 +10,12 @@ public class Distance {
     the plan is to create an object
      */
 
-    private int travelledDistance, goalDistance, currentCoordinates, prevCoordinates;
+    private int travelledDistance, goalDistance;
 
-    Location location;
+    private double longitude, latitude;
+
+    private Location location;
+    private LocationManager locationManager;
 
     /*
     default distance goal in feet
@@ -22,32 +25,38 @@ public class Distance {
     /**
      * default constructor
      *
-     * @param locationManager
+     * @param inLocationManager
      */
-    public Distance( LocationManager locationManager ){
+    public Distance( LocationManager inLocationManager ){
 
         travelledDistance = 0;
-        currentCoordinates = 0;
-        prevCoordinates = 0;
+        longitude = 0;
+        latitude = 0;
 
         goalDistance = DEFAULT_GOAL;
+
+        locationManager = inLocationManager;
+        location = null;
 
     }
 
     /**
      * initialization constructor
      *
-     * @param locationManager
+     * @param inLocationManager
      *
      * @param inGoalDistance - user set goal distance
      */
-    public Distance( LocationManager locationManager, int inGoalDistance ){
+    public Distance( LocationManager inLocationManager, int inGoalDistance ){
 
         travelledDistance = 0;
-        currentCoordinates = 0;
-        prevCoordinates = 0;
+        longitude = 0;
+        latitude = 0;
 
         goalDistance = inGoalDistance;
+
+        locationManager = inLocationManager;
+        location = null;
     }
 
     /**
@@ -60,7 +69,7 @@ public class Distance {
         return travelledDistance;
     }
     /**
-     * converts distance to feet (DEFAULT UNIT OF MEASUREMENT UNKNOWN)
+     * converts distance in meters to feet
      *
      * @return - distance in feet
      */
@@ -71,7 +80,9 @@ public class Distance {
     }
 
     /**
-     * called by setAlarm method in Alarm class. Updates distance every one second
+     * called by setAlarm method in Alarm class.
+     * <p>
+     * updates distance every one second until goal distance is reached
      */
     public void trackDistance(){
 
