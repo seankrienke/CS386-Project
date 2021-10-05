@@ -2,6 +2,7 @@ package com.example.walkitoff;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.location.LocationManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -12,6 +13,8 @@ public class MainActivity extends AppCompatActivity {
     int hour, minute;
 
     MediaPlayer alarmSound;
+
+    LocationManager locationManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
