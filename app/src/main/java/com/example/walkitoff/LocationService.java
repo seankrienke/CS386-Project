@@ -36,6 +36,11 @@ public class LocationService {
         updateLocation();
     }
 
+    /**
+     * checks for appropriate location service permissions
+     * <p>
+     * method should always be called before updating location
+     */
     private void checkPermission(){
 
         boolean missingPermissions = ActivityCompat.checkSelfPermission(context,
@@ -45,7 +50,10 @@ public class LocationService {
                         (context, Manifest.permission.ACCESS_COARSE_LOCATION)
                         != PackageManager.PERMISSION_GRANTED;
 
+        // check for missing permissions
         if( missingPermissions ){
+
+            // request permission to access location
             ActivityCompat.requestPermissions( (MainActivity)context,
                     new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_PERMISSION );
         }
@@ -57,8 +65,10 @@ public class LocationService {
      */
     public void updateLocation() {
 
+        // check for appropriate permissions
         checkPermission();
 
+        // update the current location
         currentLocation = locationManager.getLastKnownLocation( LocationManager.GPS_PROVIDER );
 
     }
