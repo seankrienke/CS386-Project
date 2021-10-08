@@ -47,9 +47,12 @@ public class Alarm {
     }
 
     /**
-     * plays alarm sound on a loop
+     * plays alarm sound on a loop until distance reached
      */
     private void playAlarm(){
+
+        // initialize distance tracking
+        distanceTracking = new Distance( locationManager );
 
         // play alarm sound
         alarmSound.start();

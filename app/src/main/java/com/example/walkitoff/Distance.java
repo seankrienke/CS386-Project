@@ -1,7 +1,11 @@
 package com.example.walkitoff;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationManager;
+
+import androidx.core.app.ActivityCompat;
 
 public class Distance {
 
@@ -27,7 +31,7 @@ public class Distance {
      *
      * @param inLocationManager
      */
-    public Distance( LocationManager inLocationManager ){
+    public Distance(LocationManager inLocationManager) {
 
         travelledDistance = 0;
         longitude = 0;
@@ -47,7 +51,7 @@ public class Distance {
      *
      * @param inGoalDistance - user set goal distance
      */
-    public Distance( LocationManager inLocationManager, int inGoalDistance ){
+    public Distance(LocationManager inLocationManager, int inGoalDistance) {
 
         travelledDistance = 0;
         longitude = 0;
@@ -68,15 +72,19 @@ public class Distance {
 
         return travelledDistance;
     }
+
     /**
      * converts distance in meters to feet
      *
      * @return - distance in feet
      */
-    private int toFeet(){
+    private double toFeet(){
+
+        // variables
+        double feetPerMeter = 3.28084;
 
         // temporary return stub
-        return 0;
+        return getTravelledDistance() * feetPerMeter;
     }
 
     /**
@@ -85,6 +93,10 @@ public class Distance {
      * updates distance every one second until goal distance is reached
      */
     public void trackDistance(){
+
+        // variables
+
+        // track distance
 
     }
 
