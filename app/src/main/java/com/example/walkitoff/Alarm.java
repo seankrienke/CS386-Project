@@ -1,7 +1,6 @@
 package com.example.walkitoff;
 
 import android.media.MediaPlayer;
-
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
