@@ -1,1 +1,1 @@
-# CS386-Project
+# CS386-Project (WalkItOff)
