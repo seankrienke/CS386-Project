@@ -13,7 +13,7 @@ import android.widget.TimePicker;
 
 public class MainActivity extends AppCompatActivity {
 
-    int hour, minute;
+    Time timeSetting;
 
     static final int REQUEST_PERMISSION = 1;
 
@@ -38,11 +38,10 @@ public class MainActivity extends AppCompatActivity {
         // create anonymous class for time change listener
         timeSelected.setOnTimeChangedListener(new TimePicker.OnTimeChangedListener() {
             @Override
-            public void onTimeChanged(TimePicker timePicker, int chosenHour, int chosenMinute) {
+            public void onTimeChanged(TimePicker timePicker, int inHour, int inMinute) {
 
                 // save the chosen hour and minute
-                hour = chosenHour;
-                minute = chosenMinute;
+                timeSetting = new Time( inHour, inMinute );
             }
         });
         // end anonymous class
@@ -59,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         alarmSound = MediaPlayer.create( this, R.raw.alarm_sound );
 
         // initialize alarm object
-        Alarm alarm = new Alarm( hour, minute, alarmSound );
+        Alarm alarm = new Alarm( timeSetting, alarmSound );
 
         // set the alarm
         alarm.setAlarm();
