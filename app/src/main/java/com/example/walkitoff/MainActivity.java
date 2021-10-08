@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     MediaPlayer alarmSound;
 
     LocationManager locationManager;
+    Location location;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
