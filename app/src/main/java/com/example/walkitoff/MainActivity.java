@@ -20,9 +20,6 @@ public class MainActivity extends AppCompatActivity {
 
     MediaPlayer alarmSound;
 
-    LocationManager locationManager;
-    Location location;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,9 +28,6 @@ public class MainActivity extends AppCompatActivity {
         // TODO: get permission for location services
         ActivityCompat.requestPermissions( this,
                 new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_PERMISSION );
-
-        // initialize location manager
-        locationManager = (LocationManager)getSystemService( LOCATION_SERVICE );
 
         // initialize time picker
         TimePicker timeSelected = findViewById( R.id.timepicker );
@@ -67,8 +61,6 @@ public class MainActivity extends AppCompatActivity {
 
          LocationService locationService = new LocationService();
 
-         Toast.makeText
-                 ( this,locationService.getLatitude(), Toast.LENGTH_SHORT ).show();
     }
 
 }
