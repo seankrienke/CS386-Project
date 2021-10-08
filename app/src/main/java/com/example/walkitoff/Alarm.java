@@ -1,5 +1,6 @@
 package com.example.walkitoff;
 
+import android.location.LocationManager;
 import android.media.MediaPlayer;
 
 import java.text.SimpleDateFormat;
@@ -19,7 +20,7 @@ public class Alarm {
     }
 
     /**
-     * plays alarm sound on a loop
+     * plays alarm sound on a loop until distance reached
      */
     private void playAlarm(){
 
