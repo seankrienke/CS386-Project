@@ -1,7 +1,9 @@
 package com.example.walkitoff;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
+import android.Manifest;
 import android.location.LocationManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -11,6 +13,8 @@ import android.widget.TimePicker;
 public class MainActivity extends AppCompatActivity {
 
     int hour, minute;
+
+    static final int REQUEST_PERMISSION = 1;
 
     MediaPlayer alarmSound;
 
@@ -22,6 +26,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // TODO: get permission for location services
+        ActivityCompat.requestPermissions( this,
+                new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_PERMISSION );
+
+        // initialize location manager
+        locationManager = (LocationManager)getSystemService( LOCATION_SERVICE );
 
         // initialize time picker
         TimePicker timeSelected = findViewById( R.id.timepicker );
@@ -45,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         alarmSound = MediaPlayer.create( this, R.raw.alarm_sound );
 
         // initialize alarm object
-        Alarm alarm = new Alarm( hour, minute, alarmSound );
+        Alarm alarm = new Alarm( hour, minute, alarmSound, locationManager );
 
         // set the alarm
         alarm.setAlarm();
