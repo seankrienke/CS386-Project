@@ -13,9 +13,7 @@ public class LocationService extends MainActivity {
     updates user location and provides information related to current location
      */
 
-    /*
-    location member data
-     */
+    // member data
     LocationManager locationManager;
     Location currentLocation;
 
