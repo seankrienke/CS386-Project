@@ -13,12 +13,7 @@ public class Alarm {
 
     MediaPlayer alarmSound;
 
-    Distance distanceTracking;
-
-    LocationManager locationManager;
-
-    public Alarm( int inHour, int inMinute, MediaPlayer inSound,
-                  LocationManager inLocationManager ){
+    public Alarm( int inHour, int inMinute, MediaPlayer inSound ){
 
         // set member data to parameters
         hour = inHour;
@@ -27,9 +22,6 @@ public class Alarm {
 
         // parse the wake-up time
         wakeUpTime = parseTime();
-
-        locationManager = inLocationManager;
-
 
     }
 
@@ -50,9 +42,6 @@ public class Alarm {
      * plays alarm sound on a loop until distance reached
      */
     private void playAlarm(){
-
-        // initialize distance tracking
-        distanceTracking = new Distance( locationManager );
 
         // play alarm sound
         alarmSound.start();
