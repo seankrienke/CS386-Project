@@ -1,43 +1,53 @@
 package com.example.walkitoff;
 
 import android.Manifest;
-import android.content.Context;
 import android.content.pm.PackageManager;
-import android.location.Location;
 import android.location.LocationManager;
 
 import androidx.core.app.ActivityCompat;
 
 public class LocationService extends MainActivity {
 
-    Location location;
-    LocationManager locationManager;
-
     /**
-     * initialization constructor
-     *<p>
-     * checks for user permission before anything else
-     *
-     * @param inManager - location manager object to update current location
+     * Constructor gets current location when initialized
      */
-    public LocationService(LocationManager inManager, Location inLocation) {
+    public LocationService() {
 
-        locationManager = inManager;
-        location = inLocation;
+        getCurrentLocation();
     }
 
     public void getCurrentLocation() {
 
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
-            return;
+        if (ActivityCompat.checkSelfPermission(this,
+                Manifest.permission.ACCESS_FINE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED &&
+                ActivityCompat.checkSelfPermission
+                        (this, Manifest.permission.ACCESS_COARSE_LOCATION)
+                        != PackageManager.PERMISSION_GRANTED) {
+
+            ActivityCompat.requestPermissions( this,
+                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_PERMISSION );
         }
         location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+    }
+
+    /**
+     * gets longitude of this location
+     *
+     * @return longitude (String)
+     */
+    public String getLongitude(){
+
+        return String.valueOf( location.getLongitude() );
+    }
+
+    /**
+     * gets latitude of this location
+     *
+     * @return latitude (String)
+     */
+    public String getLatitude(){
+
+        return String.valueOf( location.getLatitude() );
     }
 }
