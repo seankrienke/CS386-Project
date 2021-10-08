@@ -4,9 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
+import android.location.LocationManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.TimePicker;
 
 public class MainActivity extends AppCompatActivity {
@@ -17,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
 
     MediaPlayer alarmSound;
 
+    LocationManager locationManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
         // TODO: get permission for location services
         ActivityCompat.requestPermissions( this,
                 new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_PERMISSION );
+
+        locationManager = (LocationManager)getSystemService( LOCATION_SERVICE );
 
         // initialize time picker
         TimePicker timeSelected = findViewById( R.id.timepicker );
@@ -42,6 +48,11 @@ public class MainActivity extends AppCompatActivity {
         // end anonymous class
     }
 
+    /**
+     * called by a button/switch to set the alarm with a given sound
+     *
+     * @param view - parameter so that button can call method
+     */
     public void setAlarm( View view ){
 
         // initialize alarm sound
@@ -54,9 +65,18 @@ public class MainActivity extends AppCompatActivity {
         alarm.setAlarm();
     }
 
-    public void showCoordinates( View view){
+    /**
+     * for testing
+     *
+     * @param view - parameter so that button can call method
+     */
+    public void showCoordinates( View view ){
 
-         LocationService locationService = new LocationService();
+        LocationService locationData = new LocationService( this, locationManager );
+
+        TextView text = findViewById( R.id.textView );
+
+        text.setText( locationData.parseLongitude() + " " + locationData.parseLatitude() );
 
     }
 

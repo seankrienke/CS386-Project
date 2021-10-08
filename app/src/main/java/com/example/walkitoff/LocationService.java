@@ -1,32 +1,55 @@
 package com.example.walkitoff;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationManager;
 
 import androidx.core.app.ActivityCompat;
 
-public class LocationService extends MainActivity {
+public class LocationService {
 
     /*
     updates user location and provides information related to current location
      */
 
+    // constants
+    private static final int REQUEST_PERMISSION = 1;
+
     // member data
-    LocationManager locationManager;
-    Location currentLocation;
+    private Location currentLocation;
+    private LocationManager locationManager;
+
+    Context context;
 
     /**
      * Constructor gets current location when initialized
      */
-    public LocationService() {
+    public LocationService( Context activity, LocationManager inManager ) {
 
-        // initialize location manager and get current location
-        locationManager = ( LocationManager )getSystemService( LOCATION_SERVICE );
+        context = activity;
+
+        locationManager = inManager;
+
+        // get current location
         updateLocation();
     }
 
+    private void checkPermission(){
+
+        boolean missingPermissions = ActivityCompat.checkSelfPermission(context,
+                Manifest.permission.ACCESS_FINE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED &&
+                ActivityCompat.checkSelfPermission
+                        (context, Manifest.permission.ACCESS_COARSE_LOCATION)
+                        != PackageManager.PERMISSION_GRANTED;
+
+        if( missingPermissions ){
+            ActivityCompat.requestPermissions( (MainActivity)context,
+                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_PERMISSION );
+        }
+    }
     /**
      * gets the last known location from location manager via gps services.
      * <p>
@@ -34,22 +57,10 @@ public class LocationService extends MainActivity {
      */
     public void updateLocation() {
 
-        // check if permission to access location services has not been granted
-        if (ActivityCompat.checkSelfPermission(this,
-                Manifest.permission.ACCESS_FINE_LOCATION)
-                != PackageManager.PERMISSION_GRANTED &&
-                ActivityCompat.checkSelfPermission
-                        (this, Manifest.permission.ACCESS_COARSE_LOCATION)
-                        != PackageManager.PERMISSION_GRANTED) {
+        checkPermission();
 
-            // request permission
-            ActivityCompat.requestPermissions( this,
-                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_PERMISSION );
-        }
-        else{
-            // otherwise, assume permission granted and get last known location
-            currentLocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-        }
+        currentLocation = locationManager.getLastKnownLocation( LocationManager.GPS_PROVIDER );
+
     }
 
     /**
