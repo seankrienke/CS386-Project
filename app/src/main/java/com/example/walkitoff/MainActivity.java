@@ -10,6 +10,7 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -60,6 +61,14 @@ public class MainActivity extends AppCompatActivity {
 
         // set the alarm
         alarm.setAlarm();
+    }
+
+    public void showCoordinates( View view){
+
+         LocationService locationService = new LocationService();
+
+         Toast.makeText
+                 ( this,locationService.getLatitude(), Toast.LENGTH_SHORT ).show();
     }
 
 }
