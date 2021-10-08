@@ -26,10 +26,10 @@ public class MainActivity extends AppCompatActivity {
         // create anonymous class for time change listener
         timeSelected.setOnTimeChangedListener(new TimePicker.OnTimeChangedListener() {
             @Override
-            public void onTimeChanged(TimePicker timePicker, int chosenHour, int chosenMinute) {
+            public void onTimeChanged(TimePicker timePicker, int inHour, int inMinute) {
 
                 // save the chosen hour and minute
-                timeSetting = new Time( chosenHour, chosenMinute );
+                timeSetting = new Time( inHour, inMinute );
             }
         });
         // end anonymous class
