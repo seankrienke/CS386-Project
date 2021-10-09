@@ -1,3 +1,7 @@
 ## 1. System description
-There are so many of us out there who want to improve their sleep schedules to add structure to their daily lives, but being stuck in bad habits can make something simple be so difficult.
+The problem of committing to a consistent sleep schedule is
+something that affects night owls who want to transition to a morning bird,
+the impact of which is a loss of time during the day and a loss of motivation.
+Walk It Off is a fitness-oriented alarm clock app that helps motivate users
+to build better and healthier habits.
 ## 2. Model
