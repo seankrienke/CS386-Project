@@ -26,10 +26,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // TODO: get permission for location services
+        // request permission for location services
         ActivityCompat.requestPermissions( this,
                 new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_PERMISSION );
 
+        // get location services
         locationManager = (LocationManager)getSystemService( LOCATION_SERVICE );
 
         // initialize time picker
@@ -65,13 +66,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * for testing
+     * for testing purposes
+     *<p>
+     * called by alarm button to show coordinates
      *
      * @param view - parameter so that button can call method
      */
     public void showCoordinates( View view ){
 
-        LocationService locationData = new LocationService( this, locationManager );
+        LocationData locationData = new LocationData( this, locationManager );
 
         TextView text = findViewById( R.id.textView );
 
