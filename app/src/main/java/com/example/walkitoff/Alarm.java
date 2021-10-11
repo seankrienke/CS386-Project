@@ -26,7 +26,7 @@ public class Alarm {
         // play alarm sound
         alarmSound.start();
 
-        // set loop
+        // set sound loop
         alarmSound.setLooping( true );
     }
 
@@ -63,7 +63,7 @@ public class Alarm {
      */
     public void stopAlarm(){
 
-        // stop loop
+        // stop sound loop
         alarmSound.setLooping( false );
 
         // release alarm sound

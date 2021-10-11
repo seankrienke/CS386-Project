@@ -8,7 +8,7 @@ import android.location.LocationManager;
 
 import androidx.core.app.ActivityCompat;
 
-public class LocationService {
+public class LocationData {
 
     /*
     updates user location and provides information related to current location
@@ -21,12 +21,12 @@ public class LocationService {
     private Location currentLocation;
     private LocationManager locationManager;
 
-    Context context;
+    private Context context;
 
     /**
      * Constructor gets current location when initialized
      */
-    public LocationService( Context activity, LocationManager inManager ) {
+    public LocationData( Context activity, LocationManager inManager ) {
 
         context = activity;
 
