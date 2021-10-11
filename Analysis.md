@@ -16,7 +16,9 @@ up to. When the **alarm** sounds, the only way to shut if off is to walk a *pred
 by the user, but the minimum is 500 feet). There will be a **scorekeeping system**, and every foot travelled equates to a single
 point that will go towards the user's *all-time score*. When a certain amount of *points* are accumulated, the user will be able to
 unlock new features such as a new alarm sound or a *new theme* such as dark mode. For those who are only concerned about the fitness
-aspect of the app, there will be an option to track walking distance without having to set an alarm.
+aspect of the app, there will be an option to track walking distance without having to set an alarm.<br>
+<br>
+The user can save their alarm as an **alarm preset**.
 
 
 ## 2. Model
