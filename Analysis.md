@@ -19,6 +19,9 @@ unlock new features such as a new alarm sound or a *new theme* such as dark mode
 aspect of the app, there will be an option to track walking distance without having to set an alarm.<br>
 <br>
 The user can save their alarm as an **alarm preset**.
+The user can change the alarm **sound setting** based on their **score**.
+The user can set their *goal distance* and their specified **unit of measurement**
+The user can change their **theme** according to how many *points* they have accumulated.
 
 
 ## 2. Model
