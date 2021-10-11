@@ -9,8 +9,9 @@ their alarm off and go back to bed and want the motivation for self-improvement,
 Walk It Off is a lifestyle app that improves both the user health and self-discipline. Unlike
 stock alarm apps that merely wake up the user, Walk It Off wakes up the user and also makes them
 get up. Walk It Off is a lifestyle app that gives those who struggle to stick to a consistent sleep schedule
-the motivation to do so.
-	Fundamentally, the app will need to accept user input for the time to wake up and the alarm sound to wake
+the motivation to do so. <br>
+<br>
+Fundamentally, the app will need to accept user input for the time to wake up and the alarm sound to wake
 up to. When the alarm sounds, the only way to shut if off is to walk a predetermined distance (this distance can be set
 by the user, but the minimum is 500 feet). There will be a scorekeeping system, and every foot travelled equates to a single
 point that will go towards the user's all-time score. When a certain amount of points are accumulated, the user will be able to
