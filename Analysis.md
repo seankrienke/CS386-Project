@@ -22,3 +22,4 @@ The user can save their alarm as an **alarm preset**.
 
 
 ## 2. Model
+![image](https://user-images.githubusercontent.com/89943041/136730113-74d7a241-e965-413d-88a1-19065f3780e7.png)
