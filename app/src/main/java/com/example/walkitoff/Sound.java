@@ -51,4 +51,25 @@ public class Sound extends MainActivity{
         // TODO: add all other sounds accordingly once we have other sounds
     }
 
+    /**
+     * checks if the user has the required score to use the sound (called before adding sound to
+     * unlocked sound array)
+     *
+     * @param sound - alarm sound that may or may not be added to unlocked sound array
+     */
+    private void checkWithScore( MediaPlayer sound ){
+
+    }
+
+    /**
+     * finds sound in unlocked sound array
+     *
+     * @param Sound - alarm sound to match to array
+     *
+     * @return sound if found in unlocked sound array, null otherwise
+     */
+    public Sound chooseSound( MediaPlayer Sound ){
+
+    }
+
 }
