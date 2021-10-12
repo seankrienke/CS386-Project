@@ -120,7 +120,7 @@ public class LocationData extends MainActivity implements LocationListener {
 
     /**
      * DO NOTHING (EXISTS ONLY TO GET RID OF BUILD ERROR)
-     * 
+     *
      * @param location
      */
     @Override
