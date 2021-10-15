@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         MediaPlayer alarmSound = MediaPlayer.create( this, R.raw.alarm_sound );
 
         // initialize alarm object
-        Alarm alarm = new Alarm( timeSetting, alarmSound );
+        Alarm alarm = new Alarm( this, timeSetting, alarmSound );
 
         // set the alarm
         alarm.setAlarm();
