@@ -60,20 +60,6 @@ public class Distance {
     }
 
     /**
-     * converts distance in meters to feet
-     *
-     * @return - distance in feet
-     */
-    private double toFeet(){
-
-        // variables
-        double feetPerMeter = 3.28084;
-
-        // temporary return stub
-        return getTravelledDistance() * feetPerMeter;
-    }
-
-    /**
      * called by setAlarm method in Alarm class.
      * <p>
      * updates distance every one second until goal distance is reached
