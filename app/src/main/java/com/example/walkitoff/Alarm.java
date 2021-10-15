@@ -13,10 +13,10 @@ public class Alarm {
     MediaPlayer alarmSound;
     Context mainContext;
 
-    public Alarm(Context context, Time inTime, MediaPlayer inSound ){
+    public Alarm(Context context, String inTime, MediaPlayer inSound ){
 
         // set member data to parameters
-        wakeUpTime = inTime.parseTime();
+        wakeUpTime = inTime;
         alarmSound = inSound;
 
         mainContext = context;
