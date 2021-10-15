@@ -16,8 +16,6 @@ public class MainActivity extends AppCompatActivity {
 
     static final int REQUEST_PERMISSION = 1;
 
-    MediaPlayer alarmSound;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
     public void setAlarm( View view ){
 
         // initialize alarm sound
-        alarmSound = MediaPlayer.create( this, R.raw.alarm_sound );
+        MediaPlayer alarmSound = MediaPlayer.create( this, R.raw.alarm_sound );
 
         // initialize alarm object
         Alarm alarm = new Alarm( timeSetting, alarmSound );
