@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
-import android.location.LocationManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -19,8 +18,6 @@ public class MainActivity extends AppCompatActivity {
 
     MediaPlayer alarmSound;
 
-    LocationManager locationManager;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,9 +26,6 @@ public class MainActivity extends AppCompatActivity {
         // request permission for location services
         ActivityCompat.requestPermissions( this,
                 new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_PERMISSION );
-
-        // get location services
-        locationManager = (LocationManager)getSystemService( LOCATION_SERVICE );
 
         // initialize time picker
         TimePicker timeSelected = findViewById( R.id.timepicker );
