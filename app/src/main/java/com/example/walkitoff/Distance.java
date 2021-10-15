@@ -1,11 +1,8 @@
 package com.example.walkitoff;
 
-import android.Manifest;
-import android.content.pm.PackageManager;
+import android.content.Context;
 import android.location.Location;
 import android.location.LocationManager;
-
-import androidx.core.app.ActivityCompat;
 
 public class Distance {
 
@@ -16,10 +13,9 @@ public class Distance {
 
     private int travelledDistance, goalDistance;
 
-    private double longitude, latitude;
-
-    private Location location;
     private LocationManager locationManager;
+
+    private Context mainContext;
 
     /*
     default distance goal in feet
@@ -29,38 +25,28 @@ public class Distance {
     /**
      * default constructor
      *
-     * @param inLocationManager
      */
-    public Distance(LocationManager inLocationManager) {
+    public Distance( Context context ) {
 
         travelledDistance = 0;
-        longitude = 0;
-        latitude = 0;
 
         goalDistance = DEFAULT_GOAL;
 
-        locationManager = inLocationManager;
-        location = null;
-
+        mainContext = context;
     }
 
     /**
      * initialization constructor
      *
-     * @param inLocationManager
-     *
      * @param inGoalDistance - user set goal distance
      */
-    public Distance(LocationManager inLocationManager, int inGoalDistance) {
+    public Distance( Context context, int inGoalDistance ) {
 
         travelledDistance = 0;
-        longitude = 0;
-        latitude = 0;
 
         goalDistance = inGoalDistance;
 
-        locationManager = inLocationManager;
-        location = null;
+        mainContext = context;
     }
 
     /**
