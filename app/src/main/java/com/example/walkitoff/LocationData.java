@@ -10,7 +10,7 @@ import android.location.LocationManager;
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 
-public class LocationData extends MainActivity implements LocationListener {
+public class LocationData implements LocationListener {
 
     /*
     updates user location and provides information related to current location. This class can be
