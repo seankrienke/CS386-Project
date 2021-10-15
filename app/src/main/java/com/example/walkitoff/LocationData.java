@@ -29,11 +29,11 @@ public class LocationData implements LocationListener {
     /**
      * Constructor gets current location when initialized
      */
-    public LocationData( Context activity, LocationManager inManager ) {
+    public LocationData( Context activity ) {
 
         context = activity;
 
-        locationManager = inManager;
+        locationManager = ( LocationManager )context.getSystemService( Context.LOCATION_SERVICE );
 
         // get current location
         updateLocation();

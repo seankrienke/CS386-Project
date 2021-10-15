@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void showCoordinates( View view ){
 
-        LocationData locationData = new LocationData( this, locationManager );
+        LocationData locationData = new LocationData( this );
 
         TextView text = findViewById( R.id.textView );
 
