@@ -1,5 +1,6 @@
 package com.example.walkitoff;
 
+import android.content.Context;
 import android.location.LocationManager;
 import android.media.MediaPlayer;
 import java.text.SimpleDateFormat;
@@ -10,12 +11,15 @@ public class Alarm {
     private String wakeUpTime;
 
     MediaPlayer alarmSound;
+    Context mainContext;
 
-    public Alarm( Time inTime, MediaPlayer inSound ){
+    public Alarm(Context context, String inTime, MediaPlayer inSound ){
 
         // set member data to parameters
-        wakeUpTime = inTime.parseTime();
+        wakeUpTime = inTime;
         alarmSound = inSound;
+
+        mainContext = context;
     }
 
     /**

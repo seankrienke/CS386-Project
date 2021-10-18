@@ -12,8 +12,10 @@ public class Sound extends MainActivity{
     // constants
     private static int DEFAULT_CAPACITY = 10;
 
-    // array of alarm sounds that the user can choose from
-    private MediaPlayer[] soundArray;
+    // array of alarm sounds that the user can choose from and array of every alarm sound
+    private MediaPlayer[] unlockedSoundArray, everySoundArray;
+
+    // sounds
     private MediaPlayer defaultSound;
 
     private int arraySize, arrayCapacity;
@@ -23,14 +25,6 @@ public class Sound extends MainActivity{
      */
     public Sound(){
 
-        // initialize array
-        arraySize = 0;
-        arrayCapacity = DEFAULT_CAPACITY;
-        soundArray = new MediaPlayer[ arrayCapacity ];
-        defaultSound = MediaPlayer.create( this, R.raw.alarm_sound );
-
-        // add all unlocked sounds
-        addAllUnlockedSounds();
     }
 
     /**
@@ -40,11 +34,7 @@ public class Sound extends MainActivity{
      */
     private void addSound( MediaPlayer sound ){
 
-        // add sound to array size
-        soundArray[ arraySize ] = sound;
 
-        // increment array size
-        arraySize++;
     }
 
     /**
@@ -59,6 +49,27 @@ public class Sound extends MainActivity{
         addSound( defaultSound );
 
         // TODO: add all other sounds accordingly once we have other sounds
+    }
+
+    /**
+     * checks if the user has the required score to use the sound (called before adding sound to
+     * unlocked sound array)
+     *
+     * @param sound - alarm sound that may or may not be added to unlocked sound array
+     */
+    private void checkWithScore( MediaPlayer sound ){
+
+    }
+
+    /**
+     * finds sound in unlocked sound array
+     *
+     * @param Sound - alarm sound to match to array
+     *
+     * @return sound if found in unlocked sound array, null otherwise
+     */
+    public Sound chooseSound( MediaPlayer Sound ){
+
     }
 
 }

@@ -4,14 +4,17 @@ import android.Manifest;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.location.Location;
+import android.location.LocationListener;
 import android.location.LocationManager;
 
+import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 
-public class LocationData {
+public class LocationData implements LocationListener {
 
     /*
-    updates user location and provides information related to current location
+    updates user location and provides information related to current location. This class can be
+    considered a location listener as well.
      */
 
     // constants
@@ -26,11 +29,11 @@ public class LocationData {
     /**
      * Constructor gets current location when initialized
      */
-    public LocationData( Context activity, LocationManager inManager ) {
+    public LocationData( Context activity ) {
 
         context = activity;
 
-        locationManager = inManager;
+        locationManager = ( LocationManager )context.getSystemService( Context.LOCATION_SERVICE );
 
         // get current location
         updateLocation();
@@ -58,18 +61,38 @@ public class LocationData {
                     new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_PERMISSION );
         }
     }
+
+    /**
+     * this method is for accessing the last known location outside of this class
+     *
+     * @return - currentLocation (Location)
+     */
+    public Location currentLocation(){
+
+    }
+
     /**
      * gets the last known location from location manager via gps services.
      * <p>
      * note: checks for permission granted before getting the current location
      */
-    public void updateLocation() {
+    public void getLastLocation() {
 
         // check for appropriate permissions
         checkPermission();
 
         // update the current location
         currentLocation = locationManager.getLastKnownLocation( LocationManager.GPS_PROVIDER );
+
+    }
+
+    /**
+     * updates the location
+     *
+     * note: uses locationManager's requestLocationUpdates with gps provider passed. This class
+     * can also be considered a location listener
+     */
+    public void updateLocation(){
 
     }
 
@@ -93,5 +116,15 @@ public class LocationData {
 
         // return string value of latitude
         return String.valueOf( currentLocation.getLatitude() );
+    }
+
+    /**
+     * DO NOTHING (EXISTS ONLY TO GET RID OF BUILD ERROR)
+     *
+     * @param location
+     */
+    @Override
+    public void onLocationChanged(@NonNull Location location) {
+
     }
 }

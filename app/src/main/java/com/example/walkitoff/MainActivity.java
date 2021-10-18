@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
-import android.location.LocationManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -17,10 +16,6 @@ public class MainActivity extends AppCompatActivity {
 
     static final int REQUEST_PERMISSION = 1;
 
-    MediaPlayer alarmSound;
-
-    LocationManager locationManager;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,9 +24,6 @@ public class MainActivity extends AppCompatActivity {
         // request permission for location services
         ActivityCompat.requestPermissions( this,
                 new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_PERMISSION );
-
-        // get location services
-        locationManager = (LocationManager)getSystemService( LOCATION_SERVICE );
 
         // initialize time picker
         TimePicker timeSelected = findViewById( R.id.timepicker );
@@ -56,10 +48,10 @@ public class MainActivity extends AppCompatActivity {
     public void setAlarm( View view ){
 
         // initialize alarm sound
-        alarmSound = MediaPlayer.create( this, R.raw.alarm_sound );
+        MediaPlayer alarmSound = MediaPlayer.create( this, R.raw.alarm_sound );
 
         // initialize alarm object
-        Alarm alarm = new Alarm( timeSetting, alarmSound );
+        Alarm alarm = new Alarm( this, timeSetting.parseTime(), alarmSound );
 
         // set the alarm
         alarm.setAlarm();
@@ -74,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void showCoordinates( View view ){
 
-        LocationData locationData = new LocationData( this, locationManager );
+        LocationData locationData = new LocationData( this );
 
         TextView text = findViewById( R.id.textView );
 
