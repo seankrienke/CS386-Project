@@ -1,8 +1,6 @@
 package com.example.walkitoff;
 
 import android.content.Context;
-import android.location.Location;
-import android.location.LocationManager;
 
 public class Distance {
 
@@ -12,8 +10,6 @@ public class Distance {
      */
 
     private int travelledDistance, goalDistance;
-
-    private LocationManager locationManager;
 
     private Context mainContext;
 
