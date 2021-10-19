@@ -26,9 +26,11 @@ public class UnitsOfMeasurement {
      */
     public double toFeet(){
 
+        // variables
+        double feetPerMeter = 3.208;
 
         // temp return stub
-        return 0;
+        return distance * feetPerMeter;
     }
 
     /**
@@ -38,8 +40,11 @@ public class UnitsOfMeasurement {
      */
     public double toKilometers(){
 
+        // variables
+        double kilometersPerMeter = 0.001;
+
         // temp return stub
-        return 0;
+        return distance * kilometersPerMeter;
     }
 
     /**
@@ -60,8 +65,11 @@ public class UnitsOfMeasurement {
      */
     public double toMiles(){
 
+        // variables
+        double milesPerMeter = 0.000621371;
+
         // temp return stub
-        return 0;
+        return distance * milesPerMeter;
     }
 
     /**
@@ -71,7 +79,10 @@ public class UnitsOfMeasurement {
      */
     public double toYards(){
 
+        // variables
+        double yardsPerMeter = 1.09361;
+
         // temp return stub
-        return 0;
+        return distance * yardsPerMeter;
     }
 }
