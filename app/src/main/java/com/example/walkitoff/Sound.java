@@ -17,14 +17,17 @@ public class Sound extends MainActivity{
 
     // sounds
     private MediaPlayer defaultSound;
+    private MediaPlayer soundOne;
+    private MediaPlayer soundTwo;
+    private MediaPlayer soundThree;
 
     private int arraySize, arrayCapacity;
 
     /**
      * default constructor
      */
-    public Sound(){
-
+    public Sound( int capacity ){
+        DEFAULT_CAPACITY = capacity;
     }
 
     /**
@@ -49,6 +52,9 @@ public class Sound extends MainActivity{
         addSound( defaultSound );
 
         // TODO: add all other sounds accordingly once we have other sounds
+        addSound( soundOne );
+        addSound( soundTwo );
+        addSound( soundThree );
     }
 
     /**
