@@ -76,6 +76,5 @@ public class MainActivity extends AppCompatActivity {
         // set the alarm
         alarm.setAlarm();
     }
-    
 
 }
