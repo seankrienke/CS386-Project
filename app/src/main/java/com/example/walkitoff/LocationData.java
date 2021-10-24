@@ -71,7 +71,7 @@ public class LocationData implements LocationListener {
      */
     public Location currentLocation(){
 
-        return null;
+        return currentLocation;
 
     }
 
