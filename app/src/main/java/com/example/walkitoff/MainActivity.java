@@ -117,12 +117,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
 
-        if( i == 0 ){
-            chosenSound = DEFAULT;
-        }
-        else{
-            chosenSound = UNLOCKED;
-        }
+        chosenSound = adapterView.getItemAtPosition( i ).toString();
     }
 
     @Override
