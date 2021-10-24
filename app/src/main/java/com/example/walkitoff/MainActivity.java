@@ -108,6 +108,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         if( i == 0 ){
             chosenSound = MediaPlayer.create( this, R.raw.alarm_sound );
         }
+        else if( i == 1 ){
+            chosenSound = MediaPlayer.create( this, R.raw.second_alarm__sound );
+        }
     }
 
     @Override
