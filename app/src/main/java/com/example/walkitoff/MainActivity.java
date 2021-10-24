@@ -1,9 +1,20 @@
 package com.example.walkitoff;
-
+/* TODO
+- uncomment score Methods
+- uncomment score variables
+- Make connect Activity
+- Connect to DB
+- Load Values from DB
+- Constructor
+- Get methods
+- changed multyplyer
+-
+* */
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -17,6 +28,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     Time timeSetting;
     String chosenSound;
+  
+    public static String uID,uName,uDistance,uScore,uLevel;
 
     static final int REQUEST_PERMISSION = 1;
     static final String DEFAULT = "Default";
@@ -72,6 +85,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         soundSpinner.setAdapter( soundAdapter );
     }
+
+    //This is our login activity being created.
+    public void connectDB(View view){
+
+        Intent intent = new Intent(this, ConnectDB.class);
+        startActivity(intent);
+    }
+
 
     /**
      * called by a button/switch to set the alarm with a given sound

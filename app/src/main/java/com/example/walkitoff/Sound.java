@@ -68,9 +68,8 @@ public class Sound extends MainActivity{
      *
      * @return sound if found in unlocked sound array, null otherwise
      */
-    public Sound chooseSound( MediaPlayer Sound ){
+    /*public Sound chooseSound( MediaPlayer Sound ){
 
-        return null;
-    }
+    }*/
 
 }
