@@ -76,22 +76,6 @@ public class MainActivity extends AppCompatActivity {
         // set the alarm
         alarm.setAlarm();
     }
-
-    /**
-     * for testing purposes
-     *<p>
-     * called by alarm button to show coordinates
-     *
-     * @param view - parameter so that button can call method
-     */
-    public void showCoordinates( View view ){
-
-        LocationData locationData = new LocationData( this );
-
-        TextView text = findViewById( R.id.textView );
-
-        text.setText( locationData.parseLongitude() + " " + locationData.parseLatitude() );
-
-    }
+    
 
 }
