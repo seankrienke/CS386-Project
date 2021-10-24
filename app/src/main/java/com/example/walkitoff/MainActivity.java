@@ -7,12 +7,13 @@ import android.Manifest;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     Time timeSetting;
 
@@ -42,6 +43,10 @@ public class MainActivity extends AppCompatActivity {
         // end anonymous class
 
         fillMenu();
+
+        Spinner soundSpinner = findViewById( R.id.soundspinner );
+
+        soundSpinner.setOnItemSelectedListener( this );
     }
 
     /**
@@ -98,4 +103,13 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+        
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
+
+    }
 }
