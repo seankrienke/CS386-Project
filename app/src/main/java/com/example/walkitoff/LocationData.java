@@ -111,28 +111,6 @@ public class LocationData implements LocationListener {
     }
 
     /**
-     * gets longitude of this location
-     *
-     * @return longitude (String)
-     */
-    public String parseLongitude(){
-
-        // return string value of longitude
-        return String.valueOf( currentLocation.getLongitude() );
-    }
-
-    /**
-     * gets latitude of this location
-     *
-     * @return latitude (String)
-     */
-    public String parseLatitude(){
-
-        // return string value of latitude
-        return String.valueOf( currentLocation.getLatitude() );
-    }
-
-    /**
      * DO NOTHING (EXISTS ONLY TO GET RID OF BUILD ERROR)
      *
      * @param location
