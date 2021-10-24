@@ -1,9 +1,20 @@
 package com.example.walkitoff;
-
+/* TODO
+- uncomment score Methods
+- uncomment score variables
+- Make connect Activity
+- Connect to DB
+- Load Values from DB
+- Constructor
+- Get methods
+- changed multyplyer
+-
+* */
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +24,7 @@ import android.widget.TimePicker;
 public class MainActivity extends AppCompatActivity {
 
     Time timeSetting;
+    public static String uID,uName,uDistance,uScore,uLevel;
 
     static final int REQUEST_PERMISSION = 1;
 
@@ -39,6 +51,14 @@ public class MainActivity extends AppCompatActivity {
         });
         // end anonymous class
     }
+
+    //This is our login activity being created.
+    public void connectDB(View view){
+
+        Intent intent = new Intent(this, ConnectDB.class);
+        startActivity(intent);
+    }
+
 
     /**
      * called by a button/switch to set the alarm with a given sound
