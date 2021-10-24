@@ -64,7 +64,11 @@ public class Distance {
 
         // variables
 
-        // track distance
+        // loop while travelled distance less tha goal distance
+
+          // call update distance
+
+        // end loop
 
     }
 
