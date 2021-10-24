@@ -8,7 +8,10 @@ public class Score {
      */
 
     // member data
-    private int totalScore, userLevel;
+    private int totalScore, userLevel, scoreReq;
+    userLevel = 1;
+    totalScore = 0;
+    scoreReq = 200;
 
     /**
      * default constructor
@@ -22,6 +25,29 @@ public class Score {
      */
     private void calcLevel(){
 
+        int multiplyer, scoreCurrent, maxLvl;
+        multiplyer = 1.3;
+        maxLvl = 15;
+
+        scoreCurrent = totalScore;
+
+        if (scoreCurrent >= scoreReq)
+            {
+                userLevel += 1;
+                scoreCurrent = scoreCurrent - scoreReq;
+                scoreReq = scoreReq * multiplyer;
+                while((scoreReq % 10) != 0)
+                    {
+                        scoreReq += 1;
+                    }
+            }
+
+        if (userLevel == maxLvl)
+            {
+                scoreCurrent = scoreReq;
+            }
+
+        totalScore = scoreCurrent;
     }
 
     /**
@@ -57,6 +83,8 @@ public class Score {
      */
     public int totalScore(){
 
+        return totalScore;
+
     }
 
     /**
@@ -67,6 +95,7 @@ public class Score {
      */
     public void updateScore( int points ){
 
+        totalScore = points + totalScore;
 
     }
 
@@ -76,6 +105,8 @@ public class Score {
      * @return userLevel (int)
      */
     public int userLevel(){
+
+        return userLevel;
 
     }
 }
