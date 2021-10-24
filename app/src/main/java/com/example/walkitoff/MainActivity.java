@@ -16,6 +16,7 @@ import android.widget.TimePicker;
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     Time timeSetting;
+    MediaPlayer chosenSound;
 
     static final int REQUEST_PERMISSION = 1;
 
@@ -54,14 +55,15 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
      */
     private void fillMenu(){
 
-        MediaPlayer[] array = new MediaPlayer[ 2 ];
+        String[] array = new String[ 2 ];
 
-        array[ 0 ] = MediaPlayer.create( this, R.raw.alarm_sound );
+        array[ 0 ] = "Default";
+        array[ 1 ] = "New Sound";
 
         Spinner soundSpinner = findViewById( R.id.soundspinner );
 
-        ArrayAdapter<MediaPlayer> soundAdapter =
-                new ArrayAdapter<MediaPlayer>( this,
+        ArrayAdapter<String> soundAdapter =
+                new ArrayAdapter<String>( this,
                         android.R.layout.simple_list_item_1, array );
 
         soundAdapter.setDropDownViewResource( android.R.layout.simple_spinner_dropdown_item );
@@ -76,11 +78,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
      */
     public void setAlarm( View view ){
 
-        // initialize alarm sound
-        MediaPlayer alarmSound = MediaPlayer.create( this, R.raw.alarm_sound );
-
         // initialize alarm object
-        Alarm alarm = new Alarm( this, timeSetting.parseTime(), alarmSound );
+        Alarm alarm = new Alarm( this, timeSetting.parseTime(), chosenSound );
 
         // set the alarm
         alarm.setAlarm();
@@ -105,7 +104,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-        
+
+        if( i == 0 ){
+            chosenSound = MediaPlayer.create( this, R.raw.alarm_sound );
+        }
     }
 
     @Override

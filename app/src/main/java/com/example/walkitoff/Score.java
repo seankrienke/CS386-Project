@@ -8,10 +8,9 @@ public class Score {
      */
 
     // member data
-    private int totalScore, userLevel, scoreReq;
-    userLevel = 1;
-    totalScore = 0;
-    scoreReq = 200;
+    private int userLevel = 1;
+    private double totalScore = 0;
+    private double scoreReq = 200;
 
     /**
      * default constructor
@@ -25,8 +24,8 @@ public class Score {
      */
     private void calcLevel(){
 
-        int multiplyer, scoreCurrent, maxLvl;
-        multiplyer = 1.3;
+        int maxLvl;
+        double scoreCurrent, multiplyer = 1.3;
         maxLvl = 15;
 
         scoreCurrent = totalScore;
@@ -57,6 +56,7 @@ public class Score {
      */
     private int getLevelFromServer(){
 
+        return 0;
     }
 
     /**
@@ -66,6 +66,7 @@ public class Score {
      */
     private int getScoreFromServer(){
 
+        return 0;
     }
 
     /**
@@ -81,7 +82,7 @@ public class Score {
      *
      * @return totalScore (int)
      */
-    public int totalScore(){
+    public double totalScore(){
 
         return totalScore;
 
