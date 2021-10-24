@@ -1,6 +1,7 @@
 package com.example.walkitoff;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.location.Location;
@@ -8,6 +9,7 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 public class LocationData implements LocationListener {
@@ -69,6 +71,8 @@ public class LocationData implements LocationListener {
      */
     public Location currentLocation(){
 
+        return null;
+
     }
 
     /**
@@ -92,7 +96,17 @@ public class LocationData implements LocationListener {
      * note: uses locationManager's requestLocationUpdates with gps provider passed. This class
      * can also be considered a location listener
      */
+    @SuppressLint("MissingPermission")
     public void updateLocation(){
+        try{
+            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 5000, 5, LocationData.this );
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+        
+        getLastLocation();
 
     }
 
