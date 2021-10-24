@@ -7,6 +7,8 @@ import android.Manifest;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
@@ -38,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         // end anonymous class
+
+        fillMenu();
     }
 
     /**
@@ -45,6 +49,19 @@ public class MainActivity extends AppCompatActivity {
      */
     private void fillMenu(){
 
+        MediaPlayer[] array = new MediaPlayer[ 2 ];
+
+        array[ 0 ] = MediaPlayer.create( this, R.raw.alarm_sound );
+
+        Spinner soundSpinner = findViewById( R.id.soundspinner );
+
+        ArrayAdapter<MediaPlayer> soundAdapter =
+                new ArrayAdapter<MediaPlayer>( this,
+                        android.R.layout.simple_list_item_1, array );
+
+        soundAdapter.setDropDownViewResource( android.R.layout.simple_spinner_dropdown_item );
+
+        soundSpinner.setAdapter( soundAdapter );
     }
 
     /**
