@@ -41,6 +41,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
+     * fills the drop down spinner menu with unlocked sounds
+     */
+    private void fillMenu(){
+
+    }
+
+    /**
      * called by a button/switch to set the alarm with a given sound
      *
      * @param view - parameter so that button can call method
