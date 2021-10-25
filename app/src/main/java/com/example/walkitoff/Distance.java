@@ -25,11 +25,7 @@ public class Distance {
      */
     public Distance( Context context ) {
 
-        travelledDistance = 0;
-
-        goalDistance = DEFAULT_GOAL;
-
-        mainContext = context;
+        this( context, DEFAULT_GOAL );
     }
 
     /**
@@ -51,7 +47,7 @@ public class Distance {
      *
      * @return travelledDistance
      */
-    public int getTravelledDistance(){
+    public double getTravelledDistance(){
 
         return travelledDistance;
     }
@@ -63,12 +59,12 @@ public class Distance {
      */
     public void trackDistance(){
 
-        // variables
-
         // loop while travelled distance less tha goal distance
+        while( travelledDistance < goalDistance ){
 
-          // call update distance
-
+            // call update distance
+            updateDistance();
+        }
         // end loop
 
     }
@@ -78,16 +74,19 @@ public class Distance {
      */
     private void updateDistance(){
 
-        // variables
         LocationData locationTracker = new LocationData( mainContext );
 
-        int addedDistance;
+        double addedDistance;
 
         Location prevLocation = locationTracker.currentLocation();
 
         locationTracker.updateLocation();
 
         addedDistance = locationTracker.currentLocation().distanceTo( prevLocation );
+
+        addedDistance = new UnitsOfMeasurement( addedDistance ).toFeet();
+
+        travelledDistance += addedDistance;
     }
 
 }
