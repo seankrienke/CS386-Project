@@ -23,7 +23,7 @@ import android.widget.TimePicker;
 
 public class MainActivity extends AppCompatActivity {
 
-    Time timeSetting;
+    String timeSetting;
     public static String uID,uName,uDistance,uScore,uLevel;
 
     static final int REQUEST_PERMISSION = 1;
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
             public void onTimeChanged(TimePicker timePicker, int inHour, int inMinute) {
 
                 // save the chosen hour and minute
-                timeSetting = new Time( inHour, inMinute );
+                timeSetting = new Time( inHour, inMinute ).parseTime();
             }
         });
         // end anonymous class
