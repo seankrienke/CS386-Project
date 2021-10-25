@@ -33,8 +33,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public static String uID,uName,uDistance,uScore,uLevel;
 
     static final int REQUEST_PERMISSION = 1;
-    static final String DEFAULT = "Default";
-    static final String UNLOCKED = "New Sound";
+
+    int level = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,16 +71,13 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
      */
     private void fillMenu(){
 
-        String[] array = new String[ 2 ];
-
-        array[ 0 ] = DEFAULT;
-        array[ 1 ] = UNLOCKED;
+        Sound soundOptions = new Sound( this, level );
 
         Spinner soundSpinner = findViewById( R.id.soundspinner );
 
         ArrayAdapter<String> soundAdapter =
                 new ArrayAdapter<String>( this,
-                        android.R.layout.simple_list_item_1, array );
+                        android.R.layout.simple_list_item_1, soundOptions.unlockedSoundArray );
 
         soundAdapter.setDropDownViewResource( android.R.layout.simple_spinner_dropdown_item );
 
@@ -102,21 +99,16 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
      */
     public void setAlarm( View view ){
 
-        MediaPlayer alarmSound;
+        MediaPlayer alarmSound = new Sound( this, level ).chooseSound( chosenSound );
 
-        if( chosenSound.equals( DEFAULT ) ){
-
-            alarmSound = MediaPlayer.create( this, R.raw.alarm_sound );
-        }
-        else{
-
-            alarmSound = MediaPlayer.create( this, R.raw.second_alarm__sound );
-        }
         // initialize alarm object
         Alarm alarm = new Alarm( this, timeSetting, alarmSound );
 
         // set the alarm
         alarm.setAlarm();
+
+        // increment level
+        level++;
     }
 
     @Override
@@ -128,7 +120,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
 
-        chosenSound = DEFAULT;
+        chosenSound = Sound.DEFAULT_SOUND;
     }
 
 }

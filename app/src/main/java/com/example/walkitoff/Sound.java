@@ -44,6 +44,8 @@ public class Sound extends MainActivity{
         userLevel = level;
 
         mainContext = context;
+
+        addAllUnlockedSounds();
     }
 
     /**
