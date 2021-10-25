@@ -1,6 +1,7 @@
 package com.example.walkitoff;
 
 import android.content.Context;
+import android.location.Location;
 
 public class Distance {
 
@@ -9,7 +10,7 @@ public class Distance {
     the plan is to create an object
      */
 
-    private int travelledDistance, goalDistance;
+    private double travelledDistance, goalDistance;
 
     private Context mainContext;
 
@@ -77,6 +78,16 @@ public class Distance {
      */
     private void updateDistance(){
 
+        // variables
+        LocationData locationTracker = new LocationData( mainContext );
+
+        int addedDistance;
+
+        Location prevLocation = locationTracker.currentLocation();
+
+        locationTracker.updateLocation();
+
+        addedDistance = locationTracker.currentLocation().distanceTo( prevLocation );
     }
 
 }
