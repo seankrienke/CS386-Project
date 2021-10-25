@@ -32,6 +32,9 @@ public class Alarm {
 
         // set sound loop
         alarmSound.setLooping( true );
+
+        // initiate alarm stop
+        stopAlarm();
     }
 
     /**
