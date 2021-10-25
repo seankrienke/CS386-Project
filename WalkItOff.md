@@ -17,14 +17,17 @@ Issue: https://github.com/aidenhalili/CS386-Project/blob/main/app/src/main/java/
 Pull Request: https://github.com/aidenhalili/CS386-Project/commit/4a38340273f577702dfd406ee4a760aa4907cf18      
 Implemented by: Aiden                                     
 Approved by: Aiden                                     
-Print Screen:
+Print Screen:![Screenshot_20211024-212223_WalkItOff12](https://user-images.githubusercontent.com/89927293/138635210-9a9cb06c-5873-4687-813c-2e9f8ebfb793.jpg)
+
+                                                                             
 
 Requirement: As a user, I want to complete the distance to turn off the alarm.                       
 Issue: https://github.com/aidenhalili/CS386-Project/blob/main/app/src/main/java/com/example/walkitoff/Distance.java                            
 Pull Request: https://github.com/aidenhalili/CS386-Project/commit/7a51479cd78e16b29d85715cacb6659d639ddb48                             
 Implemented by: Aiden, Justin                                                
 Approved by: Aiden                                             
-Print Screen:                    
+Print Screen:             ![Screenshot_20211024-212223_WalkItOff12](https://user-images.githubusercontent.com/89927293/138635334-fe8c82e7-bd9f-44c9-8cff-1f071a8e318f.jpg)
+                                                              
 
 Requirement: As a user, I want to see my total score.                                 
 Issue: https://github.com/aidenhalili/CS386-Project/blob/main/app/src/main/java/com/example/walkitoff/Score.java                                   
@@ -32,13 +35,16 @@ Pull Request: https://github.com/aidenhalili/CS386-Project/commit/f76d54b393b3da
 Implemented by: Nick, Jake                                               
 Approved by: Aiden                                                           
 Print Screen:
+![Screenshot_20211024-205624_WalkItOff3](https://user-images.githubusercontent.com/89927293/138635246-074011d8-fd08-49dc-b537-25e26af4c0b0.jpg)
 
+                                                                
 Requirement: As a user, I want to unlock new features so that I can have fun.                                                    
 Issue: https://github.com/aidenhalili/CS386-Project/blob/main/app/src/main/java/com/example/walkitoff/Sound.java                           
 Pull Request: https://github.com/aidenhalili/CS386-Project/pull/52                   
 Implemented by: Michael, Aiden                              
 Approved by: Aiden                          
-Print Screen:                                                                                   
+Print Screen:                   ![Screenshot_20211024-212223_WalkItOff12](https://user-images.githubusercontent.com/89927293/138635371-96e85f5e-4e59-4e0f-8e47-5f246031ac1a.jpg)
+                                                                                                                                       
 
 
 **#3. Tests**
