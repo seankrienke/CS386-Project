@@ -1,5 +1,8 @@
 package com.example.walkitoff;
 
+import android.content.Context;
+import android.media.MediaPlayer;
+
 public class Sound extends MainActivity{
 
     /*
@@ -11,7 +14,7 @@ public class Sound extends MainActivity{
     private static int DEFAULT_CAPACITY = 10;
 
     // array of alarm sounds that the user can choose from and array of every alarm sound
-    private String[] unlockedSoundArray;
+    public static String[] unlockedSoundArray;
 
     // sounds
     public static String DEFAULT_SOUND = "Default";
@@ -21,22 +24,26 @@ public class Sound extends MainActivity{
 
     private int arraySize, arrayCapacity, userLevel;
 
+    Context mainContext;
+
     /**
      * default constructor
      */
-    public Sound( int level ){
+    public Sound( Context context, int level ){
 
-        this( DEFAULT_CAPACITY, level );
+        this( context, DEFAULT_CAPACITY, level );
     }
 
     /**
      * initialization constructor
      */
-    public Sound( int capacity, int level ){
+    public Sound( Context context, int capacity, int level ){
         arrayCapacity = capacity;
         arraySize = 0;
         unlockedSoundArray = new String[ arrayCapacity ];
         userLevel = level;
+
+        mainContext = context;
     }
 
     /**
@@ -113,8 +120,16 @@ public class Sound extends MainActivity{
      *
      * @return sound if found in unlocked sound array, null otherwise
      */
-    public Sound chooseSound( MediaPlayer Sound ){
+    public MediaPlayer chooseSound( String soundName ){
 
+        if( soundName.equals( DEFAULT_SOUND ) ){
+
+            return MediaPlayer.create( mainContext, R.raw.alarm_sound );
+        }
+        else{
+
+            return MediaPlayer.create( mainContext, R.raw.second_alarm__sound );
+        }
     }
 
 }
