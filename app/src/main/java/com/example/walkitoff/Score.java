@@ -32,7 +32,7 @@ public class Score {
     private void calcLevel(){
 
         int maxLvl = 15;
-        double scoreCurrent, multiplyer = 1.3;
+        int scoreCurrent, multiplyer = 2;
 
         scoreCurrent = totalScore;
 
