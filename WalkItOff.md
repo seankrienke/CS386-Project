@@ -12,6 +12,28 @@ Trello:   https://trello.com/cs386walkitoff/members?utm_source=eval-email&utm_me
 **#2. Implementation Requirements**
 
 
+Requirement: As a user, I want to set an alarm. 
+Issue: https://github.com/aidenhalili/CS386-Project/blob/main/app/src/main/java/com/example/walkitoff/Alarm.java
+Pull Request: https://github.com/aidenhalili/CS386-Project/commit/4a38340273f577702dfd406ee4a760aa4907cf18
+Implemented by: Aiden
+Approved by: Aiden
+Print Screen:
+
+Requirement: As a user, I want to complete the distance to turn off the alarm. 
+Issue: https://github.com/aidenhalili/CS386-Project/blob/main/app/src/main/java/com/example/walkitoff/Distance.java
+Pull Request: https://github.com/aidenhalili/CS386-Project/commit/7a51479cd78e16b29d85715cacb6659d639ddb48
+Implemented by: Aiden
+Approved by: Aiden
+Print Screen:
+
+Requirement: As a user, I want to see my total score. 
+Issue: https://github.com/aidenhalili/CS386-Project/blob/main/app/src/main/java/com/example/walkitoff/Score.java
+Pull Request: https://github.com/aidenhalili/CS386-Project/commit/f76d54b393b3da167dbb6a5de2fa97db301dec0b
+Implemented by: Aiden
+Approved by: Aiden
+Print Screen:
+
+
 **#3. Tests**
 
 
