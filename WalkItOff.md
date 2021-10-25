@@ -89,7 +89,9 @@ We have decided to adopt this license as a means to keep our code safe and prote
 **#8. Readme File**
 
 Code of conduct: https://github.com/aidenhalili/CS386-Project/blob/main/CODE_OF_CONDUCT.md
+
 Contributing: https://github.com/aidenhalili/CS386-Project/blob/main/CONTRIBUTING.md
+
 Readme: https://github.com/aidenhalili/CS386-Project/blob/main/README.md
 
 
