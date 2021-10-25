@@ -13,7 +13,7 @@ public class Score {
      */
 
     // member data
-    private int totalScore, userLevel, scoreReq;
+    private static int totalScore, userLevel, scoreReq;
     //userLevel = 1;
     //totalScore = 0;
     //scoreReq = 200;
