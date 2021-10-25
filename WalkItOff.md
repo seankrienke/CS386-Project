@@ -75,9 +75,14 @@ System: https://aws.amazon.com/rds/
 
 
 **#7. Licensing**
+https://www.apache.org/licenses/LICENSE-2.0
+We have decided to adopt this license as a means to keep our code safe and protected so that people would not maliciously steal any code or property that our group has created outside of the original owners of the code we had adopted from them. This License specifically gives a free reign for anyone wanting to modify or mess with it but only under the given permission from the file owner. If the License is broken or violated, necessary actions would need to be taken.
+
 
 
 **#8. Readme File**
+Contributing: https://github.com/aidenhalili/CS386-Project/blob/main/CONTRIBUTING.md
+Readme: https://github.com/aidenhalili/CS386-Project/blob/main/README.md
 
 
 **#9. Look & Feel**
