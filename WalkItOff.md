@@ -103,7 +103,8 @@ before setting the alarm. We made sure to include a minimal amount of self expla
 There is also a button to log in to the server, which is something that the developers use for testing and will be altered for the final product.
 
 ![](https://github.com/aidenhalili/CS386-Project/blob/main/Screenshot1.jpg?raw=true)
-![Screenshot_20211024-212223_WalkItOff12](https://user-images.githubusercontent.com/89927293/138636081-796cb83e-a371-4895-bd89-d827943e5086.jpg)
+![Screenshot_20211024-205624_WalkItOff3](https://user-images.githubusercontent.com/89927293/138636181-120b50ec-e4d6-485d-8c32-d1e0eac86325.jpg)
+
 
 
 **#10. Lessons Learned**
