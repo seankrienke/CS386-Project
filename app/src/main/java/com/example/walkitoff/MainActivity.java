@@ -18,15 +18,23 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
+    String chosenSound;
+  
     String timeSetting;
+
     public static String uID,uName,uDistance,uScore,uLevel;
 
     static final int REQUEST_PERMISSION = 1;
+    static final String DEFAULT = "Default";
+    static final String UNLOCKED = "New Sound";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +58,33 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         // end anonymous class
+
+        fillMenu();
+
+        Spinner soundSpinner = findViewById( R.id.soundspinner );
+
+        soundSpinner.setOnItemSelectedListener( this );
+    }
+
+    /**
+     * fills the drop down spinner menu with unlocked sounds
+     */
+    private void fillMenu(){
+
+        String[] array = new String[ 2 ];
+
+        array[ 0 ] = DEFAULT;
+        array[ 1 ] = UNLOCKED;
+
+        Spinner soundSpinner = findViewById( R.id.soundspinner );
+
+        ArrayAdapter<String> soundAdapter =
+                new ArrayAdapter<String>( this,
+                        android.R.layout.simple_list_item_1, array );
+
+        soundAdapter.setDropDownViewResource( android.R.layout.simple_spinner_dropdown_item );
+
+        soundSpinner.setAdapter( soundAdapter );
     }
 
     //This is our login activity being created.
@@ -67,14 +102,33 @@ public class MainActivity extends AppCompatActivity {
      */
     public void setAlarm( View view ){
 
-        // initialize alarm sound
-        MediaPlayer alarmSound = MediaPlayer.create( this, R.raw.alarm_sound );
+        MediaPlayer alarmSound;
 
+        if( chosenSound.equals( DEFAULT ) ){
+
+            alarmSound = MediaPlayer.create( this, R.raw.alarm_sound );
+        }
+        else{
+
+            alarmSound = MediaPlayer.create( this, R.raw.second_alarm__sound );
+        }
         // initialize alarm object
         Alarm alarm = new Alarm( this, timeSetting, alarmSound );
 
         // set the alarm
         alarm.setAlarm();
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+        chosenSound = adapterView.getItemAtPosition( i ).toString();
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
+
+        chosenSound = DEFAULT;
     }
 
 }

@@ -31,9 +31,8 @@ public class Score {
      */
     private void calcLevel(){
 
-        int multiplyer, scoreCurrent, maxLvl;
-        multiplyer = (int)1.3;
-        maxLvl = 15;
+        int maxLvl = 15;
+        double scoreCurrent, multiplyer = 1.3;
 
         scoreCurrent = totalScore;
 
@@ -64,6 +63,7 @@ public class Score {
      * @return user level (int)
      */
     private int getLevelFromServer(){
+      
         return Integer.parseInt(MainActivity.uLevel);
     }
 
@@ -74,6 +74,7 @@ public class Score {
      * @return total score (int)
      */
     private int getScoreFromServer(){
+
         return Integer.parseInt(MainActivity.uScore);
     }
 
@@ -98,7 +99,7 @@ public class Score {
      *
      * @return totalScore (int)
      */
-    public int totalScore(){
+    public double totalScore(){
 
         return totalScore;
 
