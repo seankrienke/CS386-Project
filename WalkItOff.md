@@ -45,8 +45,7 @@ in other features besides the alarm, and they also didn't care for extensive ala
 before setting the alarm. We made sure to include a minimal amount of self explanatory buttons so that users can instantly learn how to use the app.
 There is also a button to log in to the server, which is something that the developers use for testing and will be altered for the final product.
 
-![](Screenshot1.jpg)
-![](Screenshot2.jpg)
+
 
 **#10. Lessons Learned**
 
