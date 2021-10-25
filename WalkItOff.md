@@ -40,6 +40,11 @@ System: https://aws.amazon.com/rds/
 
 **#9. Look & Feel**
 
+We wanted the look to be simple and accessible. Based on our interviews, we found that the interviewees don't see a significant value
+in other features besides the alarm, and they also didn't care for extensive alarm customization. The user only needs to have a time and sound selected
+before setting the alarm. We made sure to include a minimal amount of self explanatory buttons so that users can instantly learn how to use the app.
+There is also a button to log in to the server, which is something that the developers use for testing and will be altered for the final product.
+
 
 **#10. Lessons Learned**
 
@@ -47,4 +52,4 @@ In retrospective our team found themselves learning far more than anticipated. T
 
 **#11. Demo
 
-https://www.youtube.com/watch?v=QrXdFJhgnxM
+Link - [https://www.youtube.com/watch?v=QrXdFJhgnxM)
