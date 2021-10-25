@@ -20,6 +20,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
@@ -33,8 +34,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public static String uID,uName,uDistance,uScore,uLevel;
 
     static final int REQUEST_PERMISSION = 1;
-    static final String DEFAULT = "Default";
-    static final String UNLOCKED = "New Sound";
+
+    int level = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,7 +64,17 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         Spinner soundSpinner = findViewById( R.id.soundspinner );
 
-        soundSpinner.setOnItemSelectedListener( this );
+        soundSpinner.setOnItemSelectedListener(this);
+
+        Button unlockButton = findViewById( R.id.unlockbutton );
+
+        unlockButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                fillMenu();
+            }
+        });
     }
 
     /**
@@ -71,16 +82,20 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
      */
     private void fillMenu(){
 
-        String[] array = new String[ 2 ];
+        String[] localSoundArray = new String[ level + 1 ];
 
-        array[ 0 ] = DEFAULT;
-        array[ 1 ] = UNLOCKED;
+        localSoundArray[ 0 ] = Sound.DEFAULT_SOUND;
+
+        if( level >= 1 ){
+
+            localSoundArray[ 1 ] = Sound.SOUND_ONE;
+        }
 
         Spinner soundSpinner = findViewById( R.id.soundspinner );
 
         ArrayAdapter<String> soundAdapter =
                 new ArrayAdapter<String>( this,
-                        android.R.layout.simple_list_item_1, array );
+                        android.R.layout.simple_list_item_1, localSoundArray );
 
         soundAdapter.setDropDownViewResource( android.R.layout.simple_spinner_dropdown_item );
 
@@ -104,19 +119,22 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         MediaPlayer alarmSound;
 
-        if( chosenSound.equals( DEFAULT ) ){
+        if( chosenSound.equals( Sound.DEFAULT_SOUND ) ){
 
             alarmSound = MediaPlayer.create( this, R.raw.alarm_sound );
         }
         else{
-
             alarmSound = MediaPlayer.create( this, R.raw.second_alarm__sound );
         }
+
         // initialize alarm object
         Alarm alarm = new Alarm( this, timeSetting, alarmSound );
 
         // set the alarm
         alarm.setAlarm();
+
+        // increment level
+        level++;
     }
 
     @Override
@@ -128,7 +146,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
 
-        chosenSound = DEFAULT;
+        chosenSound = Sound.DEFAULT_SOUND;
     }
 
 }

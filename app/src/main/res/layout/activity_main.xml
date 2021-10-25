@@ -27,7 +27,6 @@
         app:layout_constraintTop_toBottomOf="@+id/timepicker" />
 
 
-
     <Spinner
         android:id="@+id/soundspinner"
         android:layout_width="0dp"
@@ -53,6 +52,15 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <Button
+        android:id="@+id/unlockbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="11dp"
+        android:text="Claim Unlocks"
+        app:layout_constraintStart_toStartOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/timepicker" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
