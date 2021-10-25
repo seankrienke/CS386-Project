@@ -29,9 +29,16 @@ Print Screen:
 Requirement: As a user, I want to see my total score.                                 
 Issue: https://github.com/aidenhalili/CS386-Project/blob/main/app/src/main/java/com/example/walkitoff/Score.java                                   
 Pull Request: https://github.com/aidenhalili/CS386-Project/commit/f76d54b393b3da167dbb6a5de2fa97db301dec0b                                     
-Implemented by: Aiden, Nick                                               
+Implemented by: Nick, Jake                                               
 Approved by: Aiden                                                           
-Print Screen:                                                              
+Print Screen:
+
+Requirement: As a user, I want to unlock new features so that I can have fun.
+Issue: https://github.com/aidenhalili/CS386-Project/blob/main/app/src/main/java/com/example/walkitoff/Sound.java
+Pull Request: https://github.com/aidenhalili/CS386-Project/pull/52
+Implemented by: Michael, Aiden
+Approved by: Aiden
+Print Screen:                                                           
 
 
 **#3. Tests**
