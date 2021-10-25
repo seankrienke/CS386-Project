@@ -26,6 +26,8 @@ Trello:   https://trello.com/cs386walkitoff/members?utm_source=eval-email&utm_me
  
 Our app will be deployed on android devices in production using the google play store. Our Database runs on the Amazon Web Services Relation Database service, using MYSQL.
 
+System: https://developer.android.com/distribute/google-play
+
 System: https://aws.amazon.com/rds/
 
 
