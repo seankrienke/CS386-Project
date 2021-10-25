@@ -40,7 +40,21 @@ Print Screen:
 **#4. Adopted Technologies**
 
 
+1. __Android Studio__ - Used for UI design, implementation of android app -- We chose this because it is the framework required to build an android app
+
+2. __MediaPlayer Class__ - Class inside Android Studio, used to control playback of audio -- We chose this because it was a built in class that met all of our sound needs
+
+3. __LocationManager Class__ - Class inside Android Studio, used to access location services on Android device -- We chose this because it was the simplest implementation of what we required in a location class, and it did not require using google play services
+
+4. __MySQL Database Management System__ - Third party software used to store user information on a separate server -- We chose this because we are the most familiar with this database management system, and it offers all the services we need to track our users data 
+
+
+
 **#5. Learning/training**
+
+The strategy that our team used to learn the adopted technologies was the extreme programming strategy. This strategy was useful because it allowed us to work efficiently,  
+and by planning in small batches of work we were able to learn as we contributed to the project. The fine scale feedback aspect of extreme programming led to great communication amongst the team members, and if one of us ran into an issue or found out new useful information we would share it with the other team members. Continuous integration by submitting pull requests to the project also allowed us to see how others solved issues we might be having, and discussing it with each other furthered everyone's understanding of the technologies we were using. Communication was key in getting started with the technologies we are using, and extreme programming was a major part in that.
+
 
 
 **#6. Deployment**
