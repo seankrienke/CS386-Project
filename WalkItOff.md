@@ -59,8 +59,7 @@ Print Screen:
 
 **#5. Learning/training**
 
-The strategy that our team used to learn the adopted technologies was the extreme programming strategy. This strategy was useful because it allowed us to work efficiently,  
-and by planning in small batches of work we were able to learn as we contributed to the project. The fine scale feedback aspect of extreme programming led to great communication amongst the team members, and if one of us ran into an issue or found out new useful information we would share it with the other team members. Continuous integration by submitting pull requests to the project also allowed us to see how others solved issues we might be having, and discussing it with each other furthered everyone's understanding of the technologies we were using. Communication was key in getting started with the technologies we are using, and extreme programming was a major part in that.
+The strategy that our team used to learn the adopted technologies was the extreme programming strategy. This strategy was useful because it allowed us to work efficiently, and by planning in small batches of work we were able to learn as we contributed to the project. The fine scale feedback aspect of extreme programming led to great communication amongst the team members, and if one of us ran into an issue or found out new useful information we would share it with the other team members. Continuous integration by submitting pull requests to the project also allowed us to see how others solved issues we might be having, and discussing it with each other furthered everyone's understanding of the technologies we were using. Communication was key in getting started with the technologies we are using, and extreme programming was a major part in that.
 
 
 
