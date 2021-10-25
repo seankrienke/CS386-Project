@@ -33,12 +33,12 @@ Implemented by: Nick, Jake
 Approved by: Aiden                                                           
 Print Screen:
 
-Requirement: As a user, I want to unlock new features so that I can have fun.
-Issue: https://github.com/aidenhalili/CS386-Project/blob/main/app/src/main/java/com/example/walkitoff/Sound.java
-Pull Request: https://github.com/aidenhalili/CS386-Project/pull/52
-Implemented by: Michael, Aiden
-Approved by: Aiden
-Print Screen:                                                           
+Requirement: As a user, I want to unlock new features so that I can have fun.                                                    
+Issue: https://github.com/aidenhalili/CS386-Project/blob/main/app/src/main/java/com/example/walkitoff/Sound.java                           
+Pull Request: https://github.com/aidenhalili/CS386-Project/pull/52                   
+Implemented by: Michael, Aiden                              
+Approved by: Aiden                          
+Print Screen:                                                                                   
 
 
 **#3. Tests**
