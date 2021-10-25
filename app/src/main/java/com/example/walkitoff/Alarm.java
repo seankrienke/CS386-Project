@@ -70,6 +70,9 @@ public class Alarm {
      */
     public void stopAlarm(){
 
+        // start tracking distance at test distance of 30 feet
+        new Distance( mainContext, 30 ).trackDistance();
+
         // stop sound loop
         alarmSound.setLooping( false );
 
