@@ -62,7 +62,18 @@ System: https://aws.amazon.com/rds/
 
 **#9. Look & Feel**
 
+We wanted the look to be simple and accessible. Based on our interviews, we found that the interviewees don't see a significant value
+in other features besides the alarm, and they also didn't care for extensive alarm customization. The user only needs to have a time and sound selected
+before setting the alarm. We made sure to include a minimal amount of self explanatory buttons so that users can instantly learn how to use the app.
+There is also a button to log in to the server, which is something that the developers use for testing and will be altered for the final product.
+
+![](https://github.com/aidenhalili/CS386-Project/blob/main/Screenshot1.jpg?raw=true)
+![](https://github.com/aidenhalili/CS386-Project/blob/main/Screenshot2.jpg?raw=true)
 
 **#10. Lessons Learned**
 
 In retrospective our team found themselves learning far more than anticipated. There was a general consensus that the proper use of and knowledge of tools such as IDE’s API’s etc, are paramount and cannot be emphasized enough. We found that tracking and motivating individual developer performance can have challenges aswell.
+
+**#11. Demo
+
+Link - [https://www.youtube.com/watch?v=QrXdFJhgnxM)
