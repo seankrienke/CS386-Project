@@ -1,4 +1,4 @@
-# CS386-Project (Walkitoff v. )
+# CS386-Project (Walkitoff v. 1.0.0)
 
 ## Project Description
 
