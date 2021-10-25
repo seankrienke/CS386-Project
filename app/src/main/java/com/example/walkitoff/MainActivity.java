@@ -23,7 +23,7 @@ import android.widget.TimePicker;
 
 public class MainActivity extends AppCompatActivity {
 
-    Time timeSetting;
+    String timeSetting;
     public static String uID,uName,uDistance,uScore,uLevel;
 
     static final int REQUEST_PERMISSION = 1;
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
             public void onTimeChanged(TimePicker timePicker, int inHour, int inMinute) {
 
                 // save the chosen hour and minute
-                timeSetting = new Time( inHour, inMinute );
+                timeSetting = new Time( inHour, inMinute ).parseTime();
             }
         });
         // end anonymous class
@@ -71,27 +71,10 @@ public class MainActivity extends AppCompatActivity {
         MediaPlayer alarmSound = MediaPlayer.create( this, R.raw.alarm_sound );
 
         // initialize alarm object
-        Alarm alarm = new Alarm( this, timeSetting.parseTime(), alarmSound );
+        Alarm alarm = new Alarm( this, timeSetting, alarmSound );
 
         // set the alarm
         alarm.setAlarm();
-    }
-
-    /**
-     * for testing purposes
-     *<p>
-     * called by alarm button to show coordinates
-     *
-     * @param view - parameter so that button can call method
-     */
-    public void showCoordinates( View view ){
-
-        LocationData locationData = new LocationData( this );
-
-        TextView text = findViewById( R.id.textView );
-
-        text.setText( locationData.parseLongitude() + " " + locationData.parseLatitude() );
-
     }
 
 }
