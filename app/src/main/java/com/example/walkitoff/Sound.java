@@ -82,8 +82,28 @@ public class Sound extends MainActivity{
      *
      * @param sound - alarm sound that may or may not be added to unlocked sound array
      */
-    private void checkWithScore( String soundName ){
+    private boolean checkWithScore( String soundName ){
 
+        if( soundName.equals( DEFAULT_SOUND ) && userLevel >= 1 ){
+
+            return true;
+        }
+        else if( soundName.equals( SOUND_ONE ) && userLevel >= 2 ){
+
+            return true;
+
+        }
+        else if( soundName.equals( SOUND_TWO ) && userLevel >= 3 ){
+
+            return true;
+        }
+        else if( soundName.equals( SOUND_THREE ) && userLevel >= 4 ){
+
+            return true;
+
+        }
+
+        return false;
     }
 
     /**
@@ -93,8 +113,8 @@ public class Sound extends MainActivity{
      *
      * @return sound if found in unlocked sound array, null otherwise
      */
-    /*public Sound chooseSound( MediaPlayer Sound ){
+    public Sound chooseSound( MediaPlayer Sound ){
 
-    }*/
+    }
 
 }
