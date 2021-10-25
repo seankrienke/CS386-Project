@@ -71,13 +71,20 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
      */
     private void fillMenu(){
 
-        Sound soundOptions = new Sound( this, level );
+        String[] localSoundArray = new String[ level + 1 ];
+
+        localSoundArray[ 0 ] = Sound.DEFAULT_SOUND;
+
+        if( level >= 1 ){
+
+            localSoundArray[ 1 ] = Sound.SOUND_ONE;
+        }
 
         Spinner soundSpinner = findViewById( R.id.soundspinner );
 
         ArrayAdapter<String> soundAdapter =
                 new ArrayAdapter<String>( this,
-                        android.R.layout.simple_list_item_1, soundOptions.unlockedSoundArray );
+                        android.R.layout.simple_list_item_1, localSoundArray );
 
         soundAdapter.setDropDownViewResource( android.R.layout.simple_spinner_dropdown_item );
 
@@ -99,7 +106,15 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
      */
     public void setAlarm( View view ){
 
-        MediaPlayer alarmSound = new Sound( this, level ).chooseSound( chosenSound );
+        MediaPlayer alarmSound;
+
+        if( chosenSound.equals( Sound.DEFAULT_SOUND ) ){
+
+            alarmSound = MediaPlayer.create( this, R.raw.alarm_sound );
+        }
+        else{
+            alarmSound = MediaPlayer.create( this, R.raw.second_alarm__sound );
+        }
 
         // initialize alarm object
         Alarm alarm = new Alarm( this, timeSetting, alarmSound );
