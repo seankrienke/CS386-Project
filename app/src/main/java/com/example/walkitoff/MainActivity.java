@@ -64,17 +64,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         Spinner soundSpinner = findViewById( R.id.soundspinner );
 
-        soundSpinner.setOnItemSelectedListener(this);
-
-        Button unlockButton = findViewById( R.id.unlockbutton );
-
-        unlockButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                fillMenu();
-            }
-        });
+        soundSpinner.setOnItemSelectedListener( this );
     }
 
     /**
