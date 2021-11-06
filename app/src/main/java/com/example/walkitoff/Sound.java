@@ -80,6 +80,7 @@ public class Sound extends MainActivity{
         arraySize++;
 
         unlockedSoundArray = addSound( unlockedSoundArray, arraySize, SOUND_THREE );
+        arraySize++;
 
         return unlockedSoundArray;
 
