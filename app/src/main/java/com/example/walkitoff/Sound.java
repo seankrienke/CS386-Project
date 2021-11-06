@@ -22,7 +22,7 @@ public class Sound extends MainActivity{
     public static String SOUND_TWO = "Sound Two";
     public static String SOUND_THREE = "Sound Three";
 
-    private int arraySize, arrayCapacity, userLevel;
+    private int arraySize, arrayCapacity, level;
 
     Context mainContext;
 
@@ -39,9 +39,9 @@ public class Sound extends MainActivity{
      */
     public Sound( Context context, int capacity, int level ){
         arrayCapacity = capacity;
-        arraySize = 0;
         unlockedSoundArray = new String[ arrayCapacity ];
-        userLevel = level;
+        this.level = level;
+        arraySize = 0;
 
         mainContext = context;
 
@@ -55,8 +55,12 @@ public class Sound extends MainActivity{
      */
     private void addSound( String soundName ){
 
-        unlockedSoundArray[ arraySize ] = soundName;
-        arraySize++;
+        if( arraySize < arrayCapacity ){
+
+            unlockedSoundArray[ arraySize ] = soundName;
+            arraySize++;
+
+        }
     }
 
     /**
