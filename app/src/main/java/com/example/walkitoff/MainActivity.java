@@ -64,15 +64,36 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         Spinner soundSpinner = findViewById( R.id.soundspinner );
 
-        soundSpinner.setOnItemSelectedListener(this);
+        soundSpinner.setOnItemSelectedListener( this );
 
-        Button unlockButton = findViewById( R.id.unlockbutton );
+        Button alarmButton = findViewById( R.id.alarmbutton );
 
-        unlockButton.setOnClickListener(new View.OnClickListener() {
+        // called by alarm button
+        alarmButton.setOnClickListener( new View.OnClickListener() {
+
             @Override
             public void onClick(View view) {
 
+                MediaPlayer alarmSound;
+
+                if( chosenSound.equals(Sound.DEFAULT_SOUND ) ){
+
+                    alarmSound = MediaPlayer.create( MainActivity.this, R.raw.alarm_sound );
+                }
+                else{
+
+                    alarmSound = MediaPlayer.create( MainActivity.this,
+                            R.raw.second_alarm__sound );
+                }
+
+                Alarm alarm = new Alarm( MainActivity.this, timeSetting, alarmSound );
+
+                alarm.setAlarm();
+
+                level++;
+
                 fillMenu();
+
             }
         });
     }
@@ -107,34 +128,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         Intent intent = new Intent(this, ConnectDB.class);
         startActivity(intent);
-    }
-
-
-    /**
-     * called by a button/switch to set the alarm with a given sound
-     *
-     * @param view - parameter so that button can call method
-     */
-    public void setAlarm( View view ){
-
-        MediaPlayer alarmSound;
-
-        if( chosenSound.equals( Sound.DEFAULT_SOUND ) ){
-
-            alarmSound = MediaPlayer.create( this, R.raw.alarm_sound );
-        }
-        else{
-            alarmSound = MediaPlayer.create( this, R.raw.second_alarm__sound );
-        }
-
-        // initialize alarm object
-        Alarm alarm = new Alarm( this, timeSetting, alarmSound );
-
-        // set the alarm
-        alarm.setAlarm();
-
-        // increment level
-        level++;
     }
 
     @Override
