@@ -10,11 +10,7 @@ public class Sound extends MainActivity{
     of sounds that the user can choose from, all stored in an array
      */
 
-    // constants
-    private static int DEFAULT_CAPACITY = 10;
-
-    // array of alarm sounds that the user can choose from and array of every alarm sound
-    public static String[] unlockedSoundArray;
+    private static final int NUMBER_OF_ALL_SOUNDS = 4;
 
     // sounds
     public static String DEFAULT_SOUND = "Default";
@@ -22,7 +18,8 @@ public class Sound extends MainActivity{
     public static String SOUND_TWO = "Sound Two";
     public static String SOUND_THREE = "Sound Three";
 
-    private int arraySize, arrayCapacity, level;
+
+    private int arrayCapacity, level;
 
     Context mainContext;
 
@@ -31,21 +28,18 @@ public class Sound extends MainActivity{
      */
     public Sound( Context context, int level ){
 
-        this( context, DEFAULT_CAPACITY, level );
-    }
-
-    /**
-     * initialization constructor
-     */
-    public Sound( Context context, int capacity, int level ){
-        arrayCapacity = capacity;
-        unlockedSoundArray = new String[ arrayCapacity ];
-        this.level = level;
-        arraySize = 0;
-
         mainContext = context;
+        this.level = level;
 
-        addAllUnlockedSounds();
+        if( level < NUMBER_OF_ALL_SOUNDS ){
+
+            arrayCapacity = level + 1;
+        }
+        else{
+
+            arrayCapacity = NUMBER_OF_ALL_SOUNDS;
+
+        }
     }
 
     /**
@@ -53,14 +47,15 @@ public class Sound extends MainActivity{
      *
      * @param sound - alarm sound to add to array
      */
-    private void addSound( String soundName ){
+    private String[] addSound( String[] array, int arraySize, String soundName ){
 
         if( arraySize < arrayCapacity ){
 
-            unlockedSoundArray[ arraySize ] = soundName;
-            arraySize++;
+            array[ arraySize ] = soundName;
 
         }
+
+        return array;
     }
 
     /**
@@ -69,23 +64,24 @@ public class Sound extends MainActivity{
      * note: uses score object to determine which sounds to add
      */
     @SuppressWarnings("unused")
-    private void addAllUnlockedSounds(){
+    public String[] addAllUnlockedSounds(){
 
-        // add the base sound
-        addSound( DEFAULT_SOUND );
+        String[] unlockedSoundArray = new String[ arrayCapacity ];
 
-        if( userLevel >= 1 ){
+        int arraySize = 0;
 
-            addSound( SOUND_ONE );
-        }
-        if( userLevel >= 2 ){
+        unlockedSoundArray = addSound( unlockedSoundArray, arraySize, DEFAULT_SOUND );
+        arraySize++;
 
-            addSound( SOUND_TWO );
-        }
-        if( userLevel >= 3 ){
+        unlockedSoundArray = addSound( unlockedSoundArray, arraySize, SOUND_ONE );
+        arraySize++;
 
-            addSound( SOUND_THREE );
-        }
+        unlockedSoundArray = addSound( unlockedSoundArray, arraySize, SOUND_TWO );
+        arraySize++;
+
+        unlockedSoundArray = addSound( unlockedSoundArray, arraySize, SOUND_THREE );
+
+        return unlockedSoundArray;
 
     }
 
@@ -97,20 +93,20 @@ public class Sound extends MainActivity{
      */
     private boolean checkWithScore( String soundName ){
 
-        if( soundName.equals( DEFAULT_SOUND ) && userLevel >= 1 ){
+        if( soundName.equals( DEFAULT_SOUND ) && level >= 1 ){
 
             return true;
         }
-        else if( soundName.equals( SOUND_ONE ) && userLevel >= 2 ){
+        else if( soundName.equals( SOUND_ONE ) && level >= 2 ){
 
             return true;
 
         }
-        else if( soundName.equals( SOUND_TWO ) && userLevel >= 3 ){
+        else if( soundName.equals( SOUND_TWO ) && level >= 3 ){
 
             return true;
         }
-        else if( soundName.equals( SOUND_THREE ) && userLevel >= 4 ){
+        else if( soundName.equals( SOUND_THREE ) && level >= 4 ){
 
             return true;
 

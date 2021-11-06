@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         });
         // end anonymous class
 
-        fillMenu();
+        fillSoundMenu();
 
         Spinner soundSpinner = findViewById( R.id.soundspinner );
 
@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
                 level++;
 
-                fillMenu();
+                fillSoundMenu();
 
             }
         });
@@ -101,22 +101,17 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     /**
      * fills the drop down spinner menu with unlocked sounds
      */
-    private void fillMenu(){
+    private void fillSoundMenu(){
 
-        String[] localSoundArray = new String[ level + 1 ];
+        Sound sound = new Sound( this, level );
 
-        localSoundArray[ 0 ] = Sound.DEFAULT_SOUND;
-
-        if( level >= 1 ){
-
-            localSoundArray[ 1 ] = Sound.SOUND_ONE;
-        }
+        String[] soundArray = sound.addAllUnlockedSounds();
 
         Spinner soundSpinner = findViewById( R.id.soundspinner );
 
         ArrayAdapter<String> soundAdapter =
                 new ArrayAdapter<String>( this,
-                        android.R.layout.simple_list_item_1, localSoundArray );
+                        android.R.layout.simple_list_item_1, soundArray );
 
         soundAdapter.setDropDownViewResource( android.R.layout.simple_spinner_dropdown_item );
 
