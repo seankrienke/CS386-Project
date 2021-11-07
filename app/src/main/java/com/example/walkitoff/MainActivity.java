@@ -74,17 +74,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             @Override
             public void onClick(View view) {
 
-                MediaPlayer alarmSound;
-
-                if( chosenSound.equals(SoundName.DEFAULT_SOUND ) ){
-
-                    alarmSound = MediaPlayer.create( MainActivity.this, R.raw.alarm_sound );
-                }
-                else{
-
-                    alarmSound = MediaPlayer.create( MainActivity.this,
-                            R.raw.second_alarm__sound );
-                }
+                MediaPlayer alarmSound = MediaPlayer.create(
+                        MainActivity.this, SoundName.getSound( chosenSound ) );
 
                 Alarm alarm = new Alarm( MainActivity.this, timeSetting, alarmSound );
 
