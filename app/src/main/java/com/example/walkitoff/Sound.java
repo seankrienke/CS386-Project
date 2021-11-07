@@ -1,8 +1,5 @@
 package com.example.walkitoff;
 
-import android.content.Context;
-import android.media.MediaPlayer;
-
 public class Sound {
 
     /*
