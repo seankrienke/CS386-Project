@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
      */
     private void fillSoundMenu(){
 
-        Sound sound = new Sound( this, level );
+        Sound sound = new Sound( level );
 
         String[] soundArray = sound.addAllUnlockedSounds();
 

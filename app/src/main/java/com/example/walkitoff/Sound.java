@@ -14,14 +14,11 @@ public class Sound {
 
     private int arrayCapacity, level;
 
-    Context mainContext;
-
     /**
      * default constructor
      */
-    public Sound( Context context, int level ){
+    public Sound( int level ){
 
-        mainContext = context;
         this.level = level;
 
         if( level < NUMBER_OF_ALL_SOUNDS ){
