@@ -11,14 +11,7 @@ public class Sound extends MainActivity{
      */
 
     private static final int NUMBER_OF_ALL_SOUNDS = 4;
-
-    // sounds
-    public static String DEFAULT_SOUND = "Default";
-    public static String SOUND_ONE = "Sound One";
-    public static String SOUND_TWO = "Sound Two";
-    public static String SOUND_THREE = "Sound Three";
-
-
+    
     private int arrayCapacity, level;
 
     Context mainContext;
