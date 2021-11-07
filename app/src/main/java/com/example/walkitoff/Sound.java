@@ -3,7 +3,7 @@ package com.example.walkitoff;
 import android.content.Context;
 import android.media.MediaPlayer;
 
-public class Sound extends MainActivity{
+public class Sound {
 
     /*
     this class is to be used by the Alarm class. it functions as a library
