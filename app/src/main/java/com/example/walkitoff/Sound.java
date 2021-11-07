@@ -11,7 +11,7 @@ public class Sound extends MainActivity{
      */
 
     private static final int NUMBER_OF_ALL_SOUNDS = 4;
-    
+
     private int arrayCapacity, level;
 
     Context mainContext;
@@ -63,39 +63,20 @@ public class Sound extends MainActivity{
 
         int arraySize = 0;
 
-        unlockedSoundArray = addSound( unlockedSoundArray, arraySize, DEFAULT_SOUND );
+        unlockedSoundArray = addSound( unlockedSoundArray, arraySize, SoundName.DEFAULT_SOUND );
         arraySize++;
 
-        unlockedSoundArray = addSound( unlockedSoundArray, arraySize, SOUND_ONE );
+        unlockedSoundArray = addSound( unlockedSoundArray, arraySize, SoundName.SOUND_ONE );
         arraySize++;
 
-        unlockedSoundArray = addSound( unlockedSoundArray, arraySize, SOUND_TWO );
+        unlockedSoundArray = addSound( unlockedSoundArray, arraySize, SoundName.SOUND_TWO );
         arraySize++;
 
-        unlockedSoundArray = addSound( unlockedSoundArray, arraySize, SOUND_THREE );
+        unlockedSoundArray = addSound( unlockedSoundArray, arraySize, SoundName.SOUND_THREE );
         arraySize++;
 
         return unlockedSoundArray;
 
-    }
-
-    /**
-     * finds sound in unlocked sound array
-     *
-     * @param Sound - alarm sound to match to array
-     *
-     * @return sound if found in unlocked sound array, null otherwise
-     */
-    public MediaPlayer chooseSound( String soundName ){
-
-        if( soundName.equals( DEFAULT_SOUND ) ){
-
-            return MediaPlayer.create( mainContext, R.raw.alarm_sound );
-        }
-        else{
-
-            return MediaPlayer.create( mainContext, R.raw.second_alarm__sound );
-        }
     }
 
 }

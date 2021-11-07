@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
                 MediaPlayer alarmSound;
 
-                if( chosenSound.equals(Sound.DEFAULT_SOUND ) ){
+                if( chosenSound.equals(SoundName.DEFAULT_SOUND ) ){
 
                     alarmSound = MediaPlayer.create( MainActivity.this, R.raw.alarm_sound );
                 }
@@ -134,7 +134,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
 
-        chosenSound = Sound.DEFAULT_SOUND;
+        chosenSound = SoundName.DEFAULT_SOUND;
     }
 
 }
