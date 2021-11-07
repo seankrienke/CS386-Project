@@ -1,51 +1,32 @@
 package com.example.walkitoff;
 
-import android.content.Context;
-import android.media.MediaPlayer;
-
-public class Sound extends MainActivity{
+public class Sound {
 
     /*
     this class is to be used by the Alarm class. it functions as a library
     of sounds that the user can choose from, all stored in an array
      */
 
-    // constants
-    private static int DEFAULT_CAPACITY = 10;
+    private static final int NUMBER_OF_ALL_SOUNDS = 4;
 
-    // array of alarm sounds that the user can choose from and array of every alarm sound
-    public static String[] unlockedSoundArray;
-
-    // sounds
-    public static String DEFAULT_SOUND = "Default";
-    public static String SOUND_ONE = "Sound One";
-    public static String SOUND_TWO = "Sound Two";
-    public static String SOUND_THREE = "Sound Three";
-
-    private int arraySize, arrayCapacity, userLevel;
-
-    Context mainContext;
+    private int arrayCapacity, level;
 
     /**
      * default constructor
      */
-    public Sound( Context context, int level ){
+    public Sound( int level ){
 
-        this( context, DEFAULT_CAPACITY, level );
-    }
+        this.level = level;
 
-    /**
-     * initialization constructor
-     */
-    public Sound( Context context, int capacity, int level ){
-        arrayCapacity = capacity;
-        arraySize = 0;
-        unlockedSoundArray = new String[ arrayCapacity ];
-        userLevel = level;
+        if( level < NUMBER_OF_ALL_SOUNDS ){
 
-        mainContext = context;
+            arrayCapacity = level + 1;
+        }
+        else{
 
-        addAllUnlockedSounds();
+            arrayCapacity = NUMBER_OF_ALL_SOUNDS;
+
+        }
     }
 
     /**
@@ -53,10 +34,15 @@ public class Sound extends MainActivity{
      *
      * @param sound - alarm sound to add to array
      */
-    private void addSound( String soundName ){
+    private String[] addSound( String[] array, int arraySize, String soundName ){
 
-        unlockedSoundArray[ arraySize ] = soundName;
-        arraySize++;
+        if( arraySize < arrayCapacity ){
+
+            array[ arraySize ] = soundName;
+
+        }
+
+        return array;
     }
 
     /**
@@ -65,73 +51,26 @@ public class Sound extends MainActivity{
      * note: uses score object to determine which sounds to add
      */
     @SuppressWarnings("unused")
-    private void addAllUnlockedSounds(){
+    public String[] addAllUnlockedSounds(){
 
-        // add the base sound
-        addSound( DEFAULT_SOUND );
+        String[] unlockedSoundArray = new String[ arrayCapacity ];
 
-        if( userLevel >= 1 ){
+        int arraySize = 0;
 
-            addSound( SOUND_ONE );
-        }
-        if( userLevel >= 2 ){
+        unlockedSoundArray = addSound( unlockedSoundArray, arraySize, SoundName.DEFAULT_SOUND );
+        arraySize++;
 
-            addSound( SOUND_TWO );
-        }
-        if( userLevel >= 3 ){
+        unlockedSoundArray = addSound( unlockedSoundArray, arraySize, SoundName.SOUND_ONE );
+        arraySize++;
 
-            addSound( SOUND_THREE );
-        }
+        unlockedSoundArray = addSound( unlockedSoundArray, arraySize, SoundName.SOUND_TWO );
+        arraySize++;
 
-    }
+        unlockedSoundArray = addSound( unlockedSoundArray, arraySize, SoundName.SOUND_THREE );
+        arraySize++;
 
-    /**
-     * checks if the user has the required score to use the sound (called before adding sound to
-     * unlocked sound array)
-     *
-     * @param sound - alarm sound that may or may not be added to unlocked sound array
-     */
-    private boolean checkWithScore( String soundName ){
+        return unlockedSoundArray;
 
-        if( soundName.equals( DEFAULT_SOUND ) && userLevel >= 1 ){
-
-            return true;
-        }
-        else if( soundName.equals( SOUND_ONE ) && userLevel >= 2 ){
-
-            return true;
-
-        }
-        else if( soundName.equals( SOUND_TWO ) && userLevel >= 3 ){
-
-            return true;
-        }
-        else if( soundName.equals( SOUND_THREE ) && userLevel >= 4 ){
-
-            return true;
-
-        }
-
-        return false;
-    }
-
-    /**
-     * finds sound in unlocked sound array
-     *
-     * @param Sound - alarm sound to match to array
-     *
-     * @return sound if found in unlocked sound array, null otherwise
-     */
-    public MediaPlayer chooseSound( String soundName ){
-
-        if( soundName.equals( DEFAULT_SOUND ) ){
-
-            return MediaPlayer.create( mainContext, R.raw.alarm_sound );
-        }
-        else{
-
-            return MediaPlayer.create( mainContext, R.raw.second_alarm__sound );
-        }
     }
 
 }
