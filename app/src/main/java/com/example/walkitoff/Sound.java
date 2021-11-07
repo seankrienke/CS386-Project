@@ -87,36 +87,6 @@ public class Sound extends MainActivity{
     }
 
     /**
-     * checks if the user has the required score to use the sound (called before adding sound to
-     * unlocked sound array)
-     *
-     * @param sound - alarm sound that may or may not be added to unlocked sound array
-     */
-    private boolean checkWithScore( String soundName ){
-
-        if( soundName.equals( DEFAULT_SOUND ) && level >= 1 ){
-
-            return true;
-        }
-        else if( soundName.equals( SOUND_ONE ) && level >= 2 ){
-
-            return true;
-
-        }
-        else if( soundName.equals( SOUND_TWO ) && level >= 3 ){
-
-            return true;
-        }
-        else if( soundName.equals( SOUND_THREE ) && level >= 4 ){
-
-            return true;
-
-        }
-
-        return false;
-    }
-
-    /**
      * finds sound in unlocked sound array
      *
      * @param Sound - alarm sound to match to array
