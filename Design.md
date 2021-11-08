@@ -11,6 +11,7 @@ The WalkItOff app has two components, the MYSQL database, and the Android applic
 
 
 #*4. Sequence Diagram*
+![image](https://user-images.githubusercontent.com/89943041/140682137-ae790673-6836-4059-8668-85e5a67ed923.png)
 
 
 #*5. Design Patterns*
