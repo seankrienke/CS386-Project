@@ -8,6 +8,7 @@ The WalkItOff app has two components, the MYSQL database, and the Android applic
 
 
 #*3. Class Diagram*
+
 ![](https://github.com/aidenhalili/CS386-Project/blob/main/Class%20Screenshot.jpg)
 
 #*4. Sequence Diagram*
