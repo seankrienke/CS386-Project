@@ -64,6 +64,13 @@ The system would then cancel the prompt and return to previous screen
 
 #*5. Design Patterns*
 
+![Design Patterns](https://user-images.githubusercontent.com/71902318/140685454-ed98e290-f55b-433c-b75e-16fec9797fb7.jpg)
+
+[LocationData] https://github.com/aidenhalili/CS386-Project/blob/main/app/src/main/java/com/example/walkitoff/LocationData.java
+
+Location and LocationManager are imported; no link available. 
+
+
 
 #*6. Design Principles*
 
