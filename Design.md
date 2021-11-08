@@ -66,3 +66,25 @@ The system would then cancel the prompt and return to previous screen
 
 
 #*6. Design Principles*
+
+1. Our design observes the single responsibility principle by including classes that only have a single responsibility. The Single Responsibility Principle requires that “There should never be more than one reason for a class to change.” An example of this is our class “Sound”. This class's only responsibility is to provide a library of sounds that the user can choose from. 
+Example: 
+
+![sounds](https://user-images.githubusercontent.com/72279824/140683441-284f4180-e12e-4a44-b7cd-5dae8c51a296.PNG)
+![sound2](https://user-images.githubusercontent.com/72279824/140683458-cc5898c9-1aea-468f-9278-01b8bee0c963.PNG)
+![sounds3](https://user-images.githubusercontent.com/72279824/140683470-ac94ee11-0f61-4ce7-af5e-977ad7e86751.PNG)
+
+2. Next, our design follows the Open/Closed Principle. The Open/Closed Principle requires that “Software entities should be open for extension, but closed for modification.”  It does this by allowing the user to add on and extend the behavior of a class without having to go back and change parts of the code in that class. An example of this is our unitsOfmeasurement class, where if you want to add another unit of measurement, you can do so without having to alter any previous code. When you add a new unit of measurement, you just add in another method that deals with the conversion that you want to happen. Example:
+
+![units](https://user-images.githubusercontent.com/72279824/140683550-76e4315c-d227-4082-bdbb-28d536f92711.PNG)
+![units2](https://user-images.githubusercontent.com/72279824/140683559-6b50c765-00f2-4a8c-86b1-c4651d58c8f4.PNG)
+
+3. For the Liskov Substitution Principle, it requires that “Objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program.” We do not directly use the Liskov Substitution Principle in our code; we do not currently have any subtypes for the different objects. 
+
+4. An example of the Interface Segregation Principle in our code would be the unitsOfMeasurement Class. This class allows the user to choose between their desired unit of measurement, but it does not force any of the other options on the user if they do not want them. For example, the default unit of measurement is in meters, and if the user is fine with that, they do not have to go and mess with any of the other units. If the user selects a different unit of measurement, they choose which measurement they would like without having any other units of measurement imposed on them that they do not care for. Example: 
+
+![units](https://user-images.githubusercontent.com/72279824/140683626-6e8dfa40-43b5-453b-9a37-29009a662b15.PNG)
+![units2](https://user-images.githubusercontent.com/72279824/140683641-e45cef44-01ae-4bc7-ba3d-a57d9317dfcd.PNG)
+
+5. For the Dependency Inversion Principle, it requires that “High level modules should not depend upon low level modules. Both should depend upon abstractions” and that “Abstractions should not depend upon details. Details should depend upon abstractions.” We do not directly use the Dependency Inversion Principle in our code.
+
