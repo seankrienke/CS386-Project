@@ -26,6 +26,3 @@ The user can change their **theme** according to how many *points* they have acc
 
 ## 2. Model
 ![image](https://user-images.githubusercontent.com/89943041/136730277-7f233950-d5d6-4d7e-bd5e-960eb4b11871.png)
-
-## 3. Class Diagram
-![](https://github.com/aidenhalili/CS386-Project/blob/main/Class%20Screenshot.jpg)
