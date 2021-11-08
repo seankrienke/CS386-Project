@@ -50,12 +50,14 @@ public class Sound {
      * <p>
      * note: uses score object to determine which sounds to add
      */
-    @SuppressWarnings("unused")
     public String[] addAllUnlockedSounds(){
 
         String[] unlockedSoundArray = new String[ arrayCapacity ];
 
         int arraySize = 0;
+
+        // TODO: add sounds without the repetition shown below
+        // maybe map each level to a sound name?
 
         unlockedSoundArray = addSound( unlockedSoundArray, arraySize, SoundName.DEFAULT_SOUND );
         arraySize++;
