@@ -12,7 +12,7 @@ public class Sound {
     private int arrayCapacity, level;
 
     /**
-     * default constructor
+     * constructor
      */
     public Sound( int level ){
 
@@ -30,9 +30,15 @@ public class Sound {
     }
 
     /**
-     * appends a single sound to the array
+     * adds a sound to an array if it has the capacity for it and returns the updated array
      *
-     * @param sound - alarm sound to add to array
+     * @param array - the array to add sound name to
+     *
+     * @param arraySize - how many sound names are in the array
+     *
+     * @param soundName - the sound name that can appear on the menu
+     *
+     * @return array
      */
     private String[] addSound( String[] array, int arraySize, String soundName ){
 
