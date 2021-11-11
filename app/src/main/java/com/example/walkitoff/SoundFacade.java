@@ -8,13 +8,19 @@ public class SoundFacade {
      * array to populate the sound dropdown menu and also use a string to get the integer value
      * of a sound needed to input in the MediaPlayer.create method.
      */
+    private int level;
+
+    public SoundFacade( int level ){
+
+        this.level = level;
+    }
 
     /**
      * gets an array of unlocked sounds to populate the sound dropdown menu
      *
      * @return array of the names of unlocked sounds
      */
-    public static String[] getSoundArray( int level ){
+    public String[] getSoundArray(){
 
         SoundList soundList = new SoundList( level );
 
@@ -28,7 +34,7 @@ public class SoundFacade {
      *
      * @return integer value of sound
      */
-    public static int getSound( String soundName ){
+    public int getSound( String soundName ){
 
         return SoundName.getSound( soundName );
     }
