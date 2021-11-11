@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             public void onClick(View view) {
 
                 MediaPlayer alarmSound = MediaPlayer.create(
-                        MainActivity.this, SoundName.getSound( chosenSound ) );
+                        MainActivity.this, SoundFacade.getSound( chosenSound ) );
 
                 Alarm alarm = new Alarm( MainActivity.this, timeSetting, alarmSound );
 
@@ -93,9 +93,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
      */
     private void fillSoundMenu(){
 
-        SoundList soundList = new SoundList( level );
-
-        String[] soundArray = soundList.addAllUnlockedSounds();
+        String[] soundArray = SoundFacade.getSoundArray( level );
 
         Spinner soundSpinner = findViewById( R.id.soundspinner );
 

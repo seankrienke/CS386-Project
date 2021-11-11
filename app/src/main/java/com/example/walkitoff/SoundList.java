@@ -14,7 +14,7 @@ public class SoundList {
     /**
      * constructor
      */
-    public SoundList(int level ){
+    public SoundList( int level ){
 
         this.level = level;
 
