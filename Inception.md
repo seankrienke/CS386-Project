@@ -29,7 +29,7 @@ cheating.
 ### Interview 1:
 
 **Summary:** He is unsatisfied with his sleep schedule. Usually gets up when he plans to, but likes to rest for a few more minutes.
-Alarm is most important. Other features are a bonus. Would like to choose alarm soundList.
+Alarm is most important. Other features are a bonus. Would like to choose alarm sound.
 
 **Interviewer:** Aiden Halili\
 **Interviewee:** Nick Boticelli\
@@ -48,7 +48,7 @@ Alarm is most important. Other features are a bonus. Would like to choose alarm 
 
 **Hypotheses that were validated:**
 - A level-up system gives motivation
-- Choosing an alarm soundList is important
+- Choosing an alarm sound is important
 
 **Assessment:** Nice to have
 
@@ -63,7 +63,7 @@ Alarm is most important. Other features are a bonus. Would like to choose alarm 
 
 **Key Insights:**
 - need to be able to control distance
-- need to be able to control alarm soundList
+- need to be able to control alarm sound
 
 **Representative Quotes:**
 - "Coffee will motivate me, make it bring me coffee"
@@ -111,7 +111,7 @@ Alarm is most important. Other features are a bonus. Would like to choose alarm 
 **Consumer Segments:** Non-morning person
 
 **Key Insights:**
-- Alarm soundList doesn't matter as long as it can awaken someone
+- Alarm sound doesn't matter as long as it can awaken someone
 - Level-up system would help stay motivated
 - Other features can be nice, but the alarm is most important
 

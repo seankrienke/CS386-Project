@@ -11,15 +11,15 @@ stock alarm apps that merely wake up the user, Walk It Off wakes up the user and
 get up. Walk It Off is a lifestyle app that gives those who struggle to stick to a consistent sleep schedule
 the motivation to do so. <br>
 <br>
-Fundamentally, the app will need to accept user input for the *time to wake up* and the *alarm soundList* to wake
+Fundamentally, the app will need to accept user input for the *time to wake up* and the *alarm sound* to wake
 up to. When the **alarm** sounds, the only way to shut if off is to walk a *predetermined distance* (this distance can be set
 by the user, but the minimum is 500 feet). There will be a **scorekeeping system**, and every foot travelled equates to a single
 point that will go towards the user's *all-time score*. When a certain amount of *points* are accumulated, the user will be able to
-unlock new features such as a new alarm soundList or a *new theme* such as dark mode. For those who are only concerned about the fitness
+unlock new features such as a new alarm sound or a *new theme* such as dark mode. For those who are only concerned about the fitness
 aspect of the app, there will be an option to track walking distance without having to set an alarm.<br>
 <br>
 The user can save their alarm as an **alarm preset**.
-The user can change the alarm **soundList setting** based on their **score**.
+The user can change the alarm **sound setting** based on their **score**.
 The user can set their *goal distance* and their specified **unit of measurement**
 The user can change their **theme** according to how many *points* they have accumulated.
 

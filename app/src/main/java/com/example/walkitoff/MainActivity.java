@@ -22,6 +22,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.TimePicker;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
@@ -93,9 +94,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
      */
     private void fillSoundMenu(){
 
-        SoundList soundList = new SoundList( level );
+        Sound sound = new Sound( level );
 
-        String[] soundArray = soundList.addAllUnlockedSounds();
+        String[] soundArray = sound.addAllUnlockedSounds();
 
         Spinner soundSpinner = findViewById( R.id.soundspinner );
 
