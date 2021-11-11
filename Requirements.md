@@ -35,7 +35,7 @@
 
 #3 Functional requirements
 
-**1.)** The app accepts user input for time and sound
+**1.)** The app accepts user input for time and soundList
 
 **2.)** When the alarm sounds, it will only shut off if a certain distance is traveled.
 
@@ -70,8 +70,8 @@
 #5 MVP
 
  *  For developing the minimal viable product for this project, we will first focus on the very foundation of this project: the alarm. When launching the app, the user should be able to give the app permission
-to access location services. The user will then be able to manually set an alarm. The user can select the time via a timepicker wheel. When the selected time arrives, the alarm will sound repeatedly until a minimum distance
-of 500 feet is travelled. After that, the total distance travelled is sent to add to the users score. The MVP will have one new alarm sound and one new theme to unlock in order to demonstrate the progression system.
+to access location services. The user will then be able to manually set an alarm. The user can select the time via a timepicker wheel. When the selected time arrives, the alarm will soundList repeatedly until a minimum distance
+of 500 feet is travelled. After that, the total distance travelled is sent to add to the users score. The MVP will have one new alarm soundList and one new theme to unlock in order to demonstrate the progression system.
  
 ---------------------------------------------------------------------------------------------------------------
 
@@ -84,14 +84,14 @@ of 500 feet is travelled. After that, the total distance travelled is sent to ad
 
 Use Case: Set Alarm Sound <br />
 Actor: User <br />
-Description: User sets a sound to use for when the alarm clock goes off <br />
+Description: User sets a soundList to use for when the alarm clock goes off <br />
 Precondition: User is on the settings section of the app <br />
-Post-condition: Alarm sound is set to selected audio <br />
+Post-condition: Alarm soundList is set to selected audio <br />
 Main flow: <br />
 1. User click on settings.
-2. Click on "set alarm sound". 
-3. Click on each sound to sample it.
-4. Click on "choose sound" to select sound. <br />
+2. Click on "set alarm soundList".
+3. Click on each soundList to sample it.
+4. Click on "choose soundList" to select soundList. <br />
 
 Alternative flows: <br />
 1. App is closed out.
@@ -113,7 +113,7 @@ Alternative flows: <br />
 
 Use Case: Set Alarm Clock <br />
 Actor: User <br /> 
-Description: User sets time for alarm clock to sound. <br />
+Description: User sets time for alarm clock to soundList. <br />
 Precondition: User is on the settings section of the app <br /> 
 Post-condition: Alarm is set <br />
 Main flow: <br />
@@ -172,7 +172,7 @@ Alternative flows: <br />
 
 **1.)** As a user, I want to be active so that I have a productive morning. (Priority: 3, Estimated time: ~13-16 hours)
 
-**2.)** As a heavy sleeper, I want a loud and somewhat high-pitched alarm sound so that I wake up. (Priority: 3, Estimated time: ~13-16 hours)
+**2.)** As a heavy sleeper, I want a loud and somewhat high-pitched alarm soundList so that I wake up. (Priority: 3, Estimated time: ~13-16 hours)
 
 **3.)** As someone who sleeps in a lot, I want to be given a task in order to shut off my alarm so that I don't laze around in bed. (Priority: 4, Estimated time: ~15-20 hours)
 

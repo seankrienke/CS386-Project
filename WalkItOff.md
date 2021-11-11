@@ -55,7 +55,7 @@ Print Screen:                   ![Screenshot_20211024-212223_WalkItOff12](https:
 
 1. *__Android Studio__* - Used for UI design, implementation of android app -- We chose this because it is the framework required to build an android app
 
-2. *__MediaPlayer Class__* - Class inside Android Studio, used to control playback of audio -- We chose this because it was a built in class that met all of our sound needs
+2. *__MediaPlayer Class__* - Class inside Android Studio, used to control playback of audio -- We chose this because it was a built in class that met all of our soundList needs
 
 3. *__LocationManager Class__* - Class inside Android Studio, used to access location services on Android device -- We chose this because it was the simplest implementation of what we required in a location class, and it did not require using google play services
 
@@ -98,7 +98,7 @@ Readme: https://github.com/aidenhalili/CS386-Project/blob/main/README.md
 **#9. Look & Feel**
 
 We wanted the look to be simple and accessible. Based on our interviews, we found that the interviewees don't see a significant value
-in other features besides the alarm, and they also didn't care for extensive alarm customization. The user only needs to have a time and sound selected
+in other features besides the alarm, and they also didn't care for extensive alarm customization. The user only needs to have a time and soundList selected
 before setting the alarm. We made sure to include a minimal amount of self explanatory buttons so that users can instantly learn how to use the app.
 There is also a button to log in to the server, which is something that the developers use for testing and will be altered for the final product.
 

@@ -26,7 +26,7 @@ This is the GPS location used for the app's unique alarm system. This would trac
 Once the set distance has been reached, the alarm would then shut off.
 
 #### MediaPlayer
-This is the sound player that the alarm system holds. 
+This is the soundList player that the alarm system holds.
 Only one or two alarms would be given at the start but as the user gains levels, more alarms sounds would be available for selection.
 
 #### JUnit

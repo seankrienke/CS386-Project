@@ -22,7 +22,7 @@ public class SoundFacade {
      */
     public String[] getSoundArray(){
 
-        Sound soundList = new Sound( level );
+        SoundList soundList = new SoundList( level );
 
         return soundList.addAllUnlockedSounds();
     }

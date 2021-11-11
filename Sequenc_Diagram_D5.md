@@ -14,13 +14,13 @@
 >The new alarm has been set and saved
 ### Main-Flow
 1.The User has requested to make a new alarm.\
-2.The system has opened up the prompt for the user to select Time of alarm, Alarm sound, and distance requested.\
+2.The system has opened up the prompt for the user to select Time of alarm, Alarm soundList, and distance requested.\
 3.The User selects the time they would like for the alarm to go off.\
 4.The system would save the requested time.\
 5.The User would open up the list of sounds they can choose from.\
 6.The System pulls the sounds available for the user.\
 7.The User selects one of the sounds given to them.\
-8.The system saves that sound for the current alarm.\
+8.The system saves that soundList for the current alarm.\
 9.The User then inputs the Distance they wish to walk in order to turn alarm off.\
 10.The system saves that distance into the alarm.\
 11.The User then selects save for the system.\
