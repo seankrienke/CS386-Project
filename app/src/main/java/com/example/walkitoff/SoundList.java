@@ -1,6 +1,6 @@
 package com.example.walkitoff;
 
-public class Sound {
+public class SoundList {
 
     /*
     this class is to be used by the Alarm class. it functions as a library
@@ -14,7 +14,7 @@ public class Sound {
     /**
      * constructor
      */
-    public Sound( int level ){
+    public SoundList(int level ){
 
         this.level = level;
 
