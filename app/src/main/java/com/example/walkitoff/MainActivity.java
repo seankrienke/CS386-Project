@@ -22,7 +22,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.TimePicker;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
@@ -75,7 +74,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             public void onClick(View view) {
 
                 MediaPlayer alarmSound = MediaPlayer.create(
-                        MainActivity.this, SoundName.getSound( chosenSound ) );
+                        MainActivity.this, SoundFacade.getSound( chosenSound ) );
 
                 Alarm alarm = new Alarm( MainActivity.this, timeSetting, alarmSound );
 
@@ -94,9 +93,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
      */
     private void fillSoundMenu(){
 
-        Sound sound = new Sound( level );
-
-        String[] soundArray = sound.addAllUnlockedSounds();
+        String[] soundArray = SoundFacade.getSoundArray( level );
 
         Spinner soundSpinner = findViewById( R.id.soundspinner );
 
@@ -117,9 +114,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     }
 
     @Override
-    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+    public void onItemSelected(AdapterView<?> adapterView, View view, int index, long l) {
 
-        chosenSound = adapterView.getItemAtPosition( i ).toString();
+        chosenSound = adapterView.getItemAtPosition( index ).toString();
     }
 
     @Override
