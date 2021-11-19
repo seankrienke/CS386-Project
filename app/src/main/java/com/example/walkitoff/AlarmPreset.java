@@ -16,16 +16,16 @@ public class AlarmPreset {
      * note: add distance to parameter as soon as the feature for choosing goal distance is
      * implemented
      *
-     * @param time - wakeup time
-     *
      * @param sound - the name of the sound to wake up to
      */
-    public AlarmPreset( Context context, String time, MediaPlayer sound ){
+    public AlarmPreset( Context context, int hour, int minute, MediaPlayer sound ){
 
-        this.time = time;
+        this.time = Time.parseTime( hour, minute );
         this.sound = sound;
 
         this.context = context;
+
+        alarmLabel = Time.formatAlarmLabel( hour, minute );
 
     }
 

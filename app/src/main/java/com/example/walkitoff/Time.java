@@ -31,7 +31,7 @@ public class Time {
      *
      * @return time in 12 hour format
      */
-    public String formatAlarmLabel( int hour, int minute ){
+    public static String formatAlarmLabel( int hour, int minute ){
 
         String parsedHour = String.valueOf( hour );
         String parsedMinute = String.valueOf( minute );
