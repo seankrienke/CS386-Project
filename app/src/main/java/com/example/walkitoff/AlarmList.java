@@ -45,7 +45,7 @@ public class AlarmList {
 
         for( index = 0; index < size; index++ ){
 
-            if( alarmArray[ index ].alarmLabel.equals( label ) ){
+            if( alarmArray[ index ].getAlarmLabel().equals( label ) ){
 
                 return alarmArray[ index ];
             }

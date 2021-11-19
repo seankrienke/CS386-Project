@@ -69,6 +69,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         soundSpinner.setOnItemSelectedListener( this );
 
         Button alarmButton = findViewById( R.id.alarmbutton );
+        Button saveButton = findViewById( R.id.savebutton );
 
         // called by alarm button
         alarmButton.setOnClickListener( new View.OnClickListener() {
@@ -89,6 +90,22 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
                 fillSoundMenu();
 
+            }
+        });
+
+        saveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                MediaPlayer sound =
+                        MediaPlayer.create( MainActivity.this, SoundFacade.getSound( chosenSound ) );
+
+                AlarmPreset preset =
+                        new AlarmPreset( MainActivity.this, hour, minute, sound );
+
+                alarmList.addPreset( preset );
+
+                fillPresetMenu();
             }
         });
     }
@@ -124,7 +141,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         for( index = 0; index < alarmList.size; index++ ){
 
-            alarmLabelArray[ index ] = alarmList.alarmArray[ index ].alarmLabel;
+            alarmLabelArray[ index ] = alarmList.alarmArray[ index ].getAlarmLabel();
         }
 
         ArrayAdapter<String> presetAdapter =new ArrayAdapter<String>(

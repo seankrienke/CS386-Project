@@ -5,7 +5,7 @@ import android.media.MediaPlayer;
 
 public class AlarmPreset {
 
-    public static String alarmLabel;
+    private String alarmLabel;
     private String time;
     private MediaPlayer sound;
     private Context context;
@@ -29,6 +29,10 @@ public class AlarmPreset {
 
     }
 
+    public String getAlarmLabel(){
+
+        return alarmLabel;
+    }
     /**
      * creates an alarm object based off of member data
      *
