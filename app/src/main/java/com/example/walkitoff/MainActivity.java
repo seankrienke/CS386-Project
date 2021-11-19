@@ -27,14 +27,14 @@ import android.widget.TimePicker;
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     String chosenSound;
-  
-    String timeSetting;
 
     public static String uID,uName,uDistance,uScore,uLevel;
 
     static final int REQUEST_PERMISSION = 1;
 
     int level = 0;
+
+    int hour, minute;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +54,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             public void onTimeChanged(TimePicker timePicker, int inHour, int inMinute) {
 
                 // save the chosen hour and minute
-                timeSetting = Time.parseTime( inHour, inMinute );
+                hour = inHour;
+                minute = inMinute;
             }
         });
         // end anonymous class
@@ -75,6 +76,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
                 MediaPlayer alarmSound = MediaPlayer.create(
                         MainActivity.this, SoundFacade.getSound( chosenSound ) );
+
+                String timeSetting = Time.parseTime( hour, minute );
 
                 Alarm alarm = new Alarm( MainActivity.this, timeSetting, alarmSound );
 
