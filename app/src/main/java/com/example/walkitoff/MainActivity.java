@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             public void onTimeChanged(TimePicker timePicker, int inHour, int inMinute) {
 
                 // save the chosen hour and minute
-                timeSetting = new Time( inHour, inMinute ).parseTime();
+                timeSetting = Time.parseTime( inHour, inMinute );
             }
         });
         // end anonymous class
