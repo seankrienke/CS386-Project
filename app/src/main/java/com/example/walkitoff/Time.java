@@ -40,4 +40,28 @@ public class Time {
         return parsedHour + parsedMinute;
     }
 
+    /**
+     * to be used as an alarm label for alarm preset
+     *
+     * @return time in 12 hour format
+     */
+    public String formatAlarmLabel(){
+
+        String parsedHour = String.valueOf( hour );
+        String parsedMinute = String.valueOf( minute );
+        String meridiem = " AM";
+
+        if( hour > 12 ){
+
+            parsedHour = String.valueOf( hour - 12 );
+            meridiem = " PM";
+        }
+
+        if( minute < 10 ){
+
+            parsedMinute = "0" + String.valueOf( minute );
+        }
+
+        return parsedHour + ":" + parsedMinute + meridiem;
+    }
 }
