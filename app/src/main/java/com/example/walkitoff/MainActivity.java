@@ -111,6 +111,30 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         soundSpinner.setAdapter( soundAdapter );
     }
 
+    /**
+     * fills second dropdown menu with alarm presets
+     */
+    private void fillPresetMenu(){
+
+        Spinner presetSpinner = findViewById( R.id.presetspinner );
+
+        String[] alarmLabelArray = new String[ alarmList.size ];
+
+        int index;
+
+        for( index = 0; index < alarmList.size; index++ ){
+
+            alarmLabelArray[ index ] = alarmList.alarmArray[ index ].alarmLabel;
+        }
+
+        ArrayAdapter<String> presetAdapter =new ArrayAdapter<String>(
+                this, android.R.layout.simple_list_item_1, alarmLabelArray );
+
+        presetAdapter.setDropDownViewResource( android.R.layout.simple_spinner_dropdown_item );
+
+        presetSpinner.setAdapter( presetAdapter );
+    }
+
     //This is our login activity being created.
     public void connectDB(View view){
 

@@ -2,7 +2,7 @@ package com.example.walkitoff;
 
 public class AlarmList {
 
-    private AlarmPreset[] alarmArray;
+    public static AlarmPreset[] alarmArray;
 
     public static int size;
 
