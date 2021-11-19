@@ -34,6 +34,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     int level = 0;
 
+    AlarmList alarmList = new AlarmList();
+
     int hour, minute;
 
     @Override
