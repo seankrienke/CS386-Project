@@ -3,28 +3,12 @@ package com.example.walkitoff;
 @SuppressWarnings("unused")
 public class UnitsOfMeasurement {
 
-    /*
-    for converting the distance to units of measurements (from meters)
-     */
-    private double distance;
-
-    /**
-     * initialization constructor
-     *
-     * @param inDistance - either goal distance or distance traveled
-     */
-    public UnitsOfMeasurement( double inDistance ){
-
-        // set distance to parameter
-        distance = inDistance;
-    }
-
     /**
      * returns distance value from meters to feet
      *
      * @return distance in ft (double)
      */
-    public double toFeet(){
+    public double toFeet( double distance ){
 
         // variables
         double feetPerMeter = 3.208;
@@ -38,7 +22,7 @@ public class UnitsOfMeasurement {
      *
      * @return distance in km (double)
      */
-    public double toKilometers(){
+    public double toKilometers( double distance ){
 
         // variables
         double kilometersPerMeter = 0.001;
@@ -52,7 +36,7 @@ public class UnitsOfMeasurement {
      *
      * @return - distance (double)
      */
-    public double toMeters(){
+    public double toMeters( double distance ){
 
         // return distance
         return distance;
@@ -63,7 +47,7 @@ public class UnitsOfMeasurement {
      *
      * @return distance in miles (double)
      */
-    public double toMiles(){
+    public double toMiles( double distance ){
 
         // variables
         double milesPerMeter = 0.000621371;
@@ -77,7 +61,7 @@ public class UnitsOfMeasurement {
      *
      * @return distance in yards (double)
      */
-    public double toYards(){
+    public double toYards( double distance ){
 
         // variables
         double yardsPerMeter = 1.09361;
