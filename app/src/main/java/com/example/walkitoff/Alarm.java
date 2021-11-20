@@ -8,12 +8,11 @@ import java.util.Date;
 
 public class Alarm {
 
-    private String wakeUpTime;
+    private String wakeUpTime, alarmSound;
 
-    MediaPlayer alarmSound;
     Context mainContext;
 
-    public Alarm( Context context, String inTime, MediaPlayer inSound ){
+    public Alarm( Context context, String inTime, String inSound ){
 
         // set member data to parameters
         wakeUpTime = inTime;
@@ -27,14 +26,15 @@ public class Alarm {
      */
     private void playAlarm(){
 
+        MediaPlayer sound = MediaPlayer.create( mainContext, SoundFacade.getSound( alarmSound ) );
         // play alarm sound
-        alarmSound.start();
+        sound.start();
 
         // set sound loop
-        alarmSound.setLooping( true );
+        sound.setLooping( true );
 
         // initiate alarm stop
-        stopAlarm();
+        stopAlarm( sound );
     }
 
     /**
@@ -68,16 +68,16 @@ public class Alarm {
     /**
      * stops the alarm sound
      */
-    public void stopAlarm(){
+    public void stopAlarm( MediaPlayer sound ){
 
         // start tracking distance at test distance of 30 feet
         new Distance( mainContext, 30 ).trackDistance();
 
         // stop sound loop
-        alarmSound.setLooping( false );
+        sound.setLooping( false );
 
         // release alarm sound
-        alarmSound.release();
+        sound.release();
     }
 
 }
