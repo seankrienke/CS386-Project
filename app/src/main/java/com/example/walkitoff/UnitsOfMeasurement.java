@@ -8,7 +8,7 @@ public class UnitsOfMeasurement {
      *
      * @return distance in ft (double)
      */
-    public double toFeet( double distance ){
+    public static double toFeet( double distance ){
 
         // variables
         double feetPerMeter = 3.208;
@@ -22,7 +22,7 @@ public class UnitsOfMeasurement {
      *
      * @return distance in km (double)
      */
-    public double toKilometers( double distance ){
+    public static double toKilometers( double distance ){
 
         // variables
         double kilometersPerMeter = 0.001;
@@ -36,7 +36,7 @@ public class UnitsOfMeasurement {
      *
      * @return - distance (double)
      */
-    public double toMeters( double distance ){
+    public static double toMeters( double distance ){
 
         // return distance
         return distance;
@@ -47,7 +47,7 @@ public class UnitsOfMeasurement {
      *
      * @return distance in miles (double)
      */
-    public double toMiles( double distance ){
+    public static double toMiles( double distance ){
 
         // variables
         double milesPerMeter = 0.000621371;
@@ -61,7 +61,7 @@ public class UnitsOfMeasurement {
      *
      * @return distance in yards (double)
      */
-    public double toYards( double distance ){
+    public static double toYards( double distance ){
 
         // variables
         double yardsPerMeter = 1.09361;
