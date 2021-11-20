@@ -79,6 +79,19 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                if( chosenPresetLabel == null ){
+
+                    MediaPlayer sound = MediaPlayer.create(
+                            MainActivity.this, SoundFacade.getSound( chosenSound ) );
+
+                    AlarmPreset preset =
+                            new AlarmPreset( MainActivity.this, hour, minute, sound );
+
+                    alarmList.addPreset( preset );
+
+                    chosenPresetLabel = preset.getAlarmLabel();
+                }
+
                 Alarm alarm = alarmList.findPreset( chosenPresetLabel ).makeAlarm();
 
                 alarm.setAlarm();
