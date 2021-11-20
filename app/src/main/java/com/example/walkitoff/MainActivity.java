@@ -24,17 +24,19 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TimePicker;
 
-public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class MainActivity extends AppCompatActivity {
 
-    String chosenSound;
-  
-    String timeSetting;
+    String chosenSound, chosenPresetLabel;
 
     public static String uID,uName,uDistance,uScore,uLevel;
 
     static final int REQUEST_PERMISSION = 1;
 
     int level = 0;
+
+    AlarmList alarmList = new AlarmList();
+
+    int hour, minute;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +56,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             public void onTimeChanged(TimePicker timePicker, int inHour, int inMinute) {
 
                 // save the chosen hour and minute
-                timeSetting = new Time( inHour, inMinute ).parseTime();
+                hour = inHour;
+                minute = inMinute;
             }
         });
         // end anonymous class
@@ -62,10 +65,13 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         fillSoundMenu();
 
         Spinner soundSpinner = findViewById( R.id.soundspinner );
+        Spinner presetSpinner = findViewById( R.id.presetspinner );
 
-        soundSpinner.setOnItemSelectedListener( this );
+        presetSpinner.setOnItemSelectedListener( new PresetSpinnerClass() );
+        soundSpinner.setOnItemSelectedListener( new SoundSpinnerClass() );
 
         Button alarmButton = findViewById( R.id.alarmbutton );
+        Button saveButton = findViewById( R.id.savebutton );
 
         // called by alarm button
         alarmButton.setOnClickListener( new View.OnClickListener() {
@@ -73,10 +79,20 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             @Override
             public void onClick(View view) {
 
-                MediaPlayer alarmSound = MediaPlayer.create(
-                        MainActivity.this, SoundFacade.getSound( chosenSound ) );
+                if( chosenPresetLabel == null ){
 
-                Alarm alarm = new Alarm( MainActivity.this, timeSetting, alarmSound );
+                    MediaPlayer sound = MediaPlayer.create(
+                            MainActivity.this, SoundFacade.getSound( chosenSound ) );
+
+                    AlarmPreset preset =
+                            new AlarmPreset( MainActivity.this, hour, minute, sound );
+
+                    alarmList.addPreset( preset );
+
+                    chosenPresetLabel = preset.getAlarmLabel();
+                }
+
+                Alarm alarm = alarmList.findPreset( chosenPresetLabel ).makeAlarm();
 
                 alarm.setAlarm();
 
@@ -86,7 +102,49 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
             }
         });
+
+        saveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                MediaPlayer sound =
+                        MediaPlayer.create( MainActivity.this, SoundFacade.getSound( chosenSound ) );
+
+                AlarmPreset preset =
+                        new AlarmPreset( MainActivity.this, hour, minute, sound );
+
+                alarmList.addPreset( preset );
+
+                fillPresetMenu();
+            }
+        });
     }
+
+    class SoundSpinnerClass implements AdapterView.OnItemSelectedListener{
+
+        @Override
+        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+            chosenSound = adapterView.getItemAtPosition( i ).toString();
+        }
+
+        @Override
+        public void onNothingSelected(AdapterView<?> adapterView) {
+            chosenSound = SoundName.DEFAULT_SOUND;
+        }
+    }
+
+    class PresetSpinnerClass implements AdapterView.OnItemSelectedListener{
+        @Override
+        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+            chosenPresetLabel = adapterView.getItemAtPosition( i ).toString();
+        }
+
+        @Override
+        public void onNothingSelected(AdapterView<?> adapterView) {
+
+        }
+    }
+
 
     /**
      * fills the drop down spinner menu with unlocked sounds
@@ -106,23 +164,35 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         soundSpinner.setAdapter( soundAdapter );
     }
 
+    /**
+     * fills second dropdown menu with alarm presets
+     */
+    private void fillPresetMenu(){
+
+        Spinner presetSpinner = findViewById( R.id.presetspinner );
+
+        String[] alarmLabelArray = new String[ alarmList.size ];
+
+        int index;
+
+        for( index = 0; index < alarmList.size; index++ ){
+
+            alarmLabelArray[ index ] = alarmList.alarmArray[ index ].getAlarmLabel();
+        }
+
+        ArrayAdapter<String> presetAdapter =new ArrayAdapter<String>(
+                this, android.R.layout.simple_list_item_1, alarmLabelArray );
+
+        presetAdapter.setDropDownViewResource( android.R.layout.simple_spinner_dropdown_item );
+
+        presetSpinner.setAdapter( presetAdapter );
+    }
+
     //This is our login activity being created.
     public void connectDB(View view){
 
         Intent intent = new Intent(this, ConnectDB.class);
         startActivity(intent);
-    }
-
-    @Override
-    public void onItemSelected(AdapterView<?> adapterView, View view, int index, long l) {
-
-        chosenSound = adapterView.getItemAtPosition( index ).toString();
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> adapterView) {
-
-        chosenSound = SoundName.DEFAULT_SOUND;
     }
 
 }
