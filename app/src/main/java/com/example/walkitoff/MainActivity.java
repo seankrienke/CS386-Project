@@ -26,7 +26,7 @@ import android.widget.TimePicker;
 
 public class MainActivity extends AppCompatActivity {
 
-    String chosenSound, chosenPreset;
+    String chosenSound, chosenPresetLabel;
 
     public static String uID,uName,uDistance,uScore,uLevel;
 
@@ -79,12 +79,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                MediaPlayer alarmSound = MediaPlayer.create(
-                        MainActivity.this, SoundFacade.getSound( chosenSound ) );
-
-                String timeSetting = Time.parseTime( hour, minute );
-
-                Alarm alarm = new Alarm( MainActivity.this, timeSetting, alarmSound );
+                Alarm alarm = alarmList.findPreset( chosenPresetLabel ).makeAlarm();
 
                 alarm.setAlarm();
 
@@ -128,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
     class PresetSpinnerClass implements AdapterView.OnItemSelectedListener{
         @Override
         public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-            chosenPreset = adapterView.getItemAtPosition( i ).toString();
+            chosenPresetLabel = adapterView.getItemAtPosition( i ).toString();
         }
 
         @Override
