@@ -72,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button alarmButton = findViewById( R.id.alarmbutton );
         Button saveButton = findViewById( R.id.savebutton );
+        Button loginButton = findViewById( R.id.loginbutton );
 
         // called by alarm button
         alarmButton.setOnClickListener( new View.OnClickListener() {
