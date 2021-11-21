@@ -140,6 +140,7 @@ public class ConnectDB extends AppCompatActivity {
         protected Void doInBackground(Void... voids) {
 
             try {
+                MainActivity.uScore = "50";
                 Class.forName("com.mysql.jdbc.Driver");
                 Connection connection = DriverManager.getConnection(hostName, adminName, dbPass);
                 Statement statement = connection.createStatement();
