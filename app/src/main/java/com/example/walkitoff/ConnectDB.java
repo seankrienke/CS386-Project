@@ -39,6 +39,11 @@ public class ConnectDB extends AppCompatActivity {
 
     public void getConnected(View view)
     {
+        //set values before async uses them
+        MainActivity.uID = idField.getText().toString();
+        hostName = hostField.getText().toString();
+        adminName = adminField.getText().toString();
+        dbPass = passField.getText().toString();
         new getDBData().execute();
     }
 
@@ -66,7 +71,10 @@ public class ConnectDB extends AppCompatActivity {
                 //iterate through DB
                 while(resultSet.next())
                 {
-                    records += resultSet.getString(1) + " " + resultSet.getString(2) + " " + resultSet.getInt(3) + " " + resultSet.getInt(4) + resultSet.getInt(5) + "\n";
+                    records += resultSet.getString(1) + " "
+                            + resultSet.getString(2) + " "
+                            + resultSet.getInt(3) + " "
+                            + resultSet.getInt(4) + "\n";
                 }
 
 
@@ -107,7 +115,7 @@ public class ConnectDB extends AppCompatActivity {
         @Override
         protected void onPostExecute(Void aVoid) {
 
-
+        /*
             //set userid
             EditText idField = (EditText) findViewById(R.id.editText1);
             MainActivity.uID = idField.getText().toString();
@@ -123,6 +131,8 @@ public class ConnectDB extends AppCompatActivity {
             //set db password
             EditText passField = (EditText) findViewById(R.id.editText3);
             dbPass = passField.getText().toString();
+
+         */
 
 
             thebox.setText(records);
