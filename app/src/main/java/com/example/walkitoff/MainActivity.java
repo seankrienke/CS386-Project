@@ -142,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
             alarmLabelArray[ index ] = alarmList.alarmArray[ index ].getAlarmLabel();
         }
 
-        initializeSpinner( alarmLabelArray, R.id.soundspinner );
+        initializeSpinner( alarmLabelArray, R.id.presetspinner );
     }
 
     /**
