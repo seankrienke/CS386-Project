@@ -39,7 +39,7 @@ public class ConnectDB extends AppCompatActivity {
 
     public void getConnected(View view)
     {
-
+        //set values before async uses them
         MainActivity.uID = idField.getText().toString();
         hostName = hostField.getText().toString();
         adminName = adminField.getText().toString();
