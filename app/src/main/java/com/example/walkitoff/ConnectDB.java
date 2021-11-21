@@ -56,8 +56,7 @@ public class ConnectDB extends AppCompatActivity {
     class getDBData extends AsyncTask<Void, Void, Void> {
 
         String records = "",error = "", message = "Connected!!", distanceRan = "", unlockLevel = "";
-        //public Statement statement;
-
+        
         @Override
         protected Void doInBackground(Void... voids) {
 
@@ -114,27 +113,7 @@ public class ConnectDB extends AppCompatActivity {
         //-----------------------------------------------------
         @Override
         protected void onPostExecute(Void aVoid) {
-
-        /*
-            //set userid
-            EditText idField = (EditText) findViewById(R.id.editText1);
-            MainActivity.uID = idField.getText().toString();
-
-            //set database hostname
-            EditText hostField = (EditText) findViewById(R.id.editText2);
-            hostName = hostField.getText().toString();
-
-            //set db admin name
-            EditText adminField = (EditText) findViewById(R.id.editText4);
-            adminName = adminField.getText().toString();
-
-            //set db password
-            EditText passField = (EditText) findViewById(R.id.editText3);
-            dbPass = passField.getText().toString();
-
-         */
-
-
+   
             thebox.setText(records);
             view1.setText(MainActivity.uID);
             view2.setText(MainActivity.uName);
