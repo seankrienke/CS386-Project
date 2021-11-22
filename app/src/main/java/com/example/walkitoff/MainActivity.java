@@ -26,7 +26,7 @@ import android.widget.TimePicker;
 
 public class MainActivity extends AppCompatActivity {
 
-    String chosenSound, chosenPresetLabel;
+    public static String chosenSound, chosenPresetLabel;
 
     public static String uID,uName,uDistance,uScore,uLevel;
 
@@ -53,11 +53,11 @@ public class MainActivity extends AppCompatActivity {
         // create anonymous class for time change listener
         timeSelected.setOnTimeChangedListener(new TimePicker.OnTimeChangedListener() {
             @Override
-            public void onTimeChanged(TimePicker timePicker, int inHour, int inMinute) {
+            public void onTimeChanged(TimePicker timePicker, int hour, int minute) {
 
                 // save the chosen hour and minute
-                hour = inHour;
-                minute = inMinute;
+                MainActivity.this.hour = hour;
+                MainActivity.this.minute = minute;
             }
         });
         // end anonymous class
@@ -67,11 +67,12 @@ public class MainActivity extends AppCompatActivity {
         Spinner soundSpinner = findViewById( R.id.soundspinner );
         Spinner presetSpinner = findViewById( R.id.presetspinner );
 
-        presetSpinner.setOnItemSelectedListener( new PresetSpinnerClass() );
-        soundSpinner.setOnItemSelectedListener( new SoundSpinnerClass() );
+        presetSpinner.setOnItemSelectedListener( new PresetSpinner() );
+        soundSpinner.setOnItemSelectedListener( new SoundSpinner() );
 
         Button alarmButton = findViewById( R.id.alarmbutton );
         Button saveButton = findViewById( R.id.savebutton );
+        Button loginButton = findViewById( R.id.loginbutton );
 
         // called by alarm button
         alarmButton.setOnClickListener( new View.OnClickListener() {
@@ -79,27 +80,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if( chosenPresetLabel == null ){
-
-                    MediaPlayer sound = MediaPlayer.create(
-                            MainActivity.this, SoundFacade.getSound( chosenSound ) );
-
-                    AlarmPreset preset =
-                            new AlarmPreset( MainActivity.this, hour, minute, sound );
-
-                    alarmList.addPreset( preset );
-
-                    chosenPresetLabel = preset.getAlarmLabel();
-                }
-
-                Alarm alarm = alarmList.findPreset( chosenPresetLabel ).makeAlarm();
-
-                alarm.setAlarm();
-
-                level++;
-
-                fillSoundMenu();
-
+                setAlarm();
             }
         });
 
@@ -107,42 +88,17 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                MediaPlayer sound =
-                        MediaPlayer.create( MainActivity.this, SoundFacade.getSound( chosenSound ) );
-
-                AlarmPreset preset =
-                        new AlarmPreset( MainActivity.this, hour, minute, sound );
-
-                alarmList.addPreset( preset );
-
-                fillPresetMenu();
+                saveAsPreset();
             }
         });
-    }
 
-    class SoundSpinnerClass implements AdapterView.OnItemSelectedListener{
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
-        @Override
-        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-            chosenSound = adapterView.getItemAtPosition( i ).toString();
-        }
-
-        @Override
-        public void onNothingSelected(AdapterView<?> adapterView) {
-            chosenSound = SoundName.DEFAULT_SOUND;
-        }
-    }
-
-    class PresetSpinnerClass implements AdapterView.OnItemSelectedListener{
-        @Override
-        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-            chosenPresetLabel = adapterView.getItemAtPosition( i ).toString();
-        }
-
-        @Override
-        public void onNothingSelected(AdapterView<?> adapterView) {
-
-        }
+                connectDB();
+            }
+        });
     }
 
 
@@ -153,23 +109,13 @@ public class MainActivity extends AppCompatActivity {
 
         String[] soundArray = SoundFacade.getSoundArray( level );
 
-        Spinner soundSpinner = findViewById( R.id.soundspinner );
-
-        ArrayAdapter<String> soundAdapter =
-                new ArrayAdapter<String>( this,
-                        android.R.layout.simple_list_item_1, soundArray );
-
-        soundAdapter.setDropDownViewResource( android.R.layout.simple_spinner_dropdown_item );
-
-        soundSpinner.setAdapter( soundAdapter );
+        initializeSpinner( soundArray, R.id.soundspinner );
     }
 
     /**
      * fills second dropdown menu with alarm presets
      */
     private void fillPresetMenu(){
-
-        Spinner presetSpinner = findViewById( R.id.presetspinner );
 
         String[] alarmLabelArray = new String[ alarmList.size ];
 
@@ -180,16 +126,64 @@ public class MainActivity extends AppCompatActivity {
             alarmLabelArray[ index ] = alarmList.alarmArray[ index ].getAlarmLabel();
         }
 
-        ArrayAdapter<String> presetAdapter =new ArrayAdapter<String>(
-                this, android.R.layout.simple_list_item_1, alarmLabelArray );
+        initializeSpinner( alarmLabelArray, R.id.presetspinner );
+    }
 
-        presetAdapter.setDropDownViewResource( android.R.layout.simple_spinner_dropdown_item );
+    /**
+     * initializes a spinner with a given array and spinner id
+     *
+     * @param array - to populate the spinner
+     * @param spinnerId - reference to a spinner
+     */
+    private void initializeSpinner( String[] array, int spinnerId ){
 
-        presetSpinner.setAdapter( presetAdapter );
+        Spinner spinner = findViewById( spinnerId );
+
+        ArrayAdapter<String> adapter =
+                new ArrayAdapter<String>( this, android.R.layout.simple_list_item_1, array );
+
+        adapter.setDropDownViewResource( android.R.layout.simple_spinner_dropdown_item );
+
+        spinner.setAdapter( adapter );
+    }
+
+    /**
+     * creates an alarm preset based on current settings and adds it to the sound spinner
+     *
+     * @return new preset alarm label if needed
+     */
+    private String saveAsPreset(){
+
+        AlarmPreset preset =
+                new AlarmPreset( MainActivity.this, hour, minute, chosenSound );
+
+        alarmList.addPreset( preset );
+
+        fillPresetMenu();
+
+        return preset.getAlarmLabel();
+    }
+
+    /**
+     * checks for chosen preset and sets alarm based off of it. Also updates sound menu if needed
+     */
+    private void setAlarm(){
+        if( chosenPresetLabel == null ){
+
+            chosenPresetLabel = saveAsPreset();
+        }
+
+        Alarm alarm = alarmList.findPreset( chosenPresetLabel ).makeAlarm();
+
+        alarm.setAlarm();
+
+        level++;
+
+        fillSoundMenu();
     }
 
     //This is our login activity being created.
-    public void connectDB(View view){
+    public void connectDB(){
 
         Intent intent = new Intent(this, ConnectDB.class);
         startActivity(intent);

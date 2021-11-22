@@ -91,17 +91,13 @@ public class Distance {
 
         LocationData locationTracker = new LocationData( mainContext );
 
-        double addedDistance;
-
         Location prevLocation = locationTracker.currentLocation();
 
         locationTracker.updateLocation();
 
-        addedDistance = locationTracker.currentLocation().distanceTo( prevLocation );
+        double addedDistance = locationTracker.currentLocation().distanceTo( prevLocation );
 
-        addedDistance = new UnitsOfMeasurement( addedDistance ).toFeet();
-
-        travelledDistance += addedDistance;
+        travelledDistance += UnitsOfMeasurement.toFeet( addedDistance );
     }
 
 }

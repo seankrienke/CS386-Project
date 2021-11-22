@@ -1,13 +1,11 @@
 package com.example.walkitoff;
 
 import android.content.Context;
-import android.media.MediaPlayer;
 
 public class AlarmPreset {
 
-    private String alarmLabel;
-    private String time;
-    private MediaPlayer sound;
+    private String alarmLabel, time, sound;
+
     private Context context;
 
     /**
@@ -18,7 +16,7 @@ public class AlarmPreset {
      *
      * @param sound - the name of the sound to wake up to
      */
-    public AlarmPreset( Context context, int hour, int minute, MediaPlayer sound ){
+    public AlarmPreset( Context context, int hour, int minute, String sound ){
 
         this.time = Time.parseTime( hour, minute );
         this.sound = sound;
