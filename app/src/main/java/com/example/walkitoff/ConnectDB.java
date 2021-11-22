@@ -73,7 +73,8 @@ public class ConnectDB extends AppCompatActivity {
                     records += resultSet.getString(1) + " "
                             + resultSet.getString(2) + " "
                             + resultSet.getInt(3) + " "
-                            + resultSet.getInt(4) + "\n";
+                            + resultSet.getInt(4) + " "
+                            + resultSet.getInt(5) + "\n";
                 }
 
 
@@ -140,7 +141,7 @@ public class ConnectDB extends AppCompatActivity {
         protected Void doInBackground(Void... voids) {
 
             try {
-                MainActivity.uScore = "70";
+
                 Class.forName("com.mysql.jdbc.Driver");
                 Connection connection = DriverManager.getConnection(hostName, adminName, dbPass);
                 Statement statement = connection.createStatement();
