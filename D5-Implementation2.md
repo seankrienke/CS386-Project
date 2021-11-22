@@ -17,6 +17,10 @@ Trello: https://trello.com/cs386walkitoff/members?utm_source=eval-email&utm_medi
 
 #**5. Code Quality**
 ====================================================================================
+1. Use good names, Clean formatting, Readability, implement comments on things that may require knowledge
+2. Communicate to the others if you are modifying a class
+3. Leave a to do list in the main class
+
 
 #**6. Lessons Learned**
 ====================================================================================
