@@ -70,11 +70,11 @@ public class ConnectDB extends AppCompatActivity {
                 //iterate through DB
                 while(resultSet.next())
                 {
-                    records += resultSet.getString(1) + " "
-                            + resultSet.getString(2) + " "
-                            + resultSet.getInt(3) + " "
-                            + resultSet.getInt(4) + " "
-                            + resultSet.getInt(5) + "\n";
+                    records += "User ID: " + resultSet.getString(1) + " "
+                    + "Username: " + resultSet.getString(2) + " "
+                    + "User distance ran: " + resultSet.getInt(3) + " "
+                    + "User Score: " + resultSet.getInt(4) + " "
+                    + "User Level: " + resultSet.getInt(5) + "\n";
                 }
 
 
@@ -116,11 +116,11 @@ public class ConnectDB extends AppCompatActivity {
         protected void onPostExecute(Void aVoid) {
    
             thebox.setText(records);
-            view1.setText(MainActivity.uID);
-            view2.setText(MainActivity.uName);
-            view3.setText(MainActivity.uDistance);
-            view4.setText(MainActivity.uScore);
-            view5.setText(MainActivity.uLevel);
+            view1.setText("User ID: " + MainActivity.uID);
+            view2.setText("User Name: " + MainActivity.uName);
+            view3.setText("User Distance Ran: " + MainActivity.uDistance);
+            view4.setText("User Score: " + MainActivity.uScore);
+            view5.setText("User Level: " + MainActivity.uLevel);
 
 
 
@@ -141,7 +141,8 @@ public class ConnectDB extends AppCompatActivity {
         protected Void doInBackground(Void... voids) {
 
             try {
-
+                MainActivity.uScore = "100";
+                MainActivity.uLevel = "100";
                 Class.forName("com.mysql.jdbc.Driver");
                 Connection connection = DriverManager.getConnection(hostName, adminName, dbPass);
                 Statement statement = connection.createStatement();
