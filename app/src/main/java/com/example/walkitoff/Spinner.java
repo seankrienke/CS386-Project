@@ -5,7 +5,7 @@ import android.widget.AdapterView;
 
 public class Spinner implements AdapterView.OnItemSelectedListener{
 
-    public static String selection = "";
+    public String selection = "";
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {

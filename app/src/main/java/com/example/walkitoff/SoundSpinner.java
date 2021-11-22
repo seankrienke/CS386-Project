@@ -16,7 +16,5 @@ public class SoundSpinner extends Spinner{
     public void onNothingSelected(AdapterView<?> adapterView) {
         super.onNothingSelected( adapterView );
 
-        MainActivity.chosenSound = SoundName.DEFAULT_SOUND;
-
     }
 }
