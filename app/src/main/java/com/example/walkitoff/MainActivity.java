@@ -26,7 +26,7 @@ import android.widget.TimePicker;
 
 public class MainActivity extends AppCompatActivity {
 
-    String chosenSound, chosenPresetLabel;
+    public static String chosenSound, chosenPresetLabel;
 
     public static String uID,uName,uDistance,uScore,uLevel;
 
@@ -67,8 +67,8 @@ public class MainActivity extends AppCompatActivity {
         Spinner soundSpinner = findViewById( R.id.soundspinner );
         Spinner presetSpinner = findViewById( R.id.presetspinner );
 
-        presetSpinner.setOnItemSelectedListener( new PresetSpinnerClass() );
-        soundSpinner.setOnItemSelectedListener( new SoundSpinnerClass() );
+        presetSpinner.setOnItemSelectedListener( new PresetSpinner() );
+        soundSpinner.setOnItemSelectedListener( new SoundSpinner() );
 
         Button alarmButton = findViewById( R.id.alarmbutton );
         Button saveButton = findViewById( R.id.savebutton );
@@ -91,31 +91,14 @@ public class MainActivity extends AppCompatActivity {
                 saveAsPreset();
             }
         });
-    }
 
-    class SoundSpinnerClass implements AdapterView.OnItemSelectedListener{
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
-        @Override
-        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-            chosenSound = adapterView.getItemAtPosition( i ).toString();
-        }
-
-        @Override
-        public void onNothingSelected(AdapterView<?> adapterView) {
-            chosenSound = SoundName.DEFAULT_SOUND;
-        }
-    }
-
-    class PresetSpinnerClass implements AdapterView.OnItemSelectedListener{
-        @Override
-        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-            chosenPresetLabel = adapterView.getItemAtPosition( i ).toString();
-        }
-
-        @Override
-        public void onNothingSelected(AdapterView<?> adapterView) {
-
-        }
+                connectDB();
+            }
+        });
     }
 
 
@@ -200,7 +183,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //This is our login activity being created.
-    public void connectDB(View view){
+    public void connectDB(){
 
         Intent intent = new Intent(this, ConnectDB.class);
         startActivity(intent);
