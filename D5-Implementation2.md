@@ -17,6 +17,9 @@ Trello: https://trello.com/cs386walkitoff/members?utm_source=eval-email&utm_medi
 Demonstration of a user logging into Database, viewing scores, and updating new values.
 https://youtu.be/WPmxKIaCtG0
 
+Demonstration of user setting and deactivating alarm. General App usage.
+https://www.youtube.com/watch?v=QrXdFJhgnxM
+
 #**5. Code Quality**
 ====================================================================================
 1. Use good naming conventions 
