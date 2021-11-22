@@ -15,7 +15,7 @@ Trello: https://trello.com/cs386walkitoff/members?utm_source=eval-email&utm_medi
 #**4. Demo**
 ====================================================================================
 Demonstration of a user logging into Database, viewing scores, and updating new values.
-https://youtu.be/ZUKRaXPAyYo
+https://youtu.be/WPmxKIaCtG0
 
 #**5. Code Quality**
 ====================================================================================
