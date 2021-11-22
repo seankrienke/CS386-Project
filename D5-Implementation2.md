@@ -27,3 +27,6 @@ Trello: https://trello.com/cs386walkitoff/members?utm_source=eval-email&utm_medi
 
 #**6. Lessons Learned**
 ====================================================================================
+1. The use of SQLite may be advantageous in the future for small applications such as this.
+2. The Server implementation is very vulnerable and more work would be needed to ensure security for app users.
+3. The more you plan, the less issues you will face later down the road.
